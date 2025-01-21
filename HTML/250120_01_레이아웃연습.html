@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>레이아웃연습</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      .no1 {
+        border: 1px solid red;
+        width: 1200px;
+        height: 100px;
+      }
+      .no2 {
+        border: 1px solid blue;
+        width: 1200px;
+        height: 100px;
+      }
+      .no3 {
+        width: 1200px;
+        height: 500px;
+      }
+      p {
+        border: 1px solid;
+        display: inline-block;
+      }
+      .no3 {
+        display: inline-block;
+      }
+      #p1 {
+        width: 20%;
+        height: 500px;
+        float: left;
+      }
+      #p2 {
+        width: 70%;
+        height: 500px;
+      }
+      #p3 {
+        width: 10%;
+        height: 500px;
+        float: right;
+      }
+      .no4 {
+        width: 1200px;
+        height: 500px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="all">
+      <div class="no1"><h1>가로크기는 1200px 세로크기는 100px</h1></div>
+      <div class="no2"><h1>가로크기는 1200px 세로크기는 100px</h1></div>
+      <div class="no3">
+        <p id="p1">가로크기는 20% 세로 크기는 500px</p>
+        <p id="p2">가로크기는 10% 세로 크기는 500px</p>
+        <p id="p3">가로크기는 70% 세로 크기는 500px</p>
+      </div>
+      <div class="no4"><h1>가로크기는 1200px 세로크기는 100px</h1></div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>index연습</title>
+    <style>
+      #wrap {
+        border: 1px solid;
+        width: 1000px;
+        margin: auto 0;
+      }
+      .nav p {
+        display: inline-block;
+      }
+      .nav p:nth-child(1) {
+        float: left;
+      }
+      .nav p:nth-child(3) {
+        float: right;
+      }
+      .section p {
+        display: inline-block;
+      }
+      .section p:nth-child(3) {
+        position: relative;
+        top: -500px;
+      }
+      .section p:nth-child(4) {position:  top -300px;
+    </style>
+  </head>
+  <body>
+    <div id="wrap">
+      <header>
+        <p><img src="./top.gif" alt="top" /></p>
+      </header>
+      <nav>
+        <div class="nav">
+          <p><img src="./food_01.gif" alt="food_01" /></p>
+          <p><img src="./directory.gif" alt="directory" /></p>
+          <p><img src="./food_02.gif" alt="food_02" /></p>
+        </div>
+      </nav>
+      <section>
+        <div class="section">
+          <p><img src="./note.gif" alt="note" /></p>
+          <p><img src="./image.gif" alt="image" /></p>
+          <p><img src="./number.gif" alt="number" /></p>
+          <p><img src="./navigation.gif" alt="navigation" /></p>
+          <p><img src="./page.gif" alt="page" /></p>
+        </div>
+      </section>
+      <footer>
+        <p><img src="./bottom.gif" alt="bottom" /></p>
+      </footer>
+    </div>
+  </body>
+</html>
