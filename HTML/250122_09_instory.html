@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>instory</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      .con {
+        width: 1200px;
+        height: 800px;
+        margin: 0 auto;
+        background-color: red;
+      }
+      .con > p:nth-child(2) {
+        background-image: url(./images/index_pattern.gif);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+      }
+      .img p {
+        display: inline-block;
+      }
+      .con > p:nth-child(1) {
+        margin-left: 700px;
+      }
+      .con p:last-child {
+        background-color: #fff;
+        background-size: 800px 200px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="con">
+      <p><img src="./images/index_top.gif" alt="index" /></p>
+      <p><img src="./images/index_pattern.gif" alt="" /></p>
+      <div class="img">
+        <p><img src="./images/index_main_01.gif" alt="" /></p>
+        <p><img src="./images/index_main_02.gif" alt="" /></p>
+      </div>
+      <p><img src="./images/copyright.gif" alt="" /></p>
+    </div>
+  </body>
+</html>
