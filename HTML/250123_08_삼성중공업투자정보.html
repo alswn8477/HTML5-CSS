@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>삼성중공업투자정보table</title>
+    <style>
+      @font-face {
+        font-family: pretendardR;
+        src: url(./webfonts/Pretendard-Regular.woff) format("woff");
+      }
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      table {
+        width: 1400px;
+        border-collapse: collapse;
+        margin: 0 auto;
+        font: 18px pretendardR;
+      }
+      td {
+        border: 1px solid #e6e6e6;
+        padding: 25px 20px;
+        text-align: center;
+      }
+      thead {
+        background: #f4f6f8;
+        border-top: 2px solid #000;
+      }
+      thead,
+      tbody td:first-child,
+      tbody td:nth-child(2),
+      tbody td:nth-child(3) {
+        font: 18px pretendardR;
+        color: #666666;
+      }
+      thead,
+      tbody td:first-child,
+      tfoot td:first-child {
+        font: bold 18px pretendardR;
+        color: #000;
+      }
+      thead td:last-child,
+      tbody td:last-child,
+      tfoot td:last-child {
+        border-right: none;
+      }
+      thead td:first-child,
+      tbody td:first-child,
+      tfoot td:first-child {
+        border-left: none;
+      }
+      tfoot td {
+        font: bold 18px pretendardR;
+        color: #0c4da2;
+        background: #f0f6fc;
+        border-top: 3px solid #0c4da2;
+        border-bottom: 3px solid #0c4da2;
+      }
+    </style>
+  </head>
+  <body>
+    <table>
+      <thead>
+        <td>주식의 종류</td>
+        <td>발행주식 총수(주)</td>
+        <td>액면총액(천원)</td>
+        <td>비고</td>
+      </thead>
+      <tbody>
+        <td>보통주</td>
+        <td>880,000,000</td>
+        <td>880,000,000</td>
+        <td></td>
+      </tbody>
+      <tbody>
+        <td>우선주</td>
+        <td>114,845</td>
+        <td>114,845</td>
+        <td></td>
+      </tbody>
+      <tfoot>
+        <td>합 계</td>
+        <td>880,114,845</td>
+        <td>880,114,845</td>
+        <td></td>
+      </tfoot>
+    </table>
+  </body>
+</html>
