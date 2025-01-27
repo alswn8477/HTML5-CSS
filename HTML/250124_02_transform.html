@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>transform</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      p {
+        width: 100px;
+        height: 100px;
+        background: #ccc;
+        margin: 20px 0;
+      }
+      p:first-child {
+        transform: translate(100px, -50px);
+      }
+      p:nth-child(2) {
+        transform: translate(500px) scale(2, 0.5);
+      }
+      p:nth-child(3) {
+        transform: scale(2, 0.5) translate(500px); /* 먼저 쓰는 거 먼저 적용됨. 순서 중요. (2)와 비교해보기 */
+      }
+      p:nth-child(4) {
+        transform: rotate(40deg);
+      } /* X는 가로 기준이라 3d 앞뒤로 돌아감. 90deg돌렸을 때 안보임. Y는 세로 기준이라 3d 오른왼앞으로 돌아감. XY안쓰고 그냥 하면 평면 기준으로 돌아감 */
+      p:nth-child(5) {
+        transform: scaleX(3) translate(100px);
+      }
+      p:nth-child(6) {
+        transform: rotate(30deg);
+        transform-origin: 0 0; /* transform rotate origin은 중심을 기준으로 돌림. (7)과 비교해보기 */
+      }
+      p:nth-child(7) {
+        transform: rotate(
+          30deg
+        ); /* transform rotate는 왼쪽아래(XY기준축) 기준으로 돌림. (6)과 비교해보기 */
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <p></p>
+      <p></p>
+      <p></p>
+      <p>회전</p>
+      <p>5</p>
+      <p></p>
+      <p></p>
+    </div>
+  </body>
+</html>
