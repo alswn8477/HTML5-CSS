@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>transition자코모</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        width: 1330px;
+        list-style: none;
+        margin: 200px auto;
+      }
+      ul li {
+        float: left;
+        cursor: pointer;
+      }
+      ul li p {
+        padding: 10px;
+        transition: 1s;
+      }
+      ul li:nth-child(1) {
+        transform: translateY();
+      }
+      ul li p:nth-child(1) {
+        font-size: 14px;
+      }
+      ul li p:nth-child(2) {
+        font-family: serif;
+        font-size: 43px;
+      }
+      ul li p img {
+        width: 380px;
+        height: 494px;
+      }
+      ul li:hover p {
+        transform: translateY(-100px);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <ul>
+        <li>
+          <p>자코모 소개</p>
+          <p>About</p>
+          <p>
+            <img
+              src="https://www.jakomosofa.com/inc/img/main/info_sect_1.jpg"
+              alt=""
+            />
+          </p>
+        </li>
+        <li>
+          <p>자코모 이야기</p>
+          <p>Story</p>
+          <p>
+            <img
+              src="https://www.jakomosofa.com/inc/img/main/info_sect_2.jpg"
+              alt=""
+            />
+          </p>
+        </li>
+        <li>
+          <p>자코모 제품 철학</p>
+          <p>Philosophy</p>
+          <p>
+            <img
+              src="https://www.jakomosofa.com/inc/img/main/info_sect_3.jpg"
+              alt=""
+            />
+          </p>
+        </li>
+      </ul>
+    </div>
+  </body>
+</html>
