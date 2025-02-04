@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>스타필드</title>
+    <style>
+      @font-face {
+        font-family: notosans;
+        src: url(./webfonts/NotoSans_Condensed-Regular.woff) format("woff");
+      }
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+        margin: 50px auto;
+        width: 1180px;
+        height: 400px;
+        display: flex;
+        justify-content: space-between;
+      }
+      ul li {
+        text-align: center;
+      }
+      ul li > p {
+        width: 280px;
+        height: 280px;
+        border-radius: 20px;
+      }
+      ul li:first-child > p {
+        background: url(https://www.starfield.co.kr/assets/images/starfield/main-library-img01.jpg);
+      }
+      ul li:nth-child(2) > p {
+        background: url(https://www.starfield.co.kr/assets/images/starfield/main-library-img02.jpg);
+      }
+      ul li:nth-child(3) > p {
+        background: url(https://www.starfield.co.kr/assets/images/starfield/main-library-img03.jpg);
+      }
+      ul li:hover p:first-child {
+        width: 580px;
+        transition: 0.5s;
+      }
+      ul li .txt p:first-child {
+        font: 16px notosans;
+      }
+    </style>
+  </head>
+  <body>
+    <ul>
+      <li>
+        <p></p>
+        <div class="txt">
+          <p>별마당 도서관</p>
+          <p>휴식과 만남, 그리고 책을 주제로 소통하는 문화 감성 공간</p>
+        </div>
+      </li>
+      <li>
+        <p></p>
+        <div class="txt">
+          <p>별마당 키즈</p>
+          <p>
+            책과 공연을 중심으로 아동심리학자와 함께 만든 키즈다감각체험 공간
+          </p>
+        </div>
+      </li>
+      <li>
+        <p></p>
+        <div class="txt">
+          <p>강연&공연</p>
+          <p>가슴에 별을 품은 이들을 위한 다양한 이야기</p>
+        </div>
+      </li>
+    </ul>
+  </body>
+</html>
