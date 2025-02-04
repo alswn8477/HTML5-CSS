@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>삼성중공업</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+        width: 1720px;
+        height: 630px;
+        margin: 100px auto;
+        display: flex;
+      }
+      ul li {
+        width: 688px;
+        height: 630px;
+        position: relative;
+        overflow: hidden;
+      }
+      ul li > p img {
+        width: 688px;
+        height: 630px;
+        border-radius: 20px;
+      }
+      ul li:hover > p img {
+        overflow: visible;
+        transition: 0.5s;
+      }
+      ul li:hover > .txt {
+        top: 200px;
+        transition: 0.5s;
+      }
+      ul li:hover > .txt p:first-child {
+        font-size: 50px;
+        font-weight: bold;
+        transition: 0.5s;
+      }
+      ul li:hover > .txt p:nth-child(2) {
+        display: block;
+        transition: 0.5s;
+      }
+      ul li .txt {
+        position: absolute;
+        left: 20%;
+        top: 40%;
+        width: 100%;
+        height: 100%;
+      }
+      ul li .txt {
+        color: #fff;
+      }
+      ul li .txt p:first-child {
+        font: 35px pretendard, san-serif;
+        padding-bottom: 30px;
+      }
+      ul li .txt span a {
+      }
+      ul li .txt p:nth-child(2) {
+        display: none;
+        font-size: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <ul>
+      <li>
+        <p>
+          <img
+            src="https://www.samsungshi.com/images/main/mSolution_bg_01.jpg"
+            alt="photo1"
+          />
+        </p>
+        <div class="txt">
+          <p>제품 | 서비스</p>
+          <p>
+            끊임없는 제품 혁신과<br />
+            엔지니어링 역량 강화
+          </p>
+          <span><a href="">자세히</a></span>
+        </div>
+      </li>
+      <li>
+        <p>
+          <img
+            src="https://www.samsungshi.com/images/main/mSolution_bg_02.jpg"
+            alt="photo1"
+          />
+        </p>
+        <div class="txt">
+          <p>그린 솔루션</p>
+          <p>
+            지구를 위한 조선·해양<br />
+            탄소중립 기술 개발
+          </p>
+          <span><a href="">자세히</a></span>
+        </div>
+      </li>
+      <li>
+        <p>
+          <img
+            src="https://www.samsungshi.com/images/main/mSolution_bg_03.jpg"
+            alt="photo1"
+          />
+        </p>
+        <div class="txt">
+          <p>디지털 솔루션</p>
+          <p>
+            미래 디지털 기술<br />
+            시장 선도
+          </p>
+          <span><a href="">자세히</a></span>
+        </div>
+      </li>
+      <li>
+        <p>
+          <img
+            src="https://www.samsungshi.com/images/main/mSolution_bg_04.jpg"
+            alt="photo1"
+          />
+        </p>
+        <div class="txt">
+          <p>스마트야드 솔루션</p>
+          <p>
+            미래형 조선소로<br />
+            패러다임 전환
+          </p>
+          <span><a href="">자세히</a></span>
+        </div>
+      </li>
+    </ul>
+  </body>
+</html>
