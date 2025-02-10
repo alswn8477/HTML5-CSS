@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>input4</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      div.head {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+      }
+      ul {
+        list-style: none;
+        display: flex;
+      }
+      ul li {
+        padding: 10px;
+        margin: 5px;
+      }
+      ul li a {
+        text-decoration: none;
+        color: #1f1f1f;
+      }
+      ul li a:hover {
+        text-decoration: underline;
+      }
+      ul li img {
+        width: 20px;
+      }
+      ul.right li:last-child {
+        border: 1px solid;
+        border-radius: 100px;
+        background: #0b57d0;
+        color: #fff;
+      }
+      ul .right li:last-child:hover {
+        box-shadow: 1px;
+        text-decoration: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="head">
+      <ul class="left">
+        <li><a href="">Google 정보</a></li>
+        <li><a href="">스토어</a></li>
+      </ul>
+      <ul class="right">
+        <li><a href="">Gmail</a></li>
+        <li><a href="">이미지</a></li>
+        <li>
+          <a href="">
+            <p><img src="./images/app.svg" alt="app" /></p>
+          </a>
+        </li>
+        <li><a href="">로그인</a></li>
+      </ul>
+    </div>
+  </body>
+</html>
