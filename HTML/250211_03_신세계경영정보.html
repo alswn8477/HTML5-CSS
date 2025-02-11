@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>신세계경영정보</title>
+    <style>
+      @font-face {
+        font-family: NanumBarunGothic;
+        src: url(./HTML/webfonts/NanumBarunGothic.ttf) format("woff");
+      }
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      div {
+        width: 940px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+      }
+      div h1 {
+        margin: 50px auto;
+        font-size: 30px;
+        font: 34px NanumBarunGothic;
+        color: #444444;
+      }
+      div ul {
+        display: flex;
+        justify-content: space-between;
+        gap: 5px;
+      }
+      div ul li:nth-child(1) {
+        width: 311px;
+        height: 424px;
+        background: #000 url(./HTML/images/0211.jpg) center/cover;
+      }
+      div ul li:nth-child(2) {
+        width: 311px;
+        height: 424px;
+        background: url(./HTML/images/0211-2.jpg) center/cover;
+      }
+      div ul li:nth-child(3) {
+        width: 311px;
+        height: 424px;
+        background: url(./HTML/images/0211-3.jpg) center/cover;
+      }
+      div ul li {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        color: #fff;
+        position: relative;
+        gap: 20px;
+      }
+      div ul li:hover {
+        color: #c76f53;
+        cursor: pointer;
+      }
+      div ul li h2,
+      p {
+        z-index: 1;
+      }
+      div ul li h2 {
+        font: bold 30px NanumBarunGothic;
+      }
+      div ul li p {
+        font: 16px NanumBarunGothic;
+      }
+      div ul li:nth-child(1)::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 311px;
+        height: 424px;
+        background: rgba(0, 0, 0, 0.6);
+      }
+      div ul li:nth-child(2)::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 311px;
+        height: 424px;
+        background: rgba(0, 0, 0, 0.6);
+      }
+      div ul li:nth-child(3)::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 311px;
+        height: 424px;
+        background: rgba(0, 0, 0, 0.6);
+      }
+      div ul li:nth-child(1):hover::after {
+        background: rgba(0, 0, 0, 0.8);
+      }
+      div ul li:nth-child(2):hover::after {
+        background: rgba(0, 0, 0, 0.8);
+      }
+      div ul li:nth-child(3):hover::after {
+        background: rgba(0, 0, 0, 0.8);
+      }
+      div div.foot {
+        width: 940px;
+        height: 180px;
+        margin: 10px auto;
+        text-align: center;
+        background: #c76f53;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        color: #fff;
+      }
+      div div.foot div {
+        gap: 20px;
+      }
+      div div.foot p:nth-child(1) {
+        width: 79px;
+        height: 44px;
+        overflow: hidden;
+      }
+      div div.foot p:last-child {
+        width: 32px;
+        height: 32px;
+        overflow: hidden;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <h1>명확한 비전과 전략으로 최고의 투자 가치를 실현하는 신세계푸드</h1>
+      <ul>
+        <li>
+          <h2>경영정보</h2>
+          <p>
+            주주 및 이사회 구성을<br />
+            안내해 드립니다.
+          </p>
+        </li>
+        <li>
+          <h2>재무정보</h2>
+          <p>
+            영업현황 및 재무제표<br />
+            안내해 드립니다.
+          </p>
+        </li>
+        <li>
+          <h2>주식정보</h2>
+          <p>
+            주가정보를<br />
+            안내해 드립니다.
+          </p>
+        </li>
+      </ul>
+      <div class="foot">
+        <p><img src="./HTML/images/0211-4.png" alt="" /></p>
+        <div>
+          <h2>공시 및 공고</h2>
+          <p>
+            결산 공고 및 주주총회 결과를<br />
+            안내해 드립니다.
+          </p>
+        </div>
+        <p><img src="./HTML/images/0211-4.png" alt="" /></p>
+      </div>
+    </div>
+  </body>
+</html>
