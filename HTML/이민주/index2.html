@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      @font-face {
+        font-family: NanumSquareR;
+        src: url(../webfonts/NanumSquareR.woff2) format("woff");
+      }
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        width: 1080px;
+        height: 460px;
+        margin: 50px auto;
+        list-style: none;
+        display: flex;
+        background: #e2f3fc;
+      }
+      ul li {
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        text-align: center;
+        cursor: pointer;
+        position: relative;
+      }
+      ul li div {
+        padding-top: 25px;
+      }
+      ul li > p:last-child {
+        width: 214px;
+        word-break: keep-all;
+        padding-top: 20px;
+      }
+      ul li p.img {
+        width: 197px;
+        height: 256px;
+
+        background-size: 100%;
+        border-radius: 20px;
+        overflow: hidden;
+      }
+      ul li p.img:hover {
+        background-size: 120%;
+        transition: 0.3s ease-out;
+      }
+      ul li:nth-child(1) p.img {
+        background-image: url(./images/special_mlon_1_bg.png);
+        background-position: center;
+      }
+      ul li:nth-child(1) p.img::after {
+        position: absolute;
+        left: 100px;
+        top: 140px;
+        content: url(./images/special_mlon_1_obj.png);
+      }
+      ul li:nth-child(1) p.img::before {
+        position: absolute;
+        left: 100px;
+        top: 140px;
+        content: url(./images/special_mlon_1_shd.png);
+      }
+      ul li:nth-child(2) p.img {
+        background-image: url(./images/special_mlon_2_bg.png);
+        background-position: center;
+      }
+      ul li:nth-child(2) p.img::after {
+        position: absolute;
+        left: 100px;
+        top: 140px;
+        content: url(./images/special_mlon_2_obj.png);
+      }
+      ul li:nth-child(2) p.img::before {
+        position: absolute;
+        left: 100px;
+        top: 140px;
+        content: url(./images/special_mlon_2_shd.png);
+      }
+      ul li:nth-child(3) p.img {
+        background-image: url(./images/special_mlon_3_bg.png);
+        background-position: center;
+      }
+      ul li:nth-child(3) p.img::after {
+        position: absolute;
+        left: 100px;
+        top: 140px;
+        content: url(./images/special_mlon_3_obj.png);
+      }
+      ul li:nth-child(3) p.img::before {
+        position: absolute;
+        left: 100px;
+        top: 140px;
+        content: url(./images/special_mlon_3_shd.png);
+      }
+      ul li:nth-child(4) p.img {
+        background-image: url(./images/special_mlon_4_bg.png);
+        background-position: center;
+      }
+      ul li:nth-child(4) p.img::after {
+        position: absolute;
+        left: 100px;
+        top: 140px;
+        content: url(./images/special_mlon_4_obj.png);
+      }
+      ul li:nth-child(4) p.img::before {
+        position: absolute;
+        left: 100px;
+        top: 140px;
+        content: url(./images/special_mlon_4_shd.png);
+      }
+      ul li div p:first-child {
+        font: bold 24px NanumSquareR;
+        color: #222222;
+      }
+      ul li div p:nth-child(2),
+      ul li p:last-child {
+        font: 18px/25px NanumSquareR;
+        color: #333333;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <ul>
+        <li>
+          <p class="img"></p>
+          <div>
+            <p>단기카드대출</p>
+            <p>(현금서비스)</p>
+          </div>
+          <p>현금이 급할 때 바로 찾아쓰는,<br />편리한 생활자금 마련방법</p>
+        </li>
+        <li>
+          <p class="img"></p>
+          <div>
+            <p>장기카드대출</p>
+            <p>(카드론)</p>
+          </div>
+          <p>목돈이 필요할 때<br />복잡한 심사 과정 없이 간편하게</p>
+        </li>
+        <li>
+          <p class="img"></p>
+          <div>
+            <p>일부결제금액이월약정</p>
+            <p>(리볼빙)</p>
+          </div>
+          <p>원하는 만큼만 결제하고 매월<br />결제금액을 계획적으로 관리</p>
+        </li>
+        <li>
+          <p class="img"></p>
+          <div>
+            <p>올인원대출</p>
+            <p>(신용대출)</p>
+          </div>
+          <p>
+            우리카드가 없어도 서류없이,<br />
+            방문없이, 내 신용만으로
+          </p>
+        </li>
+      </ul>
+    </div>
+  </body>
+</html>

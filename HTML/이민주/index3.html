@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      @font-face {
+        font-family: NanumSquareR;
+        src: url(../webfonts/NanumSquareR.woff2) format("woff");
+      }
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        width: 1080px;
+        margin: 50px auto;
+        list-style: none;
+        display: flex;
+      }
+      ul li {
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        text-align: center;
+        position: relative;
+        cursor: pointer;
+      }
+      ul li p {
+        padding: 15px;
+        box-sizing: border-box;
+      }
+      ul li:nth-child(1) p.img {
+        width: 310px;
+        height: 247px;
+        background: url(./images/special_mbnf_1_obj.png) center/cover;
+      }
+      ul li:nth-child(2) p.img {
+        width: 160px;
+        height: 247px;
+        background: url(./images/special_mbnf_2_obj.png) center/cover;
+      }
+      ul li:nth-child(3) p.img {
+        width: 188px;
+        height: 247px;
+        background: url(./images/special_mbnf_3_obj.png) center/cover;
+      }
+      ul li:nth-child(4) p.img {
+        width: 174px;
+        height: 247px;
+        background: url(./images/special_mbnf_4_obj.png) center/cover;
+      }
+      ul li p:nth-child(2) {
+        font: bold 24px NanumSquareR;
+        color: #222222;
+      }
+      ul li p:nth-child(3) {
+        font: 18px NanumSquareR;
+        color: #333333;
+      }
+      ul li:nth-child(1) p.img::before {
+        content: "";
+        position: absolute;
+        left: 95%;
+        bottom: 40px;
+        width: 1px;
+        height: 40%;
+        background-color: #ccc;
+      }
+      ul li:nth-child(2) p.img::before {
+        content: "";
+        position: absolute;
+        left: 120%;
+        bottom: 40px;
+        width: 1px;
+        height: 40%;
+        background-color: #ccc;
+      }
+      ul li:nth-child(3) p.img::before {
+        content: "";
+        position: absolute;
+        left: 110%;
+        bottom: 40px;
+        width: 1px;
+        height: 40%;
+        background-color: #ccc;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <ul>
+        <li>
+          <p class="img"></p>
+          <p>해외이용의 정석</p>
+          <p>
+            여행, 직구, 항공<br />
+            무엇이든 우리카드로
+          </p>
+        </li>
+        <li>
+          <p class="img"></p>
+          <p>MY Pick 서비스</p>
+          <p>
+            혜택도 맞춤!<br />
+            나만을 위한 맞춤 혜택
+          </p>
+        </li>
+        <li>
+          <p class="img"></p>
+          <p>우리V클럽</p>
+          <p>
+            특별함을 원하는<br />
+            고객을 위한 VIP우대 혜택
+          </p>
+        </li>
+        <li>
+          <p class="img"></p>
+          <p>우리 Point</p>
+          <p>
+            차곡차곡 쌓아<br />
+            다양한 곳에서 사용가능
+          </p>
+        </li>
+      </ul>
+    </div>
+  </body>
+</html>
