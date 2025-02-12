@@ -7,6 +7,8 @@
     <title>spc</title>
     <style>
       @font-face {
+        font-family: iJWKBX;
+        src: url(./webfonts/iJWKBXyIfDnIV7nBrXw\\(1\).woff2) format("woff");
       }
       * {
         margin: 0;
@@ -16,9 +18,10 @@
         list-style: none;
       }
       .wrap {
-        width: 100%;
+        width: 1789px;
         height: 100%;
         display: flex;
+        gap: 20px;
       }
       .wrap .ice {
         background-image: url(./images/spc.webp);
@@ -34,14 +37,18 @@
         flex-direction: column;
         justify-content: center;
         text-align: center;
-        font-size: 146px;
+        font: bold 146px iJWKBX;
         color: #fff;
       }
       .wrap .con {
         display: flex;
-        flex-direction: row;
-        width: 900px;
+        gap: 20px;
+        /* flex-direction: row;
+        width: 900px; */
         flex-wrap: wrap;
+      }
+      .wrap .con div {
+        flex: 1 1 40%;
       }
       .wrap .con div:nth-child(1) {
         border: 1px solid;

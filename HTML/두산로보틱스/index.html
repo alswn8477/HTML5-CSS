@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      @font-face {
+        font-family: PretendardS;
+        src: url(../webfonts/Pretendard-SemiBold.woff) format("woff");
+      }
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        background: #f0f0f0;
+      }
+      ul {
+        list-style: none;
+      }
+      a {
+        text-decoration: none;
+      }
+      .edu {
+        width: 1680px;
+        height: 780px;
+        display: flex;
+        gap: 24px;
+        margin: 50px auto;
+      }
+      .edu div {
+        border-radius: 20px;
+        overflow: hidden;
+      }
+      .edu > div.left {
+        flex: 1;
+      }
+      .edu > div.left p {
+        width: 100%;
+        height: 100%;
+        background: url(https://www.doosanrobotics.com/images/services/robot-training-img01.png)
+          center/cover;
+      }
+      .edu > div.right {
+        flex: 3;
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+      }
+      .edu > div.right > div.inner {
+        width: 100%;
+        flex: 1;
+        display: flex;
+        gap: 24px;
+      }
+      .edu > div.right > div.inner > div {
+        /* flex: 1; */
+        background: #fff;
+      }
+      .edu > div.right > div.inner:first-child > div:first-child {
+        width: 398px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        word-break: keep-all;
+      }
+      .edu
+        > div.right
+        > div.inner:first-child
+        > div:first-child
+        > p:nth-child(1) {
+        font: 32px PretendardS;
+        line-height: 1.6;
+      }
+      .edu > div.right > div.inner:first-child > div:first-child > p {
+        margin: 0 auto;
+      }
+      .edu
+        > div.right
+        > div.inner:first-child
+        > div:first-child
+        > p:nth-child(1)
+        > span {
+        font: 32px PretendardS;
+        color: #005eb8;
+      }
+      .edu
+        > div.right
+        > div.inner:first-child
+        > div:first-child
+        > p:nth-child(2) {
+        font: 18px PretendardS;
+        color: #444444;
+        width: 322px;
+        line-height: 1.6;
+        letter-spacing: -0.035em;
+      }
+      .edu > div.right > div.inner:first-child > div:last-child {
+        flex: 2;
+      }
+      .edu > div.right > div.inner:last-child > div {
+        flex: 1;
+      }
+      .edu > div.right > div.inner:first-child > div:last-child p {
+        width: 100%;
+        height: 100%;
+        background: url(https://www.doosanrobotics.com/images/services/robot-training-img02.png)
+          center/cover;
+      }
+      .edu > div.right > div.inner:nth-child(2) > div:first-child p {
+        width: 100%;
+        height: 100%;
+        background: url(https://www.doosanrobotics.com/images/services/robot-training-img03.png)
+          center/cover;
+      }
+      .edu > div.right > div.inner:nth-child(2) > div:nth-child(2) p {
+        width: 100%;
+        height: 100%;
+        background: url(https://www.doosanrobotics.com/images/services/robot-training-img04.png)
+          center/cover;
+      }
+      .edu > div.right > div.inner:nth-child(2) > div:nth-child(3) > p {
+        margin: 0 auto;
+      }
+      .edu > div.right > div.inner:nth-child(2) > div:nth-child(3) {
+        width: 398px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        word-break: keep-all;
+      }
+      .edu
+        > div.right
+        > div.inner:nth-child(2)
+        > div:nth-child(3)
+        > p:nth-child(1) {
+        font: 32px PretendardS;
+        width: 322px;
+        margin: 0 auto;
+      }
+      .edu
+        > div.right
+        > div.inner:nth-child(2)
+        > div:nth-child(3)
+        > p:nth-child(1)
+        > span {
+        font: 32px PretendardS;
+        color: #005eb8;
+      }
+      .edu
+        > div.right
+        > div.inner:nth-child(2)
+        > div:nth-child(3)
+        > p:nth-child(2) {
+        font: 18px PretendardS;
+        color: #444444;
+        width: 322px;
+        line-height: 1.6;
+        letter-spacing: -0.035em;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="edu">
+      <div class="left">
+        <p></p>
+      </div>
+      <div class="right">
+        <div class="inner">
+          <div>
+            <p>현장에서 바로 적용 가능한<br /><span>최고의 실습 교육</span></p>
+            <p>
+              두산로보틱스에서 개발한 검증된 실무형 교육 커리큘럼으로, 실제
+              현장에서 바로 적용하며 시시각각 발생하는 다양한 문제를 해결할 수
+              있도록 설계되었습니다.
+            </p>
+          </div>
+          <div><p></p></div>
+        </div>
+        <div class="inner">
+          <div><p></p></div>
+          <div><p></p></div>
+          <div>
+            <p>초보자부터 전문가까지<br /><span>수준별 교육 제공</span></p>
+            <p>
+              초보자부터 현업 엔지니어 및 교수까지 수준별로 들을 수 있는 맞춤형
+              교육이 마련돼 있습니다.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
