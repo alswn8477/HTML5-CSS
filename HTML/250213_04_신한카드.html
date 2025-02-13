@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>신한카드</title>
+    <style>
+      @font-face {
+        font-family: SpoqaHanSansNeo;
+        src: url(./webfonts/SpoqaHanSansNeo-Medium-B95ezR9U.woff2)
+          format("woff");
+      }
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      div.wrap {
+        width: 1200px;
+        height: 535px;
+        margin: 100px auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+      }
+      ul.up {
+        margin: 0 auto;
+        list-style: none;
+        width: 1200px;
+        display: flex;
+        justify-content: space-between;
+      }
+      ul.down {
+        margin: 0 auto;
+        list-style: none;
+        width: 1200px;
+        display: flex;
+        justify-content: space-between;
+      }
+      ul.up li {
+        width: 384px;
+        height: 257px;
+        border: 1px solid #e5e5e5;
+        border-radius: 15px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        text-align: center;
+      }
+      ul li p:nth-child(2) {
+        width: 318px;
+        height: 33px;
+        font: 500 22px SpoqaHanSansNeo;
+        color: #011b6a;
+      }
+      ul.up li p:last-child {
+        width: 318px;
+        height: 54px;
+        font: 400 18px SpoqaHanSansNeo;
+        color: #111518;
+      }
+      ul li p img {
+        width: 56px;
+        height: 56px;
+      }
+      ul.down li {
+        width: 588px;
+        height: 230px;
+        border: 1px solid #e5e5e5;
+        border-radius: 15px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        text-align: center;
+      }
+      ul.down li p:last-child {
+        width: 522px;
+        height: 27px;
+        font: 400 18px SpoqaHanSansNeo;
+        color: #111518;
+        word-break: keep-all;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <ul class="up">
+        <li>
+          <p>
+            <img
+              src="https://databada.shinhancard.com/assets/icon_custom_01-D_uGWqzi.png"
+              alt="icon1"
+            />
+          </p>
+          <p>Macro Data</p>
+          <p>지역경제, 민간소비, 경제효과, 관광/상권 Data 등</p>
+        </li>
+        <li>
+          <p>
+            <img
+              src="	https://databada.shinhancard.com/assets/icon_custom_02-C3Fg9Baz.png"
+              alt="icon2"
+            />
+          </p>
+          <p>Consumer Data</p>
+          <p>Profile Data, Micro Segments, 고객유입/이탈 등</p>
+        </li>
+        <li>
+          <p>
+            <img
+              src="https://databada.shinhancard.com/assets/icon_custom_03-CBdTtg5L.png"
+              alt="icon3"
+            />
+          </p>
+          <p>Merchant & Seller Data</p>
+          <p>온/오프라인 사업자 Data</p>
+        </li>
+      </ul>
+      <ul class="down">
+        <li>
+          <p>
+            <img
+              src="https://databada.shinhancard.com/assets/icon_custom_04-DYHLchGC.png"
+              alt="icon4"
+            />
+          </p>
+          <p>E-Commerce Data</p>
+          <p>e커머스 카테고리/브랜드/상품 Data</p>
+        </li>
+        <li>
+          <p>
+            <img
+              src="https://databada.shinhancard.com/assets/icon_custom_05-DIu7oY9U.png"
+              alt="icon5"
+            />
+          </p>
+          <p>Market Data</p>
+          <p>Market Share, 고객유입/이탈, Brand Performance Data 등</p>
+        </li>
+      </ul>
+    </div>
+  </body>
+</html>
