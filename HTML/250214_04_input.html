@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>input_click_event</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        margin-top: -40px;
+      }
+      input {
+        display: none;
+      }
+      div {
+        position: relative;
+      }
+      div p {
+        position: absolute;
+        left: 0;
+        top: 0;
+      }
+      div p img {
+        opacity: 0;
+      }
+      div p img {
+        width: 500px;
+        height: 300px;
+      }
+      #photo1:checked ~ div p:nth-child(1) img {
+        opacity: 1;
+      }
+      #photo2:checked ~ div p:nth-child(2) img {
+        opacity: 1;
+      }
+      #photo3:checked ~ div p:nth-child(3) img {
+        opacity: 1;
+      }
+      #photo4:checked ~ div p:nth-child(4) img {
+        opacity: 1;
+      }
+      #photo5:checked ~ div p:nth-child(5) img {
+        opacity: 1;
+      }
+      #photo6:checked ~ div p:nth-child(6) img {
+        opacity: 1;
+      }
+      ul {
+        list-style: none;
+        width: 500px;
+        display: flex;
+        justify-content: space-between;
+        position: relative;
+        top: 340px;
+      }
+      ul li {
+        text-align: center;
+        height: 40px;
+        flex: 1;
+        background: #9cc;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      ul li:hover {
+        background: #669;
+        cursor: pointer;
+      }
+      ul li label:hover {
+        cursor: pointer;
+      }
+      #photo1:checked ~ ul li:first-child,
+      #photo2:checked ~ ul li:nth-child(2),
+      #photo3:checked ~ ul li:nth-child(3),
+      #photo4:checked ~ ul li:nth-child(4),
+      #photo5:checked ~ ul li:nth-child(5),
+      #photo6:checked ~ ul li:nth-child(6) {
+        background: #699;
+      }
+    </style>
+  </head>
+  <body>
+    <input type="radio" name="photo" id="photo1" checked />
+    <input type="radio" name="photo" id="photo2" />
+    <input type="radio" name="photo" id="photo3" />
+    <input type="radio" name="photo" id="photo4" />
+    <input type="radio" name="photo" id="photo5" />
+    <input type="radio" name="photo" id="photo6" />
+    <ul>
+      <li><label for="photo1">photo1</label></li>
+      <li><label for="photo2">photo2</label></li>
+      <li><label for="photo3">photo3</label></li>
+      <li><label for="photo4">photo4</label></li>
+      <li><label for="photo5">photo5</label></li>
+      <li><label for="photo6">photo6</label></li>
+    </ul>
+    <div>
+      <p><img src="./images/photo1.jpg" alt="" /></p>
+      <p><img src="./images/photo2.jpg" alt="" /></p>
+      <p><img src="./images/photo3.jpg" alt="" /></p>
+      <p><img src="./images/photo4.jpg" alt="" /></p>
+      <p><img src="./images/photo5.jpg" alt="" /></p>
+      <p><img src="./images/photo6.jpg" alt="" /></p>
+    </div>
+  </body>
+</html>

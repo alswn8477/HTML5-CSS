@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>웅진식품연습</title>
+    <style>
+      @font-face {
+        font-family: NanumGothic;
+        src: url(./webfonts/NanumGothic-Regular.woff) format("woff");
+      }
+      @font-face {
+        font-family: NanumGothicB;
+        src: url(./webfonts/NanumGothic-Bold.woff) format("woff");
+      }
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      div.wrap {
+        margin: 200px auto;
+        position: relative;
+      }
+      input {
+        display: none;
+      }
+      div.head {
+        width: 1480px;
+        height: 66px;
+        margin: 0 auto;
+        padding: 50px;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
+      div.head h1 {
+        font: bold 44px NanumGothic;
+        color: #2e2e2e;
+      }
+      div.head p {
+        font: 18px NanumGothic;
+        color: #777777;
+      }
+      div.menu {
+        width: 1430px;
+        height: 34.5px;
+        padding: 0 25px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-evenly;
+        position: absolute;
+        left: 180px;
+        top: 200px;
+      }
+      div.menu label {
+        text-align: center;
+        position: relative;
+        padding: 0 10px;
+        font: 15px NanumGothicB;
+      }
+      div.photo {
+        position: relative;
+      }
+      div.photo > div {
+        display: none;
+        width: 1480px;
+        height: 220px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-evenly;
+        position: absolute;
+        left: 150px;
+        top: 100px;
+      }
+      div.photo > div > a > img {
+        width: 218px;
+        height: 218px;
+        display: none;
+      }
+      div.photo > div::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 50%;
+        width: 20px;
+        height: 20px;
+        border-width: 0px 0px 1px 1px;
+        border-style: solid;
+        transform: rotate(45deg);
+      }
+      div.photo > div::after {
+        content: "";
+        position: absolute;
+        right: 0;
+        top: 50%;
+        width: 20px;
+        height: 20px;
+        border-width: 1px 1px 0px 0px;
+        border-style: solid;
+        transform: rotate(45deg);
+      }
+      #menu1:checked ~ div.photo > div:nth-child(1) > a > img,
+      #menu2:checked ~ div.photo > div:nth-child(2) > a > img,
+      #menu3:checked ~ div.photo > div:nth-child(3) > a > img,
+      #menu4:checked ~ div.photo > div:nth-child(4) > a > img,
+      #menu5:checked ~ div.photo > div:nth-child(5) > a > img,
+      #menu6:checked ~ div.photo > div:nth-child(6) > a > img,
+      #menu7:checked ~ div.photo > div:nth-child(7) > a > img,
+      #menu8:checked ~ div.photo > div:nth-child(8) > a > img {
+        display: block;
+      }
+      div.menu label:hover {
+        cursor: pointer;
+        color: #71b200;
+        font: bold 15px NanumGothicB;
+      }
+      div.photo:hover {
+        cursor: pointer;
+      }
+      div.menu label:hover:after {
+        content: "";
+        position: absolute;
+        left: 50%;
+        bottom: 0;
+        width: 100%;
+        height: 3px;
+        background: #71b200;
+        transform: translateX(-50%);
+        display: none;
+      }
+      div.menu label:hover:after {
+        content: "";
+        position: absolute;
+        left: 50%;
+        bottom: 0;
+        width: 100%;
+        height: 3px;
+        background: #71b200;
+        transform: translateX(-50%);
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <div class="head">
+        <h1>웅진 브랜드</h1>
+        <p>맛있고 건강한 웅진식품 대표 브랜드를 확인해보세요.</p>
+      </div>
+      <input type="radio" name="menu" id="menu1" checked />
+      <input type="radio" name="menu" id="menu2" />
+      <input type="radio" name="menu" id="menu3" />
+      <input type="radio" name="menu" id="menu4" />
+      <input type="radio" name="menu" id="menu5" />
+      <input type="radio" name="menu" id="menu6" />
+      <input type="radio" name="menu" id="menu7" />
+      <input type="radio" name="menu" id="menu8" />
+      <div class="photo">
+        <div class="photo주스">
+          <a>
+            <img
+              src="https://www.wjfood.co.kr/uploads/brand/988f4c9d-4968-4fff-ac87-bee8bf0ca79d.png"
+              alt="img1"
+            />
+          </a>
+          <a>
+            <img
+              src="https://www.wjfood.co.kr/uploads/brand/dad9b103-f115-42a0-b0a5-cfd25561c3be.png"
+              alt="img2"
+            />
+          </a>
+          <a>
+            <img
+              src="https://www.wjfood.co.kr/uploads/brand/ab012b6f-ce24-4d5b-ac20-76541c911f0f.png"
+              alt="img3"
+            />
+          </a>
+          <a>
+            <img
+              src="https://www.wjfood.co.kr/uploads/brand/a5699127-9db4-4568-9d60-305e0f20009c.png"
+              alt="img4"
+            />
+          </a>
+          <a>
+            <img
+              src="https://www.wjfood.co.kr/uploads/brand/dabae1f3-d620-43af-80ce-a2c66443b930.png"
+              alt="img5"
+            />
+          </a>
+        </div>
+        <div class="photo차">
+          <a>
+            <img
+              src="https://www.wjfood.co.kr/uploads/brand/25c76a16-a07f-46b9-b7a4-08d273053a5c.png"
+              alt="img1"
+            />
+          </a>
+          <a>
+            <img
+              src="https://www.wjfood.co.kr/uploads/brand/e30619e8-fe12-4aa9-ab8c-265f01436e49.png"
+              alt="img2"
+            />
+          </a>
+          <a>
+            <img
+              src="https://www.wjfood.co.kr/uploads/brand/eafaa3c6-4a4d-4221-b31a-c36e14bfd3f7.png"
+              alt="img3"
+            />
+          </a>
+          <a>
+            <img
+              src="https://www.wjfood.co.kr/uploads/brand/bf2c7c9a-cd93-4470-b1e3-b0f59e33e6a9.png"
+              alt="img4"
+            />
+          </a>
+          <a>
+            <img
+              src="https://www.wjfood.co.kr/uploads/brand/17e5ada2-b3ee-4573-928f-91a25c1920b5.png"
+              alt="img5"
+            />
+          </a>
+        </div>
+        <div class="photo곡물">
+          <a>
+            <img
+              src="https://www.wjfood.co.kr/uploads/brand/be03c11b-dbac-4ec9-984f-67a2f9772452.png"
+              alt="img1"
+            />
+          </a>
+        </div>
+        <div class="photo어린이">
+          <a>
+            <img
+              src="https://www.wjfood.co.kr/uploads/brand/fd015622-9e18-4d71-8d87-c446c80e01cc.png"
+              alt="img1"
+            />
+          </a>
+          <a>
+            <img
+              src="https://www.wjfood.co.kr/uploads/brand/e75b40f1-12ad-4642-acfd-823845df9283.png"
+              alt="img2"
+            />
+          </a>
+          <a>
+            <img
+              src="https://www.wjfood.co.kr/uploads/brand/9827e987-5dde-4fd2-9d89-c7a28a4c9618.png"
+              alt="img3"
+            />
+          </a>
+          <a>
+            <img
+              src="https://www.wjfood.co.kr/uploads/brand/35514abd-8acd-45ac-8660-3175bd56bdc1.png"
+              alt="img4"
+            />
+          </a>
+          <a>
+            <img
+              src="https://www.wjfood.co.kr/uploads/brand/d6fabdcd-a8b9-4ce9-b461-ec0882658233.png"
+              alt="img5"
+            />
+          </a>
+        </div>
+        <div class="photo생수/탄산/이온">
+          <a>
+            <img
+              src="https://www.wjfood.co.kr/uploads/brand/e12c803a-aa7a-45a0-bb5f-7cbc53621087.png"
+              alt="img1"
+            />
+          </a>
+          <a>
+            <img
+              src="https://www.wjfood.co.kr/uploads/brand/4b9a2a4c-a257-48a8-b4da-f63bbd4fe651.png"
+              alt="img2"
+            />
+          </a>
+          <a>
+            <img
+              src="https://www.wjfood.co.kr/uploads/brand/7507b95a-e5fc-474d-b254-8f76f0fffa7f.png"
+              alt="img3"
+            />
+          </a>
+          <a>
+            <img
+              src="https://www.wjfood.co.kr/uploads/brand/f4c90fe7-a1db-4c32-b804-677066facc82.png"
+              alt="img4"
+            />
+          </a>
+        </div>
+        <div class="photo홍삼/건강/드링크">
+          <a>
+            <img
+              src="https://www.wjfood.co.kr/uploads/brand/101db18c-d5b8-4c0b-b401-bdae05dec587.png"
+              alt="img1"
+            />
+          </a>
+          <a>
+            <img
+              src="https://www.wjfood.co.kr/uploads/brand/68a17608-0532-4e7a-89bf-5e002b5fdfe5.png"
+              alt="img2"
+            />
+          </a>
+          <a>
+            <img
+              src="https://www.wjfood.co.kr/uploads/brand/8b60c790-47e2-4e46-85ac-7fd95a192a7b.png"
+              alt="img3"
+            />
+          </a>
+          <a>
+            <img
+              src="https://www.wjfood.co.kr/uploads/brand/d1cec35e-a60c-4aef-962f-9f3a2ba497e5.png"
+              alt="img4"
+            />
+          </a>
+          <a>
+            <img
+              src="https://www.wjfood.co.kr/uploads/brand/7189de5b-92ca-4a6b-8b7e-080b43fae7ff.png"
+              alt="img5"
+            />
+          </a>
+        </div>
+        <div class="photo제과">
+          <a>
+            <img
+              src="https://www.wjfood.co.kr/uploads/brand/ebf54189-0e17-4376-89ce-842511533d2d.png"
+              alt="img1"
+            />
+          </a>
+        </div>
+        <div class="photo해외수입제품">
+          <a>
+            <img
+              src="https://www.wjfood.co.kr/uploads/brand/988f4c9d-4968-4fff-ac87-bee8bf0ca79d.png"
+              alt="img1"
+            />
+          </a>
+        </div>
+      </div>
+      <div class="menu">
+        <label for="menu1">주스</label>
+        <label for="menu2">차</label>
+        <label for="menu3">곡물</label>
+        <label for="menu4">어린이</label>
+        <label for="menu5">생수/탄산/이온</label>
+        <label for="menu6">홍삼/건강/드링크</label>
+        <label for="menu7">제과</label>
+        <label for="menu8">해외수입제품</label>
+      </div>
+    </div>
+  </body>
+</html>
