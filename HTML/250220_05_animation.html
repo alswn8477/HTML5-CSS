@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>animation</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      .wrap {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+      }
+      .con {
+        width: 500px;
+        height: 600px;
+        position: relative;
+      }
+      .con p:nth-child(1) {
+        animation-name: rotate;
+        animation-duration: 5s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+        animation-play-state: paused;
+      }
+      .con p:nth-child(2) {
+        position: absolute;
+        left: 0;
+        top: 5%;
+        z-index: -1;
+      }
+      .label label {
+        border: 1px solid;
+        border-radius: 50px;
+        padding: 10px 15px;
+      }
+      .label {
+        position: absolute;
+        top: 100%;
+      }
+      .label label:hover {
+        background: #000;
+        color: #fff;
+      }
+      #left:checked ~ .con > p:nth-child(1) {
+        animation-name: rotate;
+        animation-duration: 5s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+      }
+      #right:checked ~ .con p:nth-child(1) {
+        animation-name: rotate2;
+        animation-duration: 5s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+      }
+      @keyframes rotate {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(-360deg);
+        }
+      }
+      @keyframes rotate2 {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <input type="radio" name="control" id="left" />
+      <input type="radio" name="control" id="right" />
+      <input type="radio" name="control" id="off" />
+      <div class="label">
+        <label for="left">Turn left</label>
+        <label for="right">Turn right</label>
+        <label for="off">off</label>
+      </div>
+      <div class="con">
+        <p><img src="./images/propeller.png" alt="" /></p>
+        <p><img src="./images/pipe.png" alt="" /></p>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>animation</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      .wrap {
+        width: 500px;
+        height: 500px;
+        margin: 0 auto;
+        text-align: center;
+      }
+      p {
+        width: 0;
+        height: 0;
+        border: 20px solid #000;
+        border-right: none;
+        border-top-color: transparent;
+        border-bottom-color: transparent;
+        margin: 100px auto;
+      }
+      .btn label {
+        border: 1px solid;
+        padding: 20px 30px;
+        border-radius: 100px;
+      }
+      #start:checked ~ p {
+        animation: move 1s linear infinite alternate;
+      }
+      @keyframes move {
+        0% {
+          transform: translateX(0);
+        }
+        100% {
+          transform: translateX(30px);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <input type="radio" name="btn" id="start" />
+      <input type="radio" name="btn" id="stop" />
+      <p></p>
+      <div class="btn">
+        <label for="start">start</label>
+        <label for="stop">stop</label>
+      </div>
+    </div>
+  </body>
+</html>
