@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>신한카드databada</title>
+    <style>
+      @font-face {
+        font-family: OneShinhanL;
+        src: url(../webfonts/OneShinhanLight-lny5hhIL.woff2) format("woff2");
+      }
+      @font-face {
+        font-family: OneShinhanB;
+        src: url(../webfonts/OneShinhanBold-BRe4olLO.woff2) format("woff2");
+      }
+      @font-face {
+        font-family: OneShinhanM;
+        src: url(../webfonts/OneShinhanMedium-Bc1raYXK.woff2) format("woff2");
+      }
+      @font-face {
+        font-family: SpoqaHanSansNeo-R;
+        src: url(../webfonts/SpoqaHanSansNeo-Regular-BUsbL2_I.woff2)
+          format("woff2");
+      }
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+        width: 1897px;
+        height: 487px;
+        margin: 100px auto;
+        background: #f8f7fc;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 350px 0 350px;
+        box-sizing: border-box;
+      }
+      ul li {
+        width: 282px;
+        height: 359px;
+        background: #fff;
+        border: 1px solid #e5e5e5;
+        border-radius: 30px;
+        padding: 30px;
+        box-sizing: border-box;
+      }
+      ul li:hover {
+        border-color: #356cff;
+        background: #f1f4fb;
+        transform: translateY(-30px);
+        /* box-shadow: (5px 5px 5px 5px rgba(255, 255, 255, 0.5)); */
+        transition: 0.4s;
+        box-shadow: 0px 20px 15px 1px #13265914;
+        cursor: pointer;
+      }
+      ul li:hover .down > p:first-child img {
+        display: none;
+      }
+      ul li:nth-child(1):hover .down > p:first-child {
+        background-image: url(./images/img01_bg.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        width: 120px;
+        height: 120px;
+        animation: move 3s steps(91) infinite;
+      }
+      ul li:nth-child(2):hover .down > p:first-child {
+        background-image: url(./images/img02_bg.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        width: 120px;
+        height: 120px;
+        animation: move 3s steps(91) infinite;
+      }
+      ul li:nth-child(3):hover .down > p:first-child {
+        background-image: url(./images/img03_bg.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        width: 120px;
+        height: 120px;
+        animation: move 3s steps(91) infinite;
+      }
+      ul li:nth-child(4):hover .down > p:first-child {
+        background-image: url(./images/img04_bg.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        width: 120px;
+        height: 120px;
+        animation: move 3s steps(91) infinite;
+      }
+      @keyframes move {
+        0% {
+          background-position: 0 50%;
+        }
+        100% {
+          background-position: -10920px 50%;
+        }
+      }
+      ul li:hover .down > p:last-child {
+        background-color: #fff;
+      }
+      ul li .down {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+      }
+      .wrap ul li p {
+        /* padding: 0 0 50px 0; */
+      }
+      .wrap ul li > p:first-child {
+        position: relative;
+        font: 20px OneShinhanL;
+      }
+      .wrap ul li > p:first-child span {
+        font: 24px OneShinhanM;
+      }
+      .wrap ul li > p:first-child:after {
+        content: "";
+        position: absolute;
+        left: 90%;
+        top: 5%;
+        width: 10px;
+        height: 10px;
+        border-width: 1px 1px 0px 0px;
+        border-style: solid;
+        transform: rotate(45deg);
+      }
+      ul li .down > p:first-child {
+        padding: 30px 0 30px 0;
+      }
+      ul li .down > p:last-child {
+        border: 1px solid #fff;
+        border-radius: 100px;
+        background: #f1f4fb;
+        padding: 8px;
+        font: 18px SpoqaHanSansNeo-R;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <ul>
+        <li>
+          <p>
+            다양한<br />
+            <span>Data서비스</span>
+          </p>
+          <div class="down">
+            <p><img src="./images/img01.png" alt="" /></p>
+            <p>Data One-Stop Service</p>
+          </div>
+        </li>
+        <li>
+          <p>
+            혁신적인<br />
+            <span>솔루션서비스</span>
+          </p>
+          <div class="down">
+            <p><img src="./images/img02.png" alt="" /></p>
+            <p>상권분석, 시장 모니터링</p>
+          </div>
+        </li>
+        <li>
+          <p>
+            스마트한<br />
+            <span>광고서비스</span>
+          </p>
+          <div class="down">
+            <p><img src="./images/img03.png" alt="" /></p>
+            <p>최적의 고객 타겟팅</p>
+          </div>
+        </li>
+        <li>
+          <p>
+            탁월한<br />
+            <span>API서비스</span>
+          </p>
+          <div class="down">
+            <p><img src="./images/img04.png" alt="" /></p>
+            <p>Data 실시간 활용</p>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </body>
+</html>
