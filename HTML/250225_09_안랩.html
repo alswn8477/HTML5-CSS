@@ -6,102 +6,258 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>안랩</title>
     <style>
+      @font-face {
+        font-family: Pretendard;
+        src: url(./webfonts/Pretendard-Regular.woff) format("woff");
+      }
       * {
         margin: 0;
         padding: 0;
       }
+      ul {
+        list-style: none;
+      }
       body {
-        background: #ccc;
+        background: #111111;
       }
       .wrap {
         width: 1200px;
         height: 890px;
         margin: 50px auto;
       }
+      .top {
+        width: 1200px;
+        height: 151px;
+      }
+      .top > p:last-child {
+        width: 1200px;
+        height: 91px;
+        margin: 40px 0 0;
+        font: 32px Pretendard;
+        color: #fff;
+      }
+      .bottom {
+        width: 1200px;
+        height: 720px;
+        display: flex;
+        justify-content: space-between;
+      }
+      .bottom .left {
+        display: flex;
+        align-items: center;
+      }
+      .bottom .right {
+        margin: 50px 0 0 0;
+      }
+      .bottom .left ul li {
+        width: 472px;
+        height: 76px;
+        border-bottom: 1px solid #363636;
+        font: bold 20px Pretendard;
+        color: #989898;
+        line-height: 77px;
+      }
+      .bottom .left ul li:nth-child(1):hover,
+      .bottom .left ul li:nth-child(2):hover,
+      .bottom .left ul li:nth-child(3):hover,
+      .bottom .left ul li:nth-child(4):hover,
+      .bottom .left ul li:nth-child(5):hover,
+      .bottom .left ul li:nth-child(6):hover {
+        font: bold 24px Pretendard;
+        color: #2970ff;
+        line-height: 77px;
+        border-bottom: 2px solid #fff;
+        transition: 0.4s;
+      }
+      .bottom
+        .left
+        ul
+        li:nth-child(1):hover
+        .bottom
+        .right
+        .con
+        img
+        p:nth-child(1) {
+        display: block;
+      }
+      .bottom .right .con .txt p:nth-child(1) {
+        display: block;
+      }
+      .bottom .right .con .txt p {
+        width: 598px;
+        height: 102px;
+        margin: 60px 0 0;
+        display: none;
+        color: #fff;
+      }
+      .bottom .right .con .img p:nth-child(1) {
+        display: block;
+      }
+      .bottom .right .con .img p {
+        display: none;
+      }
+      .bottom .right a:nth-child(2) {
+        border: 1px solid #fff;
+        border-radius: 5px;
+        padding: 14px 24px 14px 30px;
+      }
+      .bottom .right a:nth-child(2) span:nth-child(1) {
+        font: bold 16px Pretendard;
+        color: #fff;
+      }
+      .bottom .right a:nth-child(2) span:nth-child(2) {
+        margin: 0 0 0 15px;
+      }
     </style>
   </head>
   <body>
     <div class="wrap">
-      <div class="left">
+      <div class="top">
         <p>
           <img
             src="https://www.ahnlab.com/_next/image?url=%2Fimage-proxy%3Furl%3Dhttps%253A%252F%252Fimage.ahnlab.com%252Fimg_upload%252Fassets%252Fimages%252Fko%252Fahn-plus.png&w=1920&q=75"
             alt="logo1"
           />
         </p>
-        <p>디지털 비즈니스 혁신을 위한 최적의 보안 플랫폼</p>
-        <ul>
-          <li>
-            AhnLab CONNECT PLUS<span
-              ><img
-                src="https://image.ahnlab.com/img_upload/assets/images/ko/ahn-plus-connect-after.png"
-                alt="plus"
-              />
-            </span>
-          </li>
-          <li>
-            AhnLab CLOUD PLUS<span
-              ><img
-                src="https://image.ahnlab.com/img_upload/assets/images/ko/ahn-plus-cloud-after.png
-              "
-                alt="plus"
-              />
-            </span>
-          </li>
-          <li>
-            AhnLab ENDPOINT PLUS<span
-              ><img
-                src="https://image.ahnlab.com/img_upload/assets/images/ko/ahn-plus-endpoint-after.png"
-                alt="plus"
-              />
-            </span>
-          </li>
-          <li>
-            AhnLab NETWORK PLUS<span
-              ><img
-                src="https://image.ahnlab.com/img_upload/assets/images/ko/ahn-plus-network-after.png
-                "
-                alt="plus"
-              />
-            </span>
-          </li>
-          <li>
-            AhnLab SERVICE PLUS<span
-              ><img
-                src="https://image.ahnlab.com/img_upload/assets/images/ko/ahn-plus-service-after.png"
-                alt="plus"
-              />
-            </span>
-          </li>
-          <li>
-            AhnLab CPS PLUS<span
-              ><img
-                src="	https://image.ahnlab.com/img_upload/assets/images/ko/ahn-plus-cps-after.png
-                "
-                alt="plus"
-              />
-            </span>
-          </li>
-        </ul>
+        <p>
+          디지털 비즈니스 혁신을 위한<br />
+          최적의 보안 플랫폼
+        </p>
       </div>
-      <div class="right">
-        <p>
-          <img
-            src="https://www.ahnlab.com/_next/image?url=%2Fimage-proxy%3Furl%3Dhttps%253A%252F%252Fimage.ahnlab.com%252Fimg_upload%252Fmain%252F2312233132320382.png&w=1920&q=75"
-            alt="logo2"
-          />
-        </p>
-        <p>
-          AhnLab CPS PLUS는 제조, 정유, 운송 등 다양한 산업의 OT 엔드포인트와
-          네트워크, 그리고 OT와 연결된 IT 환경까지 폭 넓게 보호하는 통합 CPS
-          보안 플랫폼입니다.
-        </p>
-        <a href=""
-          >View More<span
-            ><p>
-              <img src="./images/viewmore.png" alt="viewmorelogo" />
-            </p> </span
-        ></a>
+      <div class="bottom">
+        <div class="left">
+          <ul>
+            <li>
+              AhnLab CONNECT PLUS<span
+                ><img
+                  src="https://image.ahnlab.com/img_upload/assets/images/ko/ahn-plus-connect-after.png"
+                  alt="plus"
+                />
+              </span>
+            </li>
+            <li>
+              AhnLab CLOUD PLUS<span
+                ><img
+                  src="https://image.ahnlab.com/img_upload/assets/images/ko/ahn-plus-cloud-after.png
+                "
+                  alt="plus"
+                />
+              </span>
+            </li>
+            <li>
+              AhnLab ENDPOINT PLUS<span
+                ><img
+                  src="https://image.ahnlab.com/img_upload/assets/images/ko/ahn-plus-endpoint-after.png"
+                  alt="plus"
+                />
+              </span>
+            </li>
+            <li>
+              AhnLab NETWORK PLUS<span
+                ><img
+                  src="https://image.ahnlab.com/img_upload/assets/images/ko/ahn-plus-network-after.png
+                  "
+                  alt="plus"
+                />
+              </span>
+            </li>
+            <li>
+              AhnLab SERVICE PLUS<span
+                ><img
+                  src="https://image.ahnlab.com/img_upload/assets/images/ko/ahn-plus-service-after.png"
+                  alt="plus"
+                />
+              </span>
+            </li>
+            <li>
+              AhnLab CPS PLUS<span
+                ><img
+                  src="	https://image.ahnlab.com/img_upload/assets/images/ko/ahn-plus-cps-after.png
+                  "
+                  alt="plus"
+                />
+              </span>
+            </li>
+          </ul>
+        </div>
+        <div class="right">
+          <div class="con">
+            <div class="img">
+              <p>
+                <img
+                  src="https://www.ahnlab.com/_next/image?url=%2Fimage-proxy%3Furl%3Dhttps%253A%252F%252Fimage.ahnlab.com%252Fimg_upload%252Fmain%252F2312233132320382.png&w=1920&q=75"
+                  alt="logo2"
+                />
+              </p>
+              <p>
+                <img
+                  src="https://www.ahnlab.com/_next/image?url=%2Fimage-proxy%3Furl%3Dhttps%253A%252F%252Fimage.ahnlab.com%252Fimg_upload%252Fmain%252F2312233132376103.png&w=1920&q=75"
+                  alt="logo2"
+                />
+              </p>
+              <p>
+                <img
+                  src="https://www.ahnlab.com/_next/image?url=%2Fimage-proxy%3Furl%3Dhttps%253A%252F%252Fimage.ahnlab.com%252Fimg_upload%252Fmain%252F2312233132477178.png&w=1920&q=75"
+                  alt="logo2"
+                />
+              </p>
+              <p>
+                <img
+                  src="https://www.ahnlab.com/_next/image?url=%2Fimage-proxy%3Furl%3Dhttps%253A%252F%252Fimage.ahnlab.com%252Fimg_upload%252Fmain%252F2312233132654111.png&w=1920&q=75"
+                  alt="logo2"
+                />
+              </p>
+              <p>
+                <img
+                  src="https://www.ahnlab.com/_next/image?url=%2Fimage-proxy%3Furl%3Dhttps%253A%252F%252Fimage.ahnlab.com%252Fimg_upload%252Fmain%252F2312233132733452.png&w=1920&q=75"
+                  alt="logo2"
+                />
+              </p>
+              <p>
+                <img
+                  src="https://www.ahnlab.com/_next/image?url=%2Fimage-proxy%3Furl%3Dhttps%253A%252F%252Fimage.ahnlab.com%252Fimg_upload%252Fmain%252F2407314037297029.png&w=1920&q=75"
+                  alt="logo2"
+                />
+              </p>
+            </div>
+            <div class="txt">
+              <p>
+                AhnLab CONNECT PLUS는 XDR, SOAR, TI 플랫폼 등으로 구성되어
+                연계와 연동을 기반으로 통합 보안의 정점에 선 차세대 보안
+                플랫폼입니다.
+              </p>
+              <p>
+                AhnLab CLOUD PLUS는 클라우드 워크로드 보안 플랫폼(CWPP)부터
+                클라우드 최적화 방화벽, IPS 등 최상의 기술력을 갖춘 솔루션을
+                통해 고객의 디지털 혁신 기반을 마련합니다.
+              </p>
+              <p>
+                AhnLab ENDPOINT PLUS는 PC, 서버, 모바일, OT 기기 등 여러
+                엔드포인트 자산에 대한 위협을 체계적으로 방어하는 엔드포인트
+                보안 플랫폼입니다.
+              </p>
+              <p>
+                AhnLab NETWORK PLUS는 방화벽, IPS, 디도스 대응, 샌드박스 등 여러
+                솔루션들이 유기적으로 연동하여 최상의 보안 역량을 제공하는
+                네트워크 보안 플랫폼입니다.
+              </p>
+              <p>
+                안랩의 보안 전문가들이 수십 년간 축적해온 경험과 노하우를
+                바탕으로 최상의 보안 서비스를 제공해 안전한 비즈니스 환경을
+                조성합니다.
+              </p>
+              <p>
+                AhnLab CPS PLUS는 제조, 정유, 운송 등 다양한 산업의 OT
+                엔드포인트와 네트워크, 그리고 OT와 연결된 IT 환경까지 폭 넓게
+                보호하는 통합 CPS 보안 플랫폼입니다.
+              </p>
+            </div>
+          </div>
+          <a href="#">
+            <span>View More</span>
+            <span><img src="./images/viewmore.png" alt="viewmorelogo" /></span>
+          </a>
+        </div>
       </div>
     </div>
   </body>
