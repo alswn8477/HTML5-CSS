@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>웰리미mixblend</title>
+    <style>
+      .wrap {
+        position: relative;
+      }
+      p {
+        position: absolute;
+      }
+      p:nth-child(2) {
+        left: 110px;
+        mix-blend-mode: multiply;
+      }
+      p:nth-child(3) {
+        left: 220px;
+        mix-blend-mode: multiply;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <p>
+        <img
+          src="https://hg.mirae-n.com/front/images/main_new/logo01.svg"
+          alt="logo01"
+        />
+      </p>
+      <p>
+        <img
+          src="https://hg.mirae-n.com/front/images/main_new/logo02.svg"
+          alt="logo02"
+        />
+      </p>
+      <p>
+        <img
+          src="https://hg.mirae-n.com/front/images/main_new/logo03.svg"
+          alt="logo03"
+        />
+      </p>
+    </div>
+  </body>
+</html>
