@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>도원</title>
+    <title>도원정답</title>
     <style>
       * {
         margin: 0;
@@ -16,6 +16,7 @@
       .more {
         margin: 100px;
         position: relative;
+        cursor: pointer;
       }
       .more p {
         position: absolute;
@@ -23,6 +24,14 @@
       .more p:first-child {
         color: #fff;
         line-height: 50px;
+        width: 0;
+        overflow: hidden;
+        white-space: nowrap;
+        transition: 0.8s;
+      }
+      .more:hover p:first-child {
+        width: 100%;
+        transition: 1s;
       }
       .more p:last-child {
         width: 50px;
@@ -33,6 +42,14 @@
         line-height: 50px;
         font-weight: bold;
         font-size: 20px;
+        left: 0;
+        transition: 1s;
+      }
+      .more:hover p:last-child {
+        left: 100px;
+        transition: 0.5s;
+        background: #ae874e;
+        color: #fff;
       }
     </style>
   </head>
