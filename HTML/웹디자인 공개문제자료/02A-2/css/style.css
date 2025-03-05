@@ -1,0 +1,122 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: #333;
+}
+body {
+  font-family: Arial, 돋움, Dotum, sans-serif;
+}
+.wrap {
+  width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(6, 200px);
+  grid-template-rows: 100px 300px 200px 100px;
+  grid-template-areas:
+    "logo menu menu menu menu menu"
+    "slide slide slide slide slide slide"
+    "c1 c1 c2 c2 c3 c3"
+    "ftlogo copy copy copy copy fsite";
+}
+.wrap .logo {
+  grid-area: logo;
+}
+.wrap .menu {
+  grid-area: menu;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  position: relative;
+}
+.wrap .menu > ul {
+  width: 600px;
+  height: 50px;
+  display: flex;
+}
+.wrap .menu > ul > li {
+  width: 25%;
+  height: 100%;
+  position: relative;
+}
+.wrap .menu > ul > li:hover > a {
+  background: #000;
+  color: #fff;
+}
+.wrap .menu > ul > li > a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  line-height: 50px;
+  text-align: center;
+  border: 1px solid #333;
+  border-right: none;
+  box-sizing: border-box;
+}
+.wrap .menu > ul > li:nth-child(4) > a {
+  border-right: 1px solid #333;
+}
+.wrap .menu > ul > li > .sub {
+  position: absolute;
+  left: 0;
+  top: 50px;
+  width: 100%;
+  text-align: center;
+  height: 0;
+  overflow: hidden;
+  background: #000;
+  transition: 1s;
+}
+.wrap .menu > ul:hover > li > .sub {
+  height: 150px;
+}
+.wrap .menu > ul > li > .sub > li {
+}
+.wrap .menu > ul > li > .sub > li a:hover {
+  background: #fff;
+  color: #333;
+}
+.wrap .menu > ul > li > .sub > li a {
+  display: block;
+  color: #fff;
+}
+.wrap .bg {
+  position: absolute;
+  left: 0;
+  top: 75px;
+  background: #000;
+  width: 100%;
+  height: 0;
+  transition: 1s;
+  z-index: -1;
+}
+.menu > ul:hover ~ .bg {
+  height: 150px;
+}
+.wrap .slide {
+  grid-area: slide;
+}
+.wrap .c1 {
+  grid-area: c1;
+}
+.wrap .c2 {
+  grid-area: c2;
+}
+.wrap .c3 {
+  grid-area: c3;
+}
+.wrap .ftlogo {
+  grid-area: ftlogo;
+}
+.wrap .copy {
+  grid-area: copy;
+}
+.wrap .fsite {
+  grid-area: fsite;
+}
