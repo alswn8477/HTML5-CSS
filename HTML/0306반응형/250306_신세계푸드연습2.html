@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>신세계푸드</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      .wrap {
+        width: 100%;
+        max-width: 940px;
+        margin: 50px auto;
+      }
+      .wrap ul {
+        margin: 0 auto;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 40px;
+      }
+      .wrap ul li {
+        position: relative;
+        padding-top: 50%;
+        flex: 1 0 40%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 70px 0 70px 0;
+      }
+      .wrap ul li:nth-child(1) {
+        background: url(https://www.shinsegaefood.com/images/background/bg_vs_value_1.jpg)
+          center/cover;
+      }
+      .wrap ul li:nth-child(2) {
+        background: url(https://www.shinsegaefood.com/images/background/bg_vs_value_2.jpg)
+          center/cover;
+        transform: translateY(50px);
+      }
+      .wrap ul li:nth-child(3) {
+        background: url(https://www.shinsegaefood.com/images/background/bg_vs_value_3.jpg)
+          center/cover;
+      }
+      .wrap ul li:nth-child(4) {
+        background: url(https://www.shinsegaefood.com/images/background/bg_vs_value_4.jpg)
+          center/cover;
+        transform: translateY(50px);
+      }
+      .wrap ul li .txt {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%);
+        width: 100%;
+        text-align: center;
+        background: rgba(0, 0, 0, 0.3);
+        padding: 15px 0;
+        box-sizing: border-box;
+      }
+      .wrap ul li .txt p:nth-child(1) {
+        font: bold 32px pretendard;
+        color: #fff;
+        padding: 20px;
+      }
+      .wrap ul li .txt p:nth-child(2) {
+        font: 20px pretendard;
+        color: #fff;
+      }
+      /* @media screen and (max-width: 960px) {
+        .wrap ul li {
+          overflow: hidden;
+        }
+      } */
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <ul>
+        <li>
+          <div class="txt">
+            <p>Taste & Quality</p>
+            <p>
+              최선의 '품질'을 통해<br />
+              최상의 '맛'을 구현합니다
+            </p>
+          </div>
+        </li>
+        <li>
+          <div class="txt">
+            <p>Convenience</p>
+            <p>
+              보관/조리/폐기 전반에 걸친 고객 중심<br />
+              마인드로<br />
+              최적화된 편의를 제공합니다.
+            </p>
+          </div>
+        </li>
+        <li>
+          <div class="txt">
+            <p>Health & Wellness</p>
+            <p>
+              고객의 건강과 라이프스타일을 지원하는<br />
+              맞춤형 푸드 옵션을 제공합니다.
+            </p>
+          </div>
+        </li>
+        <li>
+          <div class="txt">
+            <p>Value</p>
+            <p>
+              지구와 사회에 긍정적인 영향을 주는<br />
+              지속 가능하고 책임감 있는 사업을 이어갑니다.
+            </p>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </body>
+</html>
