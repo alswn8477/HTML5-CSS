@@ -4,11 +4,10 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>svg</title>
-    <!-- clipPathUnits="objectBoundingBox" 로 svg를 다시 만들지 말고 맞추자! -->
-    <!-- 일러스트 가로세로 1픽셀 육각형의 쉐입을 shift로 그림 (stroke는 none)
-    속성창에 위드헤이트1 로테이트90도 이펙트메뉴 스타일라이즈 라운드코너스0
-    1px 파일 save a copy 파일형식 선택 후 미리보기 more option Decimal Places 3으로  -->
+    <title>Document</title>
+    <!-- 일러스트 가로1픽셀 세로 1픽셀 육각형의 쉐입을 shift로 그림(stroke는 none)
+    속성창에 width=1 height=1 rotate 90도 Effect메뉴의 stylize의 Round corners 0.1px 파일 save a copy svg파일형식 선택 후 저장 svg code...옆에 아이콘 --미리보기 more options Decimal Places=3 -->
+
     <style>
       * {
         margin: 0;
@@ -16,22 +15,22 @@
       }
       section {
         position: relative;
-        width: 520px;
-        height: 500px;
+        width: 300px;
+        height: 300px;
       }
       section p {
         clip-path: url(#path);
         width: 100%;
         height: 100%;
         background-size: cover;
-        animation: ani 2s infinite linear;
+        animation: bg 2s infinite alternate;
       }
-      @keyframes ani {
+      @keyframes bg {
         0% {
-          background-image: url(https://www.otoki.com/images/common/clip2_1.jpg);
+          background-image: url(./images/photo1.jpg);
         }
         100% {
-          background-image: url(https://www.otoki.com/images/common/clip2.jpg);
+          background-image: url(./images/photo2.jpg);
         }
       }
       section p img {
@@ -50,6 +49,7 @@
   </head>
   <body>
     <section>
+      <!-- <p><img src="./images/photo1.jpg" alt="photo" /></p> -->
       <p></p>
       <svg>
         <clipPath id="path" clipPathUnits="objectBoundingBox">
