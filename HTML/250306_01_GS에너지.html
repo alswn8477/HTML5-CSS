@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GS에너지</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      a {
+        text-decoration: none;
+      }
+      .wrap {
+        width: 1560px;
+        margin: 100px auto;
+      }
+      .wrap ul li {
+      }
+      .wrap ul li a {
+        display: block;
+        width: 1520px;
+        height: 121px;
+        padding: 40px 120px 40px 20px;
+        box-sizing: border-box;
+        font: bold 32px pretendard;
+        color: #000;
+        position: relative;
+        border-bottom: 1px solid #ebebeb;
+      }
+      .wrap ul li a:checked {
+        animation: ani;
+      }
+      @keyframes ani {
+        0% {
+          content-visibility: ;
+        }
+        100% {
+        }
+      }
+      .wrap ul li a::after {
+        content: "";
+        position: absolute;
+        left: 90%;
+        top: 50%;
+        width: 25px;
+        height: 2px;
+        background: #000;
+      }
+      .wrap ul li a::before {
+        content: "";
+        position: absolute;
+        left: 1380px;
+        top: 41%;
+        width: 2px;
+        height: 25px;
+        background: #000;
+      }
+      .wrap ul li #con {
+        padding: 60px 0;
+        height: 0;
+      }
+      .wrap ul li #con p {
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <ul>
+        <li>
+          <a href="#">GS파워</a>
+          <div id="con">
+            <p>
+              <img
+                src="https://www.gsenergy.co.kr/pub/images/img_collective_a01.jpg"
+                alt="image1"
+              />
+            </p>
+            <p>
+              GS파워는 한국전력공사의 발전부문 매각과 한국지역난방공사 공기업
+              민영화 작업의 일환으로 정부가 시행한 안양/부천 열병합 발전 및<br />지역난방설비에
+              대한 공개경쟁입찰에서 인수자로 최종 결정되어, 2000년 6월 22일
+              자산양수도 계약을 체결하고, 그 해 9 월 1일 본격적인 운영을
+              시작하였습니다.
+            </p>
+          </div>
+        </li>
+        <li>
+          <a href="#">인천종합에너지</a>
+          <div id="con">
+            <p>
+              <img
+                src="https://www.gsenergy.co.kr/pub/images/img_collective_b01.jpg"
+                alt="image2"
+              />
+            </p>
+            <p>
+              인천종합에너지는 2004년 6월, 송도국제도시를 중심으로 인천지역의
+              원활한 지역 냉 난방 공급과<br />국가에너지절약에 기여하기 위해
+              설립되었습니다. 당사는 편리하고 안전하게 지역 냉 난방을 공급하고
+              열공급원가를 절감하기 위해 지속적으로 노력해오고 있습니다.
+            </p>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </body>
+</html>
