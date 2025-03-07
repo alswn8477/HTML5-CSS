@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>신세계식품</title>
+    <style>
+      <link href="https://hangeul.pstatic.net/hangeul_static/css/nanum-barun-gothic.css" rel="stylesheet">
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      .wrap {
+        width: 100%;
+        max-width: 1720px;
+        margin: 50px auto;
+        text-align: center;
+      }
+      .wrap h2 {
+        width: 100%;
+        max-width: 1700px;
+        margin: 0 auto;
+        font: bold 40px NanumBarunGothic;
+        position: relative;
+      }
+      .wrap h2::after {
+        content: "";
+        position: absolute;
+        left: 50%;
+        top: 150%;
+        transform: translate(-50%, -50%);
+        width: 121px;
+        height: 4px;
+        background: #000;
+      }
+      .wrap .con p:nth-child(1) {
+        font: 22px NanumBarunGothic;
+        color: #444;
+        line-height: 180%;
+        padding-top: 50px;
+      }
+      .wrap .con ul {
+        max-width: 1280px;
+        margin: 50px auto;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 40px;
+      }
+      .wrap .con ul li {
+        max-width: 620px;
+        max-height: 400px;
+        border-radius: 20px;
+        overflow: hidden;
+        flex: 0 0 45%;
+        object-fit: cover;
+      }
+      .wrap .con ul li img {
+        width: 100%;
+      }
+      @media screen and (max-width: 960px) {
+        .wrap h2 {
+          font: bold 20px NanumBarunGothic;
+          br {
+            display: none !important;
+          }
+        }
+        .wrap .con p:nth-child(1) {
+          font: 15px NanumBarunGothic;
+          br {
+            display: none !important;
+          }
+        }
+        .wrap .con ul {
+          margin: 40px 0 0;
+          display: flex;
+          justify-content: center;
+          gap: 10px;
+        }
+        .wrap .con ul li {
+          flex: 0 0 45%;
+        }
+        .wrap .con ul li img {
+          max-width: 452px;
+          overflow: hidden;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <h2>
+        생활 속에서 함께하는<br />
+        식품 제조 선도 기업
+      </h2>
+      <div class="con">
+        <p>
+          신세계푸드는 글로벌 수준의 R&D센터와 식품 제조 인프라를 갖추고
+          있습니다.<br />
+          프리미엄 가정 간편식, 베이커리, Fresh Food, 대안식품 등을<br />
+          직접 연구개발 및 생산하며 식품시장을 선도해 가고 있습니다.
+        </p>
+        <ul>
+          <li>
+            <img
+              src="./images/business_item_hotelCollection (1).jpg"
+              alt="img1"
+            />
+          </li>
+          <li>
+            <img src="./images/business_item_vecchiaEnuovo.jpg" alt="img2" />
+          </li>
+          <li>
+            <img src="./images/business_item_olbaan.jpg" alt="img3" />
+          </li>
+          <li>
+            <img src="./images/business_item_ywe.jpg" alt="img4" />
+          </li>
+          <li>
+            <img src="./images/business_item_betterMeat.jpg" alt="img5" />
+          </li>
+          <li>
+            <img src="./images/business_item_brand.jpg" alt="img6" />
+          </li>
+          <li>
+            <img src="./images/business_item_recette.jpg" alt="img7" />
+          </li>
+          <li>
+            <img src="" alt="" />
+          </li>
+        </ul>
+      </div>
+    </div>
+  </body>
+</html>
