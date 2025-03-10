@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>삼성중공업컬럼드롭</title>
+    <style>
+          * {
+            margin: 0;
+            padding: 0;
+          }
+          ul {
+            list-style: none;
+          }
+          a {
+            text-decoration: none;
+          }
+          #wrap {
+            width: 100%;
+            max-width: 1720px;
+            margin: 0 auto;
+            display: flex;
+            flex-wrap: wrap;
+          }
+          .wrap ul {
+            margin: 100px auto;
+            display: flex;
+            flex-wrap: wrap;
+          }
+          .wrap ul li {
+            flex: 1 1 20%;
+            padding: 50px;
+            position: relative;
+          }
+          .wrap ul li::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 15%;
+            width: 1px;
+            height: 85%;
+            background: #ddd;
+          }
+          .wrap ul li .con {
+            display: flex;
+            justify-content: space-between;
+          }
+          .wrap ul li .con .txt {
+            flex-basis: 75%;
+            word-break: keep-all;
+          }
+          .wrap ul li .con .txt h4 {
+            font: bold 30px pretendard;
+            color: #111;
+          }
+          .wrap ul li .con .txt p {
+            font: 20px pretendard;
+            color: #666;
+            padding: 20px 0 50px 0;
+          }
+          .wrap ul li a {
+            font: bold 18px pretendard;
+            color: #111;
+            border-bottom: 3px solid #111;
+            padding: 10px;
+          }
+          @media screen and (max-width: 1440px) {
+            .wrap ul li {
+            padding: 30px;
+          }
+          @media screen and (max-width: 1280px) {
+            .wrap ul li:nth-child(1),
+            .wrap ul li:nth-child(2) {
+            flex: 1 1 40%;
+          }
+          .wrap ul li:nth-child(3) {
+            flex-basis: 100%;
+          }
+          .wrap ul li:nth-child(1)::before,
+          .wrap ul li:nth-child(2)::before{
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 100%;
+            width: 100%;
+            height: 1px;
+            background: #ddd;
+          }
+          .wrap ul li .con .txt {
+            flex-basis: 90%;
+        }
+      }
+      @media screen and (max-width: 840px) {
+        .wrap ul li .con .txt h4 {
+            font: bold 24px pretendard;
+          }
+          .wrap ul li .con .txt p {
+            font: 14px pretendard;
+            color: #666;
+          }
+          .wrap ul li {
+            padding: 16px;
+          }
+      }
+          @media screen and (max-width: 640px) {
+            .wrap ul li:nth-child(1),
+            .wrap ul li:nth-child(2),
+            .wrap ul li:nth-child(3) {
+            flex-basis: 100%;}
+            .wrap ul li .con .txt h4 {
+            font: bold 24px pretendard;
+          }
+          .wrap ul li .con .txt p {
+            font: 14px pretendard;
+            color: #666;
+          }
+          .wrap ul li {
+            padding: 16px;
+          }
+          .wrap ul li a {
+            font: bold 14px pretendard;
+            color: #111;
+            border-bottom: 3px solid #111;
+            padding: 10px;
+          }
+          .wrap ul li .con .txt {
+            flex-basis: 60%;
+        }
+          }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <ul>
+        <li>
+          <div class="con">
+            <div class="txt">
+              <h4>오픈소싱</h4>
+              <p>
+                내부 심의를 통해 선정된 업체는 당사의 아웃소싱 데이터베이스로
+                관리합니다.
+              </p>
+            </div>
+            <p>
+              <img
+                src="	https://www.samsungshi.com/images/main/icon_source.png"
+                alt="img"
+              />
+            </p>
+          </div>
+          <a href="#">더보기</a>
+        </li>
+        <li>
+          <div class="con">
+            <div class="txt">
+              <h4>방문신청</h4>
+              <p>
+                협력업체 지원신청, 출입 예약 시스템으로 편리한 방문신청이
+                가능합니다.
+              </p>
+            </div>
+            <p>
+              <img
+                src="https://www.samsungshi.com/images/main/icon_visit.png"
+                alt="img"
+              />
+            </p>
+          </div>
+          <a href="#">더보기</a>
+        </li>
+        <li>
+          <div class="con">
+            <div class="txt">
+              <h4>윤리경영/제보</h4>
+              <p>
+                임직원의 불공정한 업무처리 및 비리에 대한 제보를 받으며, 비공개
+                방식으로 처리됩니다.
+              </p>
+            </div>
+            <p>
+              <img
+                src="	https://www.samsungshi.com/images/main/icon_suggest.png"
+                alt="img"
+              />
+            </p>
+          </div>
+          <a href="#">더보기</a>
+        </li>
+      </ul>
+    </div>
+  </body>
+</html>
