@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      a {
+        text-decoration: none;
+      }
+      .wrap {
+        width: 95%;
+        max-width: 940px;
+        margin: 0 auto;
+      }
+      .wrap > p {
+        text-align: center;
+        font: bold 25px NanumBarunGothic;
+        color: #444;
+        padding: 50px 0 0;
+      }
+      .wrap ul {
+        width: 100%;
+        max-width: 940px;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 5%;
+      }
+      .wrap ul li {
+        width: calc(95% / 2);
+        max-width: 453px;
+        flex: 0 0 45%;
+      }
+      .wrap ul li p img {
+        max-width: 453px;
+        padding: 40px 0 0;
+      }
+      .wrap ul li .txt {
+        margin: 35px 0 0;
+        padding: 0 0 0 20px;
+        position: relative;
+      }
+      .wrap ul li:nth-child(1) .txt::after,
+      .wrap ul li:nth-child(3) .txt::after
+       {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 3px;
+        height: 125px;
+        background: #cbcbcb;
+      }
+      .wrap ul li:nth-child(2) .txt::after,
+      .wrap ul li:nth-child(4) .txt::after
+       {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 3px;
+        height: 83px;
+        background: #cbcbcb;
+      }
+      .wrap ul li .txt a {
+        border: 2px solid #fff;
+        background: #aeaeae;
+        padding: 0 12px;
+        border-radius: 5px;
+        font: bold 15px NanumBarunGothic;
+        color: #fff;
+      }
+      .wrap ul li .txt p:nth-child(1) {
+        font: bold 20px NanumBarunGothic;
+        color: #444;
+        padding: 0 0 5px;
+      }
+      .wrap ul li .txt p:nth-child(2) {
+        font: 15px NanumBarunGothic;
+        color: #444;
+        padding: 10px 0;
+      }
+      @media screen and (max-width: 960px) {
+        .wrap ul {
+          width: 100%;
+          max-width: 925px;
+          display: flex;
+          justify-content: center;
+          flex-wrap: wrap;
+          gap: 5%;
+        }
+        .wrap ul li {
+          width: calc(95% / 2);
+          max-width: 445px;
+          flex: 0 0 45%;
+        }
+        .wrap ul li p img {
+          width: 100%;
+          max-width: 445px;
+        }
+        .wrap ul li .txt p:nth-child(2) br {
+          display: none;
+        }
+      @media screen and (max-width: 640px) {
+        .wrap ul {
+          width: 100%;
+          max-width: 925px;
+          display: flex;
+          justify-content: center;
+          flex-wrap: wrap;
+          gap: 5%;
+        }
+        .wrap ul li {
+          width: calc(95% / 2);
+          max-width: 607px;
+          min-width: 459px;
+          flex: 0 0 45%;
+        }
+        .wrap ul li p img {
+          width: 100%;
+          max-width: 607px;
+          min-width: 459px;
+        }
+        .wrap ul li .txt p:nth-child(2) br {
+          display: none;
+        }
+        .wrap ul li .txt p:nth-child(1) {
+        font: bold 14px NanumBarunGothic;
+        color: #444;
+        padding: 0 0 5px;
+      }
+      .wrap ul li .txt p:nth-child(2) {
+        font: 14px NanumBarunGothic;
+        color: #444;
+        padding: 10px 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <p>친환경 활동 실천</p>
+      <ul>
+        <li>
+          <p>
+            <img
+              src="https://www.shinsegaefood.com/images/background/bg_evf_img_01.png"
+              alt="img1"
+            />
+          </p>
+          <div class="txt">
+            <p>음성공장 태양열발전</p>
+            <p>
+              음성공장 상부 유휴부지를 활용하여 신재생에너지를 생산하여<br />
+              가스(LNG)를 대체하여 사용하고 있습니다.
+            </p>
+            <a href="#">태양열에너지 사용현황</a>
+          </div>
+        </li>
+        <li>
+          <p>
+            <img
+              src="	https://www.shinsegaefood.com/images/background/bg_evf_img_02.png"
+              alt="img2"
+            />
+          </p>
+          <div class="txt">
+            <p>친환경패키징 확대</p>
+            <p>
+              식품제조 시 사용되는 용기를 탄소중립형 포장재,<br />
+              대체 플라스틱 적용을 확대하고 있습니다.
+            </p>
+          </div>
+        </li>
+        <li>
+          <p>
+            <img
+              src="https://www.shinsegaefood.com/images/background/bg_evf_img_03.png"
+              alt="img3"
+            />
+          </p>
+          <div class="txt">
+            <p>대안육제품 개발</p>
+            <p>
+              제품 제조 시 원료육 대신 식물성 원료를 사용하여 가축사육 시<br />
+              발생되는 메탄가스 및 물과 사료의 사용량을 줄여 지속가능한<br />
+              지구환경에 이바지 하고자 합니다.
+            </p>
+          </div>
+        </li>
+        <li>
+          <p>
+            <img
+              src="https://www.shinsegaefood.com/images/background/bg_evf_img_04.png"
+              alt="img4"
+            />
+          </p>
+          <div class="txt">
+            <p>(협력회사)친환경 경영 독려</p>
+            <p>
+              2021년부터 (물류 등)협력회사 입찰평가 시 ESG경영 우수 실천<br />
+              협력사 대상 가점 부여를 통해 ESG 영향력 전파에 앞장서고 있습니다.
+            </p>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </body>
+</html>

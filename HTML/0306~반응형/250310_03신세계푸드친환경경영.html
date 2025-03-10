@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      .wrap {
+        margin: 100px auto;
+        text-align: center;
+        background: #f3f3f3;
+      }
+      .wrap p:nth-child(1) {
+        font: bold 25px NanumBarunGothic;
+        color: #444444;
+        padding: 50px 0;
+      }
+      .wrap p:nth-child(2) img {
+        width: 80%;
+        max-width: 889px;
+      }
+      @media screen and (max-width: 960px) {
+        .wrap p:nth-child(1) {
+          font: bold 16px NanumBarunGothic;
+          padding: 30px 0;
+        }
+        .wrap p:nth-child(2) img {
+          width: 80%;
+          max-width: 755px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <p>친환경경영 의사결정 조직</p>
+      <p>
+        <img
+          src="https://www.shinsegaefood.com/images/background/bg_evf_graph.png"
+          alt="img"
+        />
+      </p>
+    </div>
+  </body>
+</html>
