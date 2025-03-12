@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      a {
+        text-decoration: none;
+        color: #333;
+      }
+      p img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+      }
+      .wrap {
+        width: 100%;
+        max-width: 1800px;
+        padding: 10px;
+        object-fit: cover;
+        margin: 50px auto;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+      }
+      .wrap div:nth-child(2) {
+        display: flex;
+        gap: 20px;
+      }
+      .wrap div:nth-child(2) p {
+        border-radius: 20px;
+        overflow: hidden;
+      }
+      .wrap div:nth-child(2) p:nth-child(1) {
+        flex: 1;
+      }
+      .wrap div:nth-child(2) p:nth-child(2) {
+        flex: 2;
+      }
+      .wrap div:nth-child(2) p:nth-child(3) {
+        flex: 1;
+      }
+      .wrap div:nth-child(3) {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        gap: 20px;
+      }
+      .wrap div:nth-child(3) p {
+        border-radius: 20px;
+        overflow: hidden;
+        object-fit: cover;
+      }
+      .wrap div:nth-child(3) > p {
+        flex: 1;
+      }
+      .wrap div:nth-child(3) > div.right {
+        flex: 1;
+        display: flex;
+        flex-wrap: wrap;
+      }
+      .wrap div:nth-child(3) > div.right p {
+        width: 100%;
+        flex: 1 1 45%;
+      }
+      .wrap div:nth-child(4) {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        gap: 20px;
+      }
+      .wrap div:nth-child(4) p {
+        border-radius: 20px;
+        overflow: hidden;
+        object-fit: cover;
+      }
+      .wrap div:nth-child(4) > p {
+        flex: 1;
+      }
+      .wrap div:nth-child(4) > div.left {
+        flex: 1;
+        display: flex;
+        flex-wrap: wrap;
+      }
+      .wrap div:nth-child(3) > div.left p {
+        width: 100%;
+        flex: 1 1 40%;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <div>
+        <p>
+          <img
+            src="https://www.spc.co.kr/files/banner/2024/07/e7d387f2-4281-4f1d-a789-b9a1a5cd38c3.webp"
+            alt=""
+          />
+        </p>
+      </div>
+      <div>
+        <p>
+          <img src="https://www.spc.co.kr/img/front/main/history.webp" alt="" />
+        </p>
+        <p>
+          <img src="	https://www.spc.co.kr/img/front/main/spcway.webp" alt="" />
+        </p>
+        <p>
+          <img
+            src="https://www.spc.co.kr/img/front/main/together.webp"
+            alt=""
+          />
+        </p>
+      </div>
+      <div>
+        <p>
+          <img src="https://www.spc.co.kr/img/front/main/eat.webp" alt="" />
+        </p>
+        <div class="right">
+          <p>
+            <sapn>Brand</sapn>
+            <sapn>SPC그룹의 다양한 브랜드를 만나보세요.</sapn>
+            <a href="">이전 01/06 다음</a>
+          </p>
+          <p>
+            <img
+              src="https://www.spc.co.kr/files/brand/2024/06/2702a0a8-0b1e-42f7-a055-bd6749696c7c.png
+              "
+              alt=""
+            />
+          </p>
+          <p>
+            <img
+              src="https://www.spc.co.kr/files/brand/2024/06/d96a9ce4-a1a7-42a1-836f-fa4580f21f58.jpg"
+              alt=""
+            />
+          </p>
+          <p>
+            <img
+              src="https://www.spc.co.kr/files/brand/2024/06/b59cd9b1-6acb-4deb-8d6a-7999988968bb.jpg"
+              alt=""
+            />
+          </p>
+        </div>
+      </div>
+      <div>
+        <div class="left">
+          <p>
+            <img
+              src="https://www.spc.co.kr/files/now/news/kor/2025/02/6c5ca57b-2f19-4723-84ab-80649d3dcc7b.jpg"
+              alt=""
+            />
+          </p>
+          <p>
+            <span>SPC NOW</span>
+            <span>SPC그룹의 다양한 소식을 만나보세요.</span>
+            <a href=""> 이전 01/03 다음 </a>
+          </p>
+          <p>
+            <img
+              src="https://www.spc.co.kr/files/now/news/kor/2025/02/a9695222-9785-4674-97f5-084826f56629.jpg"
+              alt=""
+            />
+          </p>
+          <p>
+            <img
+              src="https://www.spc.co.kr/files/now/news/kor/2025/02/219c71bd-0b4a-404c-bc62-de3a58bbec9b.jpg"
+              alt=""
+            />
+          </p>
+        </div>
+        <p>
+          <img src="https://www.spc.co.kr/img/front/main/news.webp" alt="" />
+        </p>
+      </div>
+      <div>
+        <p></p>
+        <p></p>
+      </div>
+    </div>
+  </body>
+</html>
