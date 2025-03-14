@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      html {
+        font-size: 10px;
+      }
+      @font-face {
+        font-family: Montserrat;
+        src: url(../webfonts/Montserrat-Medium.woff) format("woff");
+      }
+      @font-face {
+        font-family: SUIT;
+        src: url(../webfonts/SUIT-Regular.woff2) format("woff2");
+      }
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      a {
+        text-decoration: none;
+        display: block;
+      }
+      .wrap {
+        width: 95%;
+        max-width: 1800px;
+        height: 100%;
+        margin: 100px auto;
+        /* padding: 0 50px;
+        box-sizing: border-box; */
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+      }
+      .wrap div {
+        width: 100%;
+        height: 100%;
+        border-radius: 20px;
+        overflow: hidden;
+      }
+      .wrap div:not(:nth-child(1), :nth-child(5)) {
+        cursor: pointer;
+      }
+      .wrap div img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      .wrap .top,
+      .wrap .bottom {
+        display: flex;
+        flex-wrap: nowrap;
+        gap: 20px;
+      }
+      .wrap .top div:nth-child(1) {
+        flex: 1 0 50%;
+        padding: 0 0 0 6rem;
+        box-sizing: border-box;
+      }
+      .wrap .top div:nth-child(1) h3 {
+        font: bold 6.4rem Montserrat;
+        color: #222222;
+      }
+      .wrap .top div:nth-child(1) p {
+        font: bold 2rem SUIT;
+        margin: 2rem 0 0;
+        color: #5d5d5d;
+      }
+      .wrap .top div:nth-child(1) p span {
+        color: #00a287;
+      }
+      .wrap .top div:nth-child(2) {
+        flex: 1 0 25%;
+        position: relative;
+      }
+      .wrap .top div:nth-child(2):hover img,
+      .wrap .top div:nth-child(3):hover img,
+      .wrap .bottom div:nth-child(1):hover img,
+      .wrap .bottom div:nth-child(3):hover img {
+        transform: scale(1.2);
+        filter: brightness(100%);
+        transition: 0.4s;
+      }
+      .wrap .top div:nth-child(2) img,
+      .wrap .top div:nth-child(3) img,
+      .wrap .bottom div:nth-child(1) img,
+      .wrap .bottom div:nth-child(3) img {
+        vertical-align: middle;
+        filter: brightness(50%);
+      }
+      .wrap .top div:nth-child(2) a,
+      .wrap .top div:nth-child(3) a,
+      .wrap .bottom div:nth-child(1) a,
+      .wrap .bottom div:nth-child(3) a {
+        font: bold 2.8rem SUIT;
+        color: #fff;
+        position: absolute;
+        left: 10%;
+        top: 70%;
+      }
+      .wrap .top div:nth-child(3) {
+        position: relative;
+      }
+      .wrap .top div:nth-child(3) {
+        flex: 1 0 25%;
+      }
+      .wrap .bottom div:nth-child(1) {
+        flex: 1 0 50%;
+        position: relative;
+      }
+      .wrap .bottom div:nth-child(2) {
+        flex: 1 0 25%;
+      }
+      .wrap .bottom div:nth-child(3) {
+        flex: 1 0 25%;
+        position: relative;
+      }
+      @media screen and (max-width: 1440px) {
+      }
+      @media screen and (max-width: 1280px) {
+        html {
+          font-size: 9px;
+        }
+      }
+      @media screen and (max-width: 1140px) {
+        .wrap .top div,
+        .wrap .bottom div {
+          height: 270px;
+        }
+        .wrap .top,
+        .wrap .bottom {
+          flex-wrap: wrap;
+        }
+        .wrap .top div:nth-child(1) {
+          flex-basis: 100%;
+          padding: 0;
+          height: 100%;
+        }
+        .wrap .top div:nth-child(2),
+        .wrap .top div:nth-child(3) {
+          flex-basis: 45%;
+        }
+        .wrap .bottom div:nth-child(2) {
+          display: none;
+        }
+        .wrap .bottom div:nth-child(1),
+        .wrap .bottom div:nth-child(3) {
+          flex-basis: 45%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <div class="top">
+        <div>
+          <h3>PROGRAM</h3>
+          <p>
+            <span>KAIST GGGS</span>에서는 녹색성장과 지속가능성 문제해결을
+            위해<br />
+            탄소중립기후기술 및 정책·금융에 대한 통섭적인 이해를 갖춘<br />
+            국가 핵심인재를 양성합니다.
+          </p>
+        </div>
+        <div>
+          <img
+            src="https://gggs.kaist.ac.kr/html/images/main/sec03_tab01.png"
+            alt="img"
+          />
+          <a href="#"><span>박사과정</span></a>
+        </div>
+        <div>
+          <img
+            src="https://gggs.kaist.ac.kr/html/images/main/sec03_tab02.png"
+            alt="img"
+          />
+          <a href="#"><span>군학 프로그램</span></a>
+        </div>
+      </div>
+      <div class="bottom">
+        <div>
+          <img
+            src="https://gggs.kaist.ac.kr/html/images/main/sec03_tab03.png"
+            alt="img"
+          />
+          <a href="#"><span>석사과정</span></a>
+        </div>
+        <div>
+          <img
+            src="https://gggs.kaist.ac.kr/html/images/main/sec03_thumb.png"
+            alt="img"
+          />
+        </div>
+        <div>
+          <img
+            src="https://gggs.kaist.ac.kr/html/images/main/sec03_tab04.png"
+            alt="img"
+          />
+          <a href="#"><span>외국인 전형</span></a>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
