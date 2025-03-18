@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      @font-face {
+        font-family: OYGretaSans;
+        src: url(../webfonts/OYGretaSans-Bd116-1fa3907a9b3cfce1d7306e83edc3fe3c.woff)
+          format(woff);
+      }
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      a {
+        text-decoration: none;
+        color: #565e65;
+      }
+      .cj {
+        width: 100%;
+        max-width: 1420px;
+        margin: 50px auto;
+        padding: 0 10px;
+        box-sizing: border-box;
+      }
+      .wrap {
+        width: 100%;
+        display: flex;
+        position: relative;
+      }
+      .wrap .left {
+        flex: 1;
+      }
+      .wrap .right {
+        flex: 1;
+        position: relative;
+      }
+      .wrap .left .list {
+      }
+      input {
+        display: none;
+      }
+      .wrap .left .list label {
+        cursor: pointer;
+      }
+      .wrap .left .list label:hover {
+        color: #82dc28;
+      }
+      #list1:checked ~ .right ul li:nth-child(1),
+      #list2:checked ~ .right ul li:nth-child(2),
+      #list2:checked ~ .right ul li:nth-child(3) {
+        opacity: 0;
+      }
+      .wrap .left .list .num li:nth-child(1) span:nth-child(2),
+      .wrap .left .list .num li:nth-child(2) span:nth-child(2),
+      .wrap .left .list .num li:nth-child(3) span:nth-child(2) {
+        display: none;
+      }
+      .wrap .left .list .num li:nth-child(1) {
+        position: absolute;
+        left: 40%;
+        top: 0;
+      }
+      .wrap .left .list .num li:nth-child(2) {
+        position: absolute;
+        left: 40%;
+        top: 0;
+      }
+      .wrap .left .list .num li:nth-child(3) {
+        position: absolute;
+        left: 40%;
+        top: 0;
+      }
+      .wrap img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      .wrap div {
+        flex: 1;
+      }
+      .wrap .left h3 {
+        font: bold 54px OYGretaSans;
+      }
+      .wrap .left .list {
+        margin: 60px 0 0;
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+      }
+      .wrap .right ul li {
+        padding: 0 0 100px;
+      }
+      .wrap .right ul li h3 {
+        font: bold 30px pretendard;
+        margin: 46px 0 0;
+      }
+      .wrap .right ul li p {
+        font: 18px pretendard;
+        color: #565e65;
+        margin: 34px 0;
+      }
+      .wrap .right ul li:nth-child(1) span:nth-child(1) {
+        position: absolute;
+        left: 40%;
+        top: 0;
+      }
+      .wrap .right ul li:nth-child(1) span:nth-child(2) {
+        position: absolute;
+        left: 42%;
+        top: 0;
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="cj">
+      <div class="wrap">
+        <input type="rario" name="list" id="list1" checked />
+        <input type="rario" name="list" id="list2" />
+        <input type="rario" name="list" id="list3" />
+        <div class="left">
+          <h3>
+            OLIVE YOUNG<br />
+            Platforms
+          </h3>
+          <div class="list">
+            <label for="list1">올리브영 매장</label>
+            <label for="list2">올리브영 Online (국내)</label>
+            <label for="list3">올리브영 글로벌</label>
+            <ul class="num">
+              <li>
+                <span>01</span>
+                <span>올리브영 매장 (국내)</span>
+              </li>
+              <li>
+                <span>02</span>
+                <span>올리브영 매장 (국내)</span>
+              </li>
+              <li>
+                <span>03</span>
+                <span>올리브영 매장 (국내)</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="right">
+          <ul>
+            <li>
+              <img
+                src="https://corp.oliveyoung.com/img/tmp/tmp_img_platform1-cf428ca64855adc4a1062251b83cf683.jpg;jsessionid=FF9BDBB299414A49192AA42DECC00D3B"
+                alt=""
+              />
+              <h3>
+                고객과 가장 가까운 곳에서<br />건강한 아름다움을 제안합니다.
+              </h3>
+              <p>
+                우리는 1,370여개의 매장을 기반으로 고객에게 뷰티&헬스 상품을
+                큐레이션합니다. 또한 체험형 콘텐츠와 커머스의 연계를
+                통해파트너사들에게 매력적인 브랜딩, 마케팅 채널로 진화하고
+                있습니다.
+              </p>
+              <a href="#">올리브영 매장이 보고 싶다면?</a>
+            </li>
+            <li>
+              <img
+                src="https://corp.oliveyoung.com/img/tmp/tmp_img_platform2-777eecd5b0d28e7c17848bfe3dffe645.jpg"
+                alt=""
+              />
+              <h3>
+                고객이 건강한 아름다움을 찾아가는<br />온라인 PLAYGROUND를
+                제공합니다.
+              </h3>
+              <p>
+                우리는 차별화된 온라인 콘텐츠와 AI기술 기반 상품 추천을 통해 월
+                이용자 수 532만명, 멤버십 회원 수 1,560만명 이상의 뷰티&amp;헬스
+                커뮤니티를 구현했습니다. 또한 업계 최초 당일 배송 서비스인
+                오늘드림을 실행하여 고객경험을 혁신했습니다.
+              </p>
+              <a href="#">올리브영 매장이 보고 싶다면?</a>
+            </li>
+            <li>
+              <img
+                src="https://corp.oliveyoung.com/img/tmp/tmp_img_platform3-c78371c66bba75b227096ecd0f128e12.jpg"
+                alt=""
+              />
+              <h3>전세계에 한국의<br />뷰티&헬스를 알립니다.</h3>
+              <p>
+                우리는 한국의 뷰티&헬스 브랜드들이 세계로 뻗어 나가는 교두보
+                역할을 수행합니다. 2019년 런칭한 글로벌몰과 연간 약 500만명
+                이상이 외국인 고객이 방문하는 국내 글로벌 특화매장은 파트너사와
+                함께 글로벌 시장에서 동반 성장을 할 수 있는 핵심 원동력입니다.
+              </p>
+              <a href="#">올리브영 매장이 보고 싶다면?</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
