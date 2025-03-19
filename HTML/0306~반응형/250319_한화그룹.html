@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      a {
+        text-decoration: none;
+      }
+      .wrap {
+        width: 100%;
+        padding: 100px 50px;
+        margin: 100px auto;
+        box-sizing: border-box;
+        background: #f6f0ec;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+      }
+      .wrap h1 {
+        font: bold 4vw san-serif;
+        color: #222222;
+      }
+      .wrap ul {
+        width: 100%;
+        margin: 0 auto;
+        display: flex;
+        gap: 15px;
+      }
+      .wrap ul li {
+        width: 100%;
+        padding: 30px 0;
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+        background: #efe8e4;
+        border-radius: 20px;
+        position: relative;
+      }
+      .wrap ul li::after {
+        content: "";
+        position: absolute;
+        left: 50%;
+        top: 75%;
+        width: 90%;
+        height: 1px;
+        transform: translateX(-50%);
+        background: #cccccc;
+      }
+      .wrap ul li p:nth-child(1) {
+        height: 10vw;
+      }
+      .wrap ul li .bottom p:nth-child(1) {
+        font: bold 2vw san-serif;
+        color: #222222;
+      }
+      .wrap ul li .bottom p:nth-child(1) span {
+        color: #f37321;
+      }
+      .wrap ul li .bottom p:nth-child(2) {
+        font: bold 1vw san-serif;
+        color: #616161;
+      }
+      .wrap ul li p img {
+        height: 100%;
+        object-fit: cover;
+      }
+      @media screen and (max-width: 767px) {
+        .wrap {
+          padding: 100px 20px;
+        }
+        .wrap h1 {
+          font: bold 5vw san-serif;
+        }
+        .wrap ul {
+          display: flex;
+          flex-direction: column;
+          gap: ;
+        }
+        .wrap ul li {
+          flex-direction: row;
+          flex-wrap: wrap;
+          gap: 0;
+          padding: 30px 0;
+          box-sizing: border-box;
+        }
+        .wrap ul li::after {
+          left: 60%;
+          top: 55%;
+          width: 70%;
+          height: 1px;
+        }
+        .wrap ul li > p:nth-child(1) {
+          height: 15vw;
+          flex: 1 0 20%;
+        }
+        .wrap ul li .bottom {
+          font: bold 2vw san-serif;
+          color: #222222;
+          flex: 1 0 70%;
+          text-align: left;
+        }
+        .wrap ul li .bottom p:nth-child(1) {
+          font: bold 2.5vw san-serif;
+        }
+        .wrap ul li .bottom p:nth-child(2) {
+          font: bold 1.5vw san-serif;
+        }
+        .wrap ul li .bottom p:nth-child(2) br {
+          display: none;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <h1>Our Brand Values</h1>
+      <ul>
+        <li>
+          <p>
+            <img
+              src="https://www.hanwha.com/assets/img/main/sustainable-and-inclusive-growth.svg"
+              alt="img"
+            />
+          </p>
+          <div class="bottom">
+            <p>
+              Sustainable and<br />
+              Inclusive <span>Growth</span>
+            </p>
+            <p>
+              We strive for social, economic, and<br />
+              environmental prosperity for all
+            </p>
+          </div>
+        </li>
+        <li>
+          <p>
+            <img
+              src="https://www.hanwha.com/assets/img/main/technology-and-solution-driven-innovation.svg"
+              alt="img"
+            />
+          </p>
+          <div class="bottom">
+            <p>
+              Technology and<br />
+              Solution-driven <span>Innovation</span>
+            </p>
+            <p>
+              Through technological innovation,<br />
+              we provide solutions from people to planet
+            </p>
+          </div>
+        </li>
+        <li>
+          <p>
+            <img
+              src="https://www.hanwha.com/assets/img/main/hanwha-enhances-lives.svg"
+              alt="img"
+            />
+          </p>
+          <div class="bottom">
+            <p>
+              Enhancing<br />
+              <span>Lives</span>
+            </p>
+            <p>
+              We lay the foundation for a fulfilling life through<br />
+              our technologies, products, and services
+            </p>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </body>
+</html>

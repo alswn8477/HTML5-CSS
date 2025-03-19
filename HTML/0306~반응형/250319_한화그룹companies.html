@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      a {
+        text-decoration: none;
+      }
+      .wrap {
+        width: 100%;
+        padding: 0 50px;
+        box-sizing: border-box;
+        margin: 100px auto;
+      }
+      .wrap ul {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+      }
+      .wrap ul li {
+        flex: 25%;
+        border: 1px solid #e5e5e5;
+        border-radius: 15px;
+        padding: 20px 20px;
+        display: flex;
+      }
+      .wrap ul li:nth-child(14),
+      .wrap ul li:nth-child(15) {
+        border-color: transparent;
+      }
+      .wrap ul li a {
+        display: flex;
+      }
+      .wrap ul li a p {
+        width: 100%;
+        flex: 90%;
+        justify-content: center;
+      }
+      .wrap ul li a p img {
+        width: 100%;
+        object-fit: cover;
+      }
+      .wrap ul li a .btn {
+        flex: 10%;
+        position: relative;
+        display: flex;
+        align-items: center;
+      }
+      .wrap ul li a .btn svg {
+        z-index: 1;
+      }
+      .wrap ul li a .btn:hover svg {
+        filter: brightness(100);
+      }
+      .wrap ul li a .btn::before {
+        content: "";
+        position: absolute;
+        top: 10%;
+        left: -10%;
+        width: 100%;
+        height: 80%;
+        border-radius: 50%;
+        border: 1px solid #e5e5e5;
+        background-color: transparent;
+        box-sizing: border-box;
+        transition: 0.5s;
+      }
+      .wrap ul li a .btn:hover:before {
+        content: "";
+        position: absolute;
+        top: 10%;
+        left: -10%;
+        width: 100%;
+        height: 80%;
+        border-radius: 50%;
+        border: 1px solid #f37321;
+        background-color: #f37321;
+        box-sizing: border-box;
+      }
+      @media screen and (max-width: 767px) {
+        .wrap ul li {
+          flex: 40%;
+        }
+      }
+      @media screen and (max-width: 670px) {
+        .wrap ul li {
+          flex: 90%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <ul>
+        <li>
+          <a href="">
+            <p>
+              <img
+                src="https://www.hanwha.com/upload/company/20240422/1713775631479.jpg"
+                alt="img1"
+              />
+            </p>
+            <div class="btn">
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M6.33301 12.001L17.6663 12.001"
+                  stroke="#616161"
+                  stroke-width="1.5"
+                ></path>
+                <path
+                  d="M12.1924 6.33301L17.6659 11.9997L12.1924 17.6663"
+                  stroke="#616161"
+                  stroke-width="1.5"
+                ></path>
+              </svg>
+            </div>
+          </a>
+        </li>
+        <li>
+          <a href="">
+            <p>
+              <img
+                src="https://www.hanwha.com/upload/company/20240423/1713869856042.jpg"
+                alt="img2"
+              />
+            </p>
+            <div class="btn">
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M6.33301 12.001L17.6663 12.001"
+                  stroke="#616161"
+                  stroke-width="1.5"
+                ></path>
+                <path
+                  d="M12.1924 6.33301L17.6659 11.9997L12.1924 17.6663"
+                  stroke="#616161"
+                  stroke-width="1.5"
+                ></path>
+              </svg>
+            </div>
+          </a>
+        </li>
+        <li>
+          <a href="">
+            <p>
+              <img
+                src="https://www.hanwha.com/upload/company/20240423/1713874192354.jpg"
+                alt="img3"
+              />
+            </p>
+            <div class="btn">
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M6.33301 12.001L17.6663 12.001"
+                  stroke="#616161"
+                  stroke-width="1.5"
+                ></path>
+                <path
+                  d="M12.1924 6.33301L17.6659 11.9997L12.1924 17.6663"
+                  stroke="#616161"
+                  stroke-width="1.5"
+                ></path>
+              </svg>
+            </div>
+          </a>
+        </li>
+        <li>
+          <a href="">
+            <p>
+              <img
+                src="https://www.hanwha.com/upload/company/20240423/1713874567467.jpg"
+                alt="img4"
+              />
+            </p>
+            <div class="btn">
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M6.33301 12.001L17.6663 12.001"
+                  stroke="#616161"
+                  stroke-width="1.5"
+                ></path>
+                <path
+                  d="M12.1924 6.33301L17.6659 11.9997L12.1924 17.6663"
+                  stroke="#616161"
+                  stroke-width="1.5"
+                ></path>
+              </svg>
+            </div>
+          </a>
+        </li>
+        <li>
+          <a href="">
+            <p>
+              <img
+                src="https://www.hanwha.com/upload/company/20240423/1713874779700.jpg"
+                alt="img5"
+              />
+            </p>
+            <div class="btn">
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M6.33301 12.001L17.6663 12.001"
+                  stroke="#616161"
+                  stroke-width="1.5"
+                ></path>
+                <path
+                  d="M12.1924 6.33301L17.6659 11.9997L12.1924 17.6663"
+                  stroke="#616161"
+                  stroke-width="1.5"
+                ></path>
+              </svg>
+            </div>
+          </a>
+        </li>
+        <li>
+          <a href="">
+            <p>
+              <img
+                src="https://www.hanwha.com/upload/company/20240423/1713874951317.jpg"
+                alt="img6"
+              />
+            </p>
+            <div class="btn">
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M6.33301 12.001L17.6663 12.001"
+                  stroke="#616161"
+                  stroke-width="1.5"
+                ></path>
+                <path
+                  d="M12.1924 6.33301L17.6659 11.9997L12.1924 17.6663"
+                  stroke="#616161"
+                  stroke-width="1.5"
+                ></path>
+              </svg>
+            </div>
+          </a>
+        </li>
+        <li>
+          <a href="">
+            <p>
+              <img
+                src="https://www.hanwha.com/upload/company/20240423/1713871679059.jpg"
+                alt="img7"
+              />
+            </p>
+            <div class="btn">
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M6.33301 12.001L17.6663 12.001"
+                  stroke="#616161"
+                  stroke-width="1.5"
+                ></path>
+                <path
+                  d="M12.1924 6.33301L17.6659 11.9997L12.1924 17.6663"
+                  stroke="#616161"
+                  stroke-width="1.5"
+                ></path>
+              </svg>
+            </div>
+          </a>
+        </li>
+        <li>
+          <a href="">
+            <p>
+              <img
+                src="https://www.hanwha.com/upload/company/20240423/1713875259067.jpg"
+                alt="img8"
+              />
+            </p>
+            <div class="btn">
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M6.33301 12.001L17.6663 12.001"
+                  stroke="#616161"
+                  stroke-width="1.5"
+                ></path>
+                <path
+                  d="M12.1924 6.33301L17.6659 11.9997L12.1924 17.6663"
+                  stroke="#616161"
+                  stroke-width="1.5"
+                ></path>
+              </svg>
+            </div>
+          </a>
+        </li>
+        <li>
+          <a href="">
+            <p>
+              <img
+                src="https://www.hanwha.com/upload/company/20240423/1713875259067.jpg"
+                alt="img9"
+              />
+            </p>
+            <div class="btn">
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M6.33301 12.001L17.6663 12.001"
+                  stroke="#616161"
+                  stroke-width="1.5"
+                ></path>
+                <path
+                  d="M12.1924 6.33301L17.6659 11.9997L12.1924 17.6663"
+                  stroke="#616161"
+                  stroke-width="1.5"
+                ></path>
+              </svg>
+            </div>
+          </a>
+        </li>
+        <li>
+          <a href="">
+            <p>
+              <img
+                src="https://www.hanwha.com/upload/company/20240521/1716268151833.jpg"
+                alt="img10"
+              />
+            </p>
+            <div class="btn">
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M6.33301 12.001L17.6663 12.001"
+                  stroke="#616161"
+                  stroke-width="1.5"
+                ></path>
+                <path
+                  d="M12.1924 6.33301L17.6659 11.9997L12.1924 17.6663"
+                  stroke="#616161"
+                  stroke-width="1.5"
+                ></path>
+              </svg>
+            </div>
+          </a>
+        </li>
+        <li>
+          <a href="">
+            <p>
+              <img
+                src="https://www.hanwha.com/upload/company/20240521/1716268151833.jpg"
+                alt="img11"
+              />
+            </p>
+            <div class="btn">
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M6.33301 12.001L17.6663 12.001"
+                  stroke="#616161"
+                  stroke-width="1.5"
+                ></path>
+                <path
+                  d="M12.1924 6.33301L17.6659 11.9997L12.1924 17.6663"
+                  stroke="#616161"
+                  stroke-width="1.5"
+                ></path>
+              </svg>
+            </div>
+          </a>
+        </li>
+        <li>
+          <a href="">
+            <p>
+              <img
+                src="https://www.hanwha.com/upload/company/20240423/1713875509763.jpg"
+                alt="img12"
+              />
+            </p>
+            <div class="btn">
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M6.33301 12.001L17.6663 12.001"
+                  stroke="#616161"
+                  stroke-width="1.5"
+                ></path>
+                <path
+                  d="M12.1924 6.33301L17.6659 11.9997L12.1924 17.6663"
+                  stroke="#616161"
+                  stroke-width="1.5"
+                ></path>
+              </svg>
+            </div>
+          </a>
+        </li>
+        <li>
+          <a href="">
+            <p>
+              <img
+                src="https://www.hanwha.com/upload/company/20240423/1713875629246.jpg"
+                alt="img13"
+              />
+            </p>
+            <div class="btn">
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M6.33301 12.001L17.6663 12.001"
+                  stroke="#616161"
+                  stroke-width="1.5"
+                ></path>
+                <path
+                  d="M12.1924 6.33301L17.6659 11.9997L12.1924 17.6663"
+                  stroke="#616161"
+                  stroke-width="1.5"
+                ></path>
+              </svg>
+            </div>
+          </a>
+        </li>
+        <li></li>
+        <li></li>
+      </ul>
+    </div>
+  </body>
+</html>
