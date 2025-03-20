@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      @font-face {
+        font-family: NotoSans;
+        src: url(../webfonts/NotoSans-Regular\\(2\).woff) format(woff);
+      }
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      a {
+        text-decoration: none;
+        color: #fff;
+        font-family: NotoSans;
+      }
+      .wrap {
+        width: 100%;
+      }
+      .wrap > p:first-child {
+        width: 100%;
+        position: relative;
+      }
+      .wrap > p:first-child img {
+        width: 100vw;
+        height: 100vh;
+        object-fit: cover;
+        filter: brightness(0.8);
+      }
+      .wrap .top {
+        padding: 20px;
+        box-sizing: border-box;
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: flex;
+      }
+      .wrap .top div:first-child p {
+        width: 100%;
+        padding: 20px;
+      }
+      .wrap .top div:first-child p img {
+        width: 100%;
+        max-width: 273px;
+        filter: brightness(100);
+      }
+      .wrap .top .nav ul {
+        display: flex;
+        gap: 5px;
+      }
+      .wrap .top .nav ul li {
+        display: flex;
+        flex-direction: column;
+      }
+      .wrap .top .nav ul li ul {
+        display: flex;
+        flex-direction: column;
+        border: 1px solid;
+        display: none;
+      }
+      .wrap .top .nav ul li ul li {
+        display: flex;
+        flex-direction: row;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <p>
+        <img
+          src="https://cdn.imweb.me/thumbnail/20221125/dfcd44cb2a395.png"
+          alt="img"
+        />
+      </p>
+      <div class="top">
+        <div>
+          <p><img src="./images/saturn_logo.png" alt="" /></p>
+        </div>
+        <div class="nav">
+          <ul>
+            <li>
+              <a href="#">COMPANY</a>
+              <ul>
+                <li><a href="#">CEO 인사말</a></li>
+                <li><a href="#">연혁</a></li>
+                <li><a href="#">CI소개</a></li>
+                <li><a href="#">오시는길</a></li>
+                <li><a href="#">클라이언트</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">PRODUCTS</a>
+              <ul>
+                <li>
+                  <a href="#">욕조</a>
+                  <ul>
+                    <li>
+                      <a href="#">형태별</a>
+                      <ul>
+                        <li><a href="#">프리스탠딩</a></li>
+                        <li><a href="#">빌트인</a></li>
+                      </ul>
+                    </li>
+                    <li>
+                      <a href="#">소재별</a>
+                      <ul>
+                        <li><a href="#">인조대리석 욕조</a></li>
+                        <li><a href="#">아크릴욕조</a></li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#">세면대</a>
+                  <ul>
+                    <li><a href="#">프리스탠딩</a></li>
+                    <li><a href="#">공용세면대</a></li>
+                    <li><a href="#">탑볼</a></li>
+                    <li><a href="#">언더볼</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#">욕실장</a>
+                  <ul>
+                    <li><a href="#">상부장</a></li>
+                    <li><a href="#">하부장</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#">거울</a>
+                  <ul>
+                    <li><a href="#">조명</a></li>
+                    <li><a href="#">비조명</a></li>
+                  </ul>
+                </li>
+                <li><a href="#">샤워부스</a></li>
+                <li><a href="#">욕실 수전</a></li>
+                <li><a href="#">스마트 절수 샤워기</a></li>
+                <li><a href="#">일체형 비데 양변기</a></li>
+                <li>
+                  <a href="#">해외 유통</a>
+                  <ul>
+                    <li><a href="#">vola</a></li>
+                    <li><a href="#">Cisal</a></li>
+                    <li><a href="#">effe</a></li>
+                    <li><a href="#">FLORIM</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">DESIGNER</a>
+              <ul>
+                <li><a href="#">카림라시드</a></li>
+                <li><a href="#">로렌즈+카즈</a></li>
+                <li><a href="#">클라우디오 벨리니</a></li>
+                <li><a href="#">이노다+스베제</a></li>
+                <li><a href="#">송승용</a></li>
+                <li><a href="#">김현범</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">CUSTOMER</a>
+              <ul>
+                <li><a href="#">공지사항</a></li>
+                <li><a href="#">A/S</a></li>
+                <li>
+                  <a href="#">자료실</a>
+                  <ul>
+                    <li><a href="#">새턴바스 재고현황</a></li>
+                    <li><a href="#">대리점 단가표</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#">공식대리점</a>
+                  <ul>
+                    <li><a href="#">강남</a></li>
+                    <li><a href="#">을지로</a></li>
+                    <li><a href="#">서울</a></li>
+                    <li><a href="#">경기</a></li>
+                    <li><a href="#">인천</a></li>
+                    <li><a href="#">세종</a></li>
+                    <li><a href="#">대전</a></li>
+                    <li><a href="#">대구</a></li>
+                    <li><a href="#">부산</a></li>
+                    <li><a href="#">광주</a></li>
+                    <li><a href="#">강원</a></li>
+                    <li><a href="#">충북</a></li>
+                    <li><a href="#">전남</a></li>
+                    <li><a href="#">전북</a></li>
+                    <li><a href="#">제주</a></li>
+                  </ul>
+                </li>
+                <li><a href="#">견적의뢰</a></li>
+                <li><a href="#">컴플라이언스 (법위반 제보)</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">SATURN STORY</a>
+              <ul>
+                <li><a href="#">협찬</a></li>
+                <li><a href="#">새턴뉴스</a></li>
+                <li><a href="#">포트폴리오</a></li>
+                <li>
+                  <a href="#">뉴스레터</a>
+                  <ul>
+                    <li><a href="#">NEWSLETTER VOL.1</a></li>
+                    <li><a href="#">NEWSLETTER VOL.2</a></li>
+                  </ul>
+                </li>
+                <li><a href="#">새턴바스 영상</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">EXHIBITION</a>
+              <ul>
+                <li><a href="#">2025 호텔페어</a></li>
+                <li><a href="#">2024 스마트건설엑스포</a></li>
+                <li><a href="#">2024 한국건축산업대전</a></li>
+                <li><a href="#">2024 현대건설 기술엑스포</a></li>
+                <li><a href="#">2024 코리아빌드</a></li>
+                <li><a href="#">2024 홈케어·재활·복지 전시회</a></li>
+                <li><a href="#">2024 대한민국 기계설비전시회</a></li>
+                <li><a href="#">2024 호텔페어</a></li>
+                <li><a href="#">2023 서울디자인</a></li>
+                <li><a href="#">2023 집코노미 박람회</a></li>
+                <li><a href="#">2023 MBC 건축박람회</a></li>
+                <li><a href="#">2023 서울 미래 DX-CON WORLD</a></li>
+                <li><a href="#">2023 대한민국 기계설비전시회</a></li>
+                <li><a href="#">2023 호텔페어</a></li>
+                <li><a href="#">2022 ddp Design Fair</a></li>
+                <li><a href="#">2022 공간디자인페어</a></li>
+                <li><a href="#">2022 인테리어디자인코리아</a></li>
+                <li><a href="#">2021 서울디자인페스티벌</a></li>
+                <li><a href="#">2021 ddp Design Fair</a></li>
+                <li><a href="#">2021 서울리빙디자인페어</a></li>
+                <li><a href="#">2020 호텔페어</a></li>
+                <li><a href="#">2020 코리아빌드 (코엑스)</a></li>
+                <li><a href="#">2019 호텔페어</a></li>
+                <li><a href="#">2019 코펀</a></li>
+                <li><a href="#">2019 코리아빌드</a></li>
+                <li><a href="#">2019 인테리어디자인코리아</a></li>
+                <li><a href="#">2019 화장실 박람회</a></li>
+                <li><a href="#">2018 호텔페어</a></li>
+                <li><a href="#">2017 카림라시드 전시회</a></li>
+                <li><a href="#">2017 홈테이블데코페어</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">VISOFT</a>
+              <ul>
+                <li><a href="#">VISOFT 구매 문의</a></li>
+                <li>
+                  <a href="#">VISOFT 렌더링</a>
+                  <ul>
+                    <li><a href="#">호텔 및 고급빌라</a></li>
+                    <li><a href="#">아파트</a></li>
+                    <li><a href="#">전시장</a></li>
+                    <li><a href="#">공공시설</a></li>
+                    <li><a href="#">욕실 턴키 제안사례</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#">BATHROOM SET</a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">지구본 KOR 화살표</a>
+              <ul>
+                <li><a href="#">KOR</a></li>
+                <li><a href="#">ENG</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">COMPANY</a>
+              <ul>
+                <li><a href="#">CEO 인사말</a></li>
+                <li><a href="#">연혁</a></li>
+                <li><a href="#">CI소개</a></li>
+                <li><a href="#">오시는길</a></li>
+                <li><a href="#">클라이언트</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+        <div>
+          <ul>
+            <li><a href="#">돋보기</a></li>
+            <li><a href="#">로그인</a></li>
+            <li><a href="#">회원가입</a></li>
+            <li><a href="#">새턴바스 공식몰</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

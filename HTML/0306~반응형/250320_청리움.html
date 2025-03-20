@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      a {
+        text-decoration: none;
+        color: #fff;
+      }
+      .wrap {
+        width: 100%;
+        padding: 0 100px;
+        box-sizing: border-box;
+        margin: 100px auto;
+      }
+      .wrap .top {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+      }
+      .wrap .top .left {
+        width: 100%;
+        flex: 1 1 30%;
+      }
+      .wrap .top .left h1 {
+        font: 64px pretendard;
+      }
+      .wrap .top .left p {
+        width: 100%;
+        font: 22px pretendard;
+        padding: 10px 0;
+      }
+      .wrap .top .list {
+        flex: 1 0 70%;
+      }
+      .wrap .top .list ul {
+        width: 100%;
+        display: flex;
+      }
+      .wrap .top .list ul li {
+        width: 100%;
+        cursor: pointer;
+        font: 16px pretendard;
+        color: #b2b2b2;
+        text-align: center;
+      }
+      .wrap .bottom {
+        width: 100%;
+        position: relative;
+      }
+      .wrap .bottom > p {
+        width: 100%;
+        height: 70vh;
+        margin: 50px 0;
+        border-radius: 10px;
+        overflow: hidden;
+      }
+      .wrap .bottom > p > img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        filter: brightness(0.7);
+      }
+      .wrap .bottom .txt {
+        width: 90%;
+        position: absolute;
+        left: 5%;
+        top: 65%;
+        color: #fff;
+        display: flex;
+        justify-content: space-between;
+      }
+      .wrap .bottom .txt .left p:nth-child(1) {
+        font: 40px pretendard;
+      }
+      .wrap .bottom .txt .left p:nth-child(2) {
+        font: 24px pretendard;
+        padding: 20px 0;
+      }
+      .wrap .bottom .txt .left a:nth-child(3) {
+        font: 24px pretendard;
+        padding: 20px 0;
+      }
+      .wrap .bottom .txt .right {
+        top: 20%;
+        left: 20%;
+      }
+      .wrap .bottom .txt .right a {
+        border: 1px solid #fff;
+        border-radius: 50px;
+        padding: 10px 30px;
+        font: 22px pretendard;
+        color: #000;
+        background: #fff;
+      }
+      @media screen and (max-width: 1024px) {
+        .wrap {
+          padding: 0 20px;
+        }
+        .wrap .top {
+          display: block;
+          text-align: center;
+        }
+        .wrap .top .left h1 {
+          font: 32px pretendard;
+        }
+        .wrap .top .left p {
+          width: 40%;
+          margin: 0 auto;
+          font: 14px pretendard;
+          padding-bottom: 40px;
+        }
+        .wrap .bottom .txt {
+          left: 3%;
+          top: 80%;
+        }
+        .wrap .bottom .txt .left p:nth-child(1) {
+          font: 24px pretendard;
+        }
+        .wrap .bottom .txt .left p:nth-child(2) {
+          font: 14px pretendard;
+          padding: 10px 0;
+        }
+        .wrap .bottom .txt .left a:nth-child(3) {
+          font: 14px pretendard;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <div class="top">
+        <div class="left">
+          <h1>공간안내</h1>
+          <p>
+            고즈넉한 자연 속 사계절의 아름다운 정취가 있는 청리움의 공간을
+            안내합니다
+          </p>
+        </div>
+        <div class="list">
+          <ul>
+            <li>강당동</li>
+            <li>연수동</li>
+            <li>카페테리아</li>
+            <li>잔디마당</li>
+            <li>오하산방</li>
+            <li>약초원</li>
+            <li>명당 기도터</li>
+            <li>녹차 · 포도밭</li>
+          </ul>
+        </div>
+      </div>
+      <div class="bottom">
+        <p>
+          <img
+            src="https://www.cheongrium.com/static/images/spaceinfo/main_space_1.jpg"
+            alt="img"
+          />
+        </p>
+        <div class="txt">
+          <div class="left">
+            <p>강당동 (컨퍼런스홀 | 세미나 A·B)</p>
+            <p>
+              천혜의 자연 속 프라이빗한 단독 공간으로<br />
+              교육, 세미나, 연수, 행사 등 다채로운 이벤트를 지원합니다.
+            </p>
+            <a href="#">VIEW MORE</a>
+          </div>
+          <div class="right"><a href="#">가이드 맵</a></div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
