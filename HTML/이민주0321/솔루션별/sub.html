@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>솔루선별</title>
+    <style>
+      @font-face {
+        font-family: NotoSans;
+        src: url(./webfonts/NotoSans-Medium\\(2\).woff) format(woff);
+      }
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      a {
+        text-decoration: none;
+        color: #000;
+      }
+      .wrap {
+        width: 100%;
+        margin: 0 auto;
+      }
+      .wrap .title {
+        width: 100%;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 100px 0;
+        text-align: center;
+      }
+      .wrap .title h3 {
+        font: 20px pretendard;
+        color: #666;
+        margin-bottom: 14px;
+      }
+      .wrap .title p {
+        font: 40px pretendard;
+        color: #000;
+      }
+      .wrap .bottom {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 100px;
+      }
+      .wrap .bottom .con {
+        display: flex;
+        flex-direction: column;
+        gap: 100px;
+      }
+      .wrap .bottom .con .photo {
+        display: flex;
+        justify-content: flex-end;
+      }
+      .wrap .bottom .con2 .photo {
+        display: flex;
+        justify-content: flex-start;
+      }
+      .wrap .bottom .con .photo p a img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      .wrap .bottom .con .txt {
+        width: 100%;
+        margin: 0 auto;
+        text-align: center;
+      }
+      .wrap .bottom .con .txt span:first-child {
+        font: bold 70px NotoSans;
+        position: relative;
+      }
+      .wrap .bottom .con .txt span:first-child::after {
+        content: "";
+        position: absolute;
+        left: 105%;
+        top: 0%;
+        width: 0;
+        height: 0;
+        background: url(./images/arrow_green.svg);
+        transition: 0.2s;
+      }
+      .wrap .bottom .con .txt a:hover span:first-child::after {
+        content: "";
+        position: absolute;
+        left: 110%;
+        top: 0%;
+        width: 40px;
+        height: 40px;
+        background: url(./images/arrow_green.svg);
+      }
+      .wrap .bottom .con .txt a:hover span:first-child {
+        right: 20px;
+      }
+      .wrap .bottom .con .txt a:hover .photo p {
+        transform: scale(120%);
+      }
+      .wrap .bottom .con .txt a span:nth-child(2) {
+        font: 20px pretendard;
+      }
+      @media screen and (max-width: 1024px) {
+        .wrap .title {
+          padding: 50px 0;
+        }
+        .wrap .title h3 {
+          font-size: 14px;
+        }
+        .wrap .title p {
+          font-size: 22px;
+        }
+        .wrap .title p br {
+          display: none;
+        }
+        .wrap .bottom {
+          gap: 70px;
+        }
+        .wrap .bottom .photo {
+          margin: 0 20px;
+        }
+        .wrap .bottom .con {
+          gap: 20px;
+        }
+        .wrap .bottom .con .txt {
+          position: relative;
+        }
+        .wrap .bottom .con .txt span:first-child {
+          font-size: 32px;
+          position: static;
+        }
+        .wrap .bottom .con .txt a span:nth-child(2) {
+          font-size: 16px;
+        }
+        .wrap .bottom .con .txt a:hover span:first-child {
+          position: static;
+        }
+        .wrap .bottom .con .txt span:first-child::after {
+          display: none;
+        }
+        .wrap .bottom .con .txt span:first-child::before {
+          content: "";
+          position: absolute;
+          right: 1%;
+          top: 0%;
+          width: 40px;
+          height: 40px;
+          background: url(./images/button_arrow_l_bk.svg);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <div class="title">
+        <h3>솔루션별</h3>
+        <p>
+          자동차, 전기전자, 산업재까지 다양한 분야에서 적용되고 있는<br />
+          BGF에코머티리얼즈의 솔루션을 소개합니다.
+        </p>
+      </div>
+      <div class="bottom">
+        <div class="con con1">
+          <div class="photo">
+            <p>
+              <a href="#"><img src="./images/contents_01.jpg" alt="" /></a>
+            </p>
+          </div>
+          <div class="txt">
+            <a href="#"
+              ><span>Automotive</span><br /><span
+                >탄소저감과 지속 가능성을 고려하여 혁신적인 자동차 제품을
+                실현하는데 주력하고 있습니다.</span
+              ></a
+            >
+          </div>
+        </div>
+        <div class="con con2">
+          <div class="photo">
+            <p>
+              <a href="#"><img src="./images/contents_02.jpg" alt="" /></a>
+            </p>
+          </div>
+          <div class="txt">
+            <a href="#"
+              ><span>Electric & Electronic</span><br /><span
+                >플라스틱 소재의 내충격성과 전기절연, 단열성, 화학적 기능을
+                강화하여 제품의 신뢰성과 안전성을 향상시키는 것을 목표로
+                합니다.</span
+              ></a
+            >
+          </div>
+        </div>
+        <div class="con con3">
+          <div class="photo">
+            <p>
+              <a href="#"><img src="./images/contents_03.jpg" alt="" /></a>
+            </p>
+          </div>
+          <div class="txt">
+            <a href="#"
+              ><span>Industrial</span><br /><span
+                >전자기기의 내부 및 외부 재료, 부품, 설비, 도구 등 다양한 산업
+                재료로 널리 활용됩니다.</span
+              ></a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

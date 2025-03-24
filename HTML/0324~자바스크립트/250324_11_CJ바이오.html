@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      a {
+        text-decoration: none;
+        color: #ccc;
+      }
+      .wrap {
+        width: 100%;
+        margin: 100px auto;
+        padding: 0 100px;
+        box-sizing: border-box;
+        display: flex;
+        justify-content: center;
+      }
+      .wrap .menu {
+        flex: 30%;
+      }
+      .wrap .menu h2 {
+        font-size: 48px;
+        padding: 20px 0;
+      }
+      .wrap .menu ul li {
+        font-size: 28px;
+        padding: 10px 0;
+      }
+      .wrap .con {
+        flex: 70%;
+        display: flex;
+        border: 1px solid #e5e5e5;
+        position: relative;
+      }
+      .wrap .con ul li {
+        display: flex;
+        position: absolute;
+        left: 0;
+        top: 0;
+        opacity: 0;
+      }
+      .wrap .con ul li.on {
+        opacity: 1;
+      }
+      /* .wrap .con ul li:nth-child(2),
+      .wrap .con ul li:nth-child(3),
+      .wrap .con ul li:nth-child(4) {
+        display: none;
+      } */
+      .wrap .con ul li > p {
+        flex: 1 1 100%;
+        display: flex;
+        align-items: center;
+      }
+      .wrap .con ul li > p img {
+        width: 100%;
+        object-fit: cover;
+      }
+      .wrap .con ul li .txt {
+        flex: 1 1 100%;
+        padding: 50px;
+        box-sizing: border-box;
+        background: #000;
+      }
+      .wrap .con ul li .txt p {
+        color: #fff;
+        flex: 1;
+        overflow: hidden;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <div class="menu">
+        <h2>What’s<br />New</h2>
+        <ul>
+          <li><a href="#">보도자료</a></li>
+          <li><a href="#">언론보도</a></li>
+          <li><a href="#">CJBS Now</a></li>
+          <li><a href="#">미디어</a></li>
+        </ul>
+      </div>
+      <div class="con">
+        <ul>
+          <li class="conli">
+            <p>
+              <img
+                src="https://www.cjbioscience.com/wp-content/themes/cj/asset/img/logo-bk.svg"
+                alt=""
+              />
+            </p>
+            <div class="txt">
+              <p>
+                CJ바이오사이언스, ‘ECCO 2025’에서 ‘CJRB-201’ 전임상 데이터
+                발표…”26년 임상 진입 목표”
+              </p>
+              <p>
+                - ‘CJRB-201’, 강력한 항염효과로 주목받고 있는 ‘페칼리박테리움’
+                균주 중 ‘조절 T세포’ 가장 효과적으로 유도 -- 다양한 동물실험
+                통해 체중 감소 억제, 질병활성 지수 개선, 조직 병리 완화 등 주요
+                질환 지표 개선 확인 -- 기존 항체 기반 치료제와 동등한 수준의
+                항염증 효과에 안전성과 경구 투약 편의성도 갖춰 차별화된 치료
+                옵션 제시 - CJ바이오사이언스가 이 달 19일부터 22일까지 독일
+                베를린에서 열리는 ‘유럽 크론병 및 대장염 학회(European Crohn’s
+                and Colitis Organization, 이하 ECCO) 2025’에서 파이프라인
+                ‘CJRB-201’의 연구 성과를 발표한다고 18일 밝혔다.
+              </p>
+              <p>2025-02-18</p>
+            </div>
+          </li>
+          <li class="conli">
+            <p>
+              <img
+                src="	https://www.cjbioscience.com/wp-content/uploads/kboard_thumbnails/4/202502/67bfd9c9b40fa1956256.jpg"
+                alt=""
+              />
+            </p>
+            <div class="txt">
+              <p>
+                CJ바이오사이언스, ‘ECCO 2025’에서 ‘CJRB-201’ 전임상 데이터
+                발표…”26년 임상 진입 목표”
+              </p>
+              <p>
+                - ‘CJRB-201’, 강력한 항염효과로 주목받고 있는 ‘페칼리박테리움’
+                균주 중 ‘조절 T세포’ 가장 효과적으로 유도 -- 다양한 동물실험
+                통해 체중 감소 억제, 질병활성 지수 개선, 조직 병리 완화 등 주요
+                질환 지표 개선 확인 -- 기존 항체 기반 치료제와 동등한 수준의
+                항염증 효과에 안전성과 경구 투약 편의성도 갖춰 차별화된 치료
+                옵션 제시 - CJ바이오사이언스가 이 달 19일부터 22일까지 독일
+                베를린에서 열리는 ‘유럽 크론병 및 대장염 학회(European Crohn’s
+                and Colitis Organization, 이하 ECCO) 2025’에서 파이프라인
+                ‘CJRB-201’의 연구 성과를 발표한다고 18일 밝혔다.
+              </p>
+              <p>2025-02-18</p>
+            </div>
+          </li>
+          <li class="conli">
+            <p>
+              <img
+                src="https://www.cjbioscience.com/wp-content/themes/cj/asset/img/logo-bk.svg"
+                alt=""
+              />
+            </p>
+            <div class="txt">
+              <p>
+                CJ바이오사이언스, ‘ECCO 2025’에서 ‘CJRB-201’ 전임상 데이터
+                발표…”26년 임상 진입 목표”
+              </p>
+              <p>
+                - ‘CJRB-201’, 강력한 항염효과로 주목받고 있는 ‘페칼리박테리움’
+                균주 중 ‘조절 T세포’ 가장 효과적으로 유도 -- 다양한 동물실험
+                통해 체중 감소 억제, 질병활성 지수 개선, 조직 병리 완화 등 주요
+                질환 지표 개선 확인 -- 기존 항체 기반 치료제와 동등한 수준의
+                항염증 효과에 안전성과 경구 투약 편의성도 갖춰 차별화된 치료
+                옵션 제시 - CJ바이오사이언스가 이 달 19일부터 22일까지 독일
+                베를린에서 열리는 ‘유럽 크론병 및 대장염 학회(European Crohn’s
+                and Colitis Organization, 이하 ECCO) 2025’에서 파이프라인
+                ‘CJRB-201’의 연구 성과를 발표한다고 18일 밝혔다.
+              </p>
+              <p>2025-02-18</p>
+            </div>
+          </li>
+          <li class="conli">
+            <p>
+              <img
+                src="https://www.cjbioscience.com/wp-content/uploads/kboard_attached/6/202502/67a9ac62bdfc63227496.jpg"
+                alt=""
+              />
+            </p>
+            <div class="txt">
+              <p>
+                CJ바이오사이언스, ‘ECCO 2025’에서 ‘CJRB-201’ 전임상 데이터
+                발표…”26년 임상 진입 목표”
+              </p>
+              <p>
+                - ‘CJRB-201’, 강력한 항염효과로 주목받고 있는 ‘페칼리박테리움’
+                균주 중 ‘조절 T세포’ 가장 효과적으로 유도 -- 다양한 동물실험
+                통해 체중 감소 억제, 질병활성 지수 개선, 조직 병리 완화 등 주요
+                질환 지표 개선 확인 -- 기존 항체 기반 치료제와 동등한 수준의
+                항염증 효과에 안전성과 경구 투약 편의성도 갖춰 차별화된 치료
+                옵션 제시 - CJ바이오사이언스가 이 달 19일부터 22일까지 독일
+                베를린에서 열리는 ‘유럽 크론병 및 대장염 학회(European Crohn’s
+                and Colitis Organization, 이하 ECCO) 2025’에서 파이프라인
+                ‘CJRB-201’의 연구 성과를 발표한다고 18일 밝혔다.
+              </p>
+              <p>2025-02-18</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <script>
+      function my() {
+        document.querySelectorAll(".wrap .con ul li").forEach(function (value, key) {
+          value.classList.add("on");
+        });
+      }
+
+      document.getElementsByClassName("conli")[0].classList.add("on");
+      document.querySelectorAll("a").forEach(function (value, key) {
+        value.onclick = function () {
+          my();
+      });
+    </script>
+  </body>
+</html>

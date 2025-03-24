@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>사업영역</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      .wrap {
+        width: 100%;
+        padding: 0 10px;
+        box-sizing: border-box;
+        margin: 50px auto;
+      }
+      .wrap .top {
+        width: 100%;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 100px 0;
+        box-sizing: border-box;
+      }
+      .wrap .top h3 {
+        font: 20px pretendard;
+        color: #666;
+        margin-bottom: 20px;
+      }
+      .wrap .top p {
+        font: 40px pretendard;
+        font-weight: 500;
+        color: #000;
+      }
+      .wrap .bottom {
+        width: 100%;
+        position: relative;
+      }
+      .wrap .bottom > p {
+        width: 100%;
+        max-width: 1440px;
+        height: 600px;
+        margin: 0 auto;
+      }
+      .wrap .bottom > p img {
+        width: 100%;
+        object-fit: cover;
+      }
+      .wrap .bottom .txt {
+        position: absolute;
+        left: 15%;
+        top: 35%;
+        padding: 5px;
+        box-sizing: border-box;
+        word-break: keep-all;
+      }
+      .wrap .bottom .txt p:nth-child(1) {
+        font: 30px pretendard;
+        color: #fff;
+        margin-bottom: 20px;
+      }
+      .wrap .bottom .txt p:nth-child(2) {
+        font: 16px pretendard;
+        color: #fff;
+      }
+      @media screen and (max-width: 1439px) {
+        .wrap .top {
+          padding: 50px 0;
+        }
+        .wrap .top p {
+          word-break: keep-all;
+        }
+        .wrap .top p br {
+          display: none;
+        }
+
+        .wrap .bottom > p {
+          width: 98%;
+          margin: 0 auto;
+        }
+        .wrap .bottom > p img {
+          width: 100%;
+          height: 100%;
+          object-fit: none;
+        }
+      }
+      @media screen and (max-width: 1023px) {
+        .wrap .top h3 {
+          font-size: 14px;
+        }
+        .wrap .top p {
+          font-size: 22px;
+        }
+        .wrap .bottom > p {
+          height: 500px;
+        }
+        .wrap .bottom .txt {
+          position: absolute;
+          left: 3%;
+          top: 10%;
+        }
+        .wrap .bottom .txt p br {
+          display: none;
+        }
+        .wrap .bottom .txt p:nth-child(1) {
+          font-size: 18px;
+        }
+        .wrap .bottom .txt p:nth-child(2) {
+          font-size: 14px;
+          word-break: keep-all;
+        }
+      }
+      @media screen and (max-width: 766px) {
+        .wrap .bottom > p {
+          height: 840px;
+        }
+        .wrap .bottom > p img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+        .wrap .bottom .txt {
+          position: absolute;
+          left: 3%;
+          top: 10%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <div class="top">
+        <h3>사업소개</h3>
+        <p>
+          다양한 소재 솔루션으로 고객의 생활을 더 안전하고 풍요롭게 하며<br />
+          환경에 이로운 신소재 개발로 지속 가능한 미래를 만듭니다.
+        </p>
+      </div>
+      <div class="bottom">
+        <p><img src="./images/advanced-materials_bg_pc_img.jpg" alt="" /></p>
+        <div class="txt">
+          <p>
+            고객의 니즈에 따라 맞춤형 엔지니어링 소재를 개발하여<br />
+            다양한 용도별 요구 성능을 충족 시킵니다.
+          </p>
+          <p>
+            환경규제 강화로 인한 금속부품의 경량화, 에너지효율 증대,
+            e-Mobility와 ESS 등 신규 Application의<br />
+            확대로 고기능성 엔지니어링 소재의 적용처가 확대되고 있으며, 이에
+            따라 고객들은 보다 더 다양하고<br />
+            정밀한 기능성을 요구하고 있습니다.
+          </p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
