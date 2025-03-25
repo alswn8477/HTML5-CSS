@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      .wrap {
+        width: 100%;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+      }
+      .wrap .up {
+        width: 100%;
+        padding: 100px;
+        box-sizing: border-box;
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+      }
+      .wrap .up li a {
+        font: 20px pretendard;
+        color: #ffffff80;
+        text-decoration: none;
+        border: 1px solid #transparent;
+        background: rgba(51, 51, 51, 0.8);
+        padding: 5px 30px;
+        border-radius: 30px;
+      }
+      .wrap .up li a.on {
+        font: 20px pretendard;
+        color: #fff;
+        text-decoration: none;
+        border: 1px solid #transparent;
+        background: #da291c;
+        padding: 5px 30px;
+        border-radius: 30px;
+      }
+      .wrap .down {
+        width: 100%;
+      }
+      .wrap .down li {
+        width: 100%;
+        position: relative;
+        position: absolute;
+        opacity: 0;
+      }
+      .wrap .down li.on {
+        opacity: 1;
+      }
+      .wrap .down li p {
+        width: 100%;
+      }
+      .wrap .down li p img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      .wrap .down li .txt {
+        width: 100%;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+      }
+      .wrap .down li .txt h3 {
+        font: bold 38px pretendard;
+        color: #111;
+        margin-bottom: 15px;
+      }
+      .wrap .down li .txt p {
+        font: 22px pretendard;
+        color: #333;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <ul class="up">
+        <li><a href="#">연구개발</a></li>
+        <li><a href="#">기초연구</a></li>
+        <li><a href="#">패키지연구</a></li>
+        <li><a href="#">기술연구</a></li>
+        <li><a href="#">안전관리</a></li>
+        <li><a href="#">연구전략</a></li>
+      </ul>
+      <ul class="down">
+        <li>
+          <p>
+            <img
+              src="https://www.lotternd.com/assets/images/sub/research/research-ban1.jpg"
+              alt="img1"
+            />
+          </p>
+          <div class="txt">
+            <h3>연구개발</h3>
+            <p>
+              소비자의 니즈와 시장 선호도에 부합하는 신제품을 출시하고 품질을
+              개선합니다.
+            </p>
+          </div>
+        </li>
+        <li>
+          <p>
+            <img
+              src="	https://www.lotternd.com/assets/images/sub/research/research-ban2.jpg
+              "
+              alt="img2"
+            />
+          </p>
+          <div class="txt">
+            <h3>기초연구</h3>
+            <p>
+              바이오 연구, 신소재 발굴 등 개발의 기틀을 마련하고 신규 솔루션을
+              개척합니다.
+            </p>
+          </div>
+        </li>
+        <li>
+          <p>
+            <img
+              src="https://www.lotternd.com/assets/images/sub/research/research-ban3.jpg"
+              alt="img3"
+            />
+          </p>
+          <div class="txt">
+            <h3>패키지연구</h3>
+            <p>
+              제품 포장을 설계하고 디자인하여 품질 유지와 아이덴티티 강화를
+              이룹니다.
+            </p>
+          </div>
+        </li>
+        <li>
+          <p>
+            <img
+              src="https://www.lotternd.com/assets/images/sub/research/research-ban4.jpg"
+              alt="img1"
+            />
+          </p>
+          <div class="txt">
+            <h3>기술연구</h3>
+            <p>
+              첨단 기술을 현장에 적용하여 식품 제조 방식의 선진화를 이끕니다.
+            </p>
+          </div>
+        </li>
+        <li>
+          <p>
+            <img
+              src="https://www.lotternd.com/assets/images/sub/research/research-ban5.jpg"
+              alt="img1"
+            />
+          </p>
+          <div class="txt">
+            <h3>안전관리</h3>
+            <p>
+              위생 관리와 위해 사고 예방을 통해 롯데 식품 및 상품의 안전을
+              책임집니다.
+            </p>
+          </div>
+        </li>
+        <li>
+          <p>
+            <img
+              src="https://www.lotternd.com/assets/images/sub/research/research-ban6.jpg"
+              alt="img1"
+            />
+          </p>
+          <div class="txt">
+            <h3>연구전략</h3>
+            <p>진행 방향을 설계하고 실질적 연구 활동을 지원합니다.</p>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <script>
+      document.querySelectorAll(".wrap .up li a")[0].classList.add("on");
+      document.querySelectorAll(".wrap .down li")[0].classList.add("on");
+
+      function myremove() {
+        document.querySelectorAll(".wrap .up li a").forEach(function (v, k) {
+          v.classList.remove("on");
+        });
+        document.querySelectorAll(".wrap .down li").forEach(function (v, k) {
+          v.classList.remove("on");
+        });
+      }
+
+      document.querySelectorAll(".wrap .up li a").forEach(function (v, k) {
+        v.onclick = function (e) {
+          e.preventDefault();
+          myremove();
+          document.querySelectorAll(".wrap .down li")[k].classList.add("on");
+          document.querySelectorAll(".wrap .up li a")[k].classList.add("on");
+        };
+      });
+    </script>
+  </body>
+</html>
