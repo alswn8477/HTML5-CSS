@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      a {
+        text-decoration: none;
+      }
+      .wrap {
+        max-width: 1440px;
+        width: 100%;
+        margin: 0 auto;
+        padding: 100px 20px;
+        box-sizing: border-box;
+        display: flex;
+        gap: 50px;
+      }
+      .wrap > ul {
+        flex: 50%;
+        position: relative;
+      }
+      .wrap > ul li {
+        width: 100%;
+        position: absolute;
+      }
+      .wrap > ul li:nth-child(3),
+      .wrap > ul li:nth-child(2) {
+        opacity: 0;
+      }
+      .wrap > ul li img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      .wrap .right {
+        flex: 50%;
+      }
+      .wrap .right ul {
+        display: flex;
+        justify-content: space-around;
+        padding: 50px 0;
+      }
+      .wrap .right ul li a {
+        font: 21px pretendard;
+        color: #999;
+        position: relative;
+      }
+      .wrap .right ul li a:hover {
+        font-weight: bold;
+        color: #0e2071;
+      }
+      .wrap .right ul li a:hover span {
+        color: #fff;
+      }
+      .wrap .right ul li.on a {
+        font-weight: bold;
+        color: #0e2071;
+      }
+      .wrap .right ul li.on a span {
+        color: #fff;
+      }
+      .wrap .right ul li.on a::after {
+        opacity: 1;
+      }
+      .wrap .right ul li a:hover::after {
+        opacity: 1;
+      }
+      .wrap .right ul li a::after {
+        content: "";
+        position: absolute;
+        left: -20%;
+        top: -50%;
+        width: 50px;
+        height: 50px;
+        background: #0e2071;
+        border-radius: 50%;
+        z-index: -1;
+        opacity: 0;
+        transition: 0.5s;
+      }
+      .wrap .right .bottom h1 {
+        padding-bottom: 50px;
+        font-size: 73px;
+        line-height: 60px;
+      }
+      .wrap .right .bottom h1 span {
+        font-size: 30px;
+      }
+      .wrap .right .bottom p {
+        font-size: 17px;
+        color: #666;
+      }
+      .wrap .right .bottom a {
+        display: inline-block;
+        margin-top: 50px;
+        padding: 10px 20px;
+        font: 14px pretendard;
+        color: #666;
+        border: 1px solid #transparent;
+        border-radius: 50px;
+        background: #f1f1f1;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <ul class="left">
+        <li>
+          <img
+            src="	https://www.unitechcorp.com/wp-content/themes/unitech/assets/images/business_slide_img.jpg"
+            alt=""
+          />
+        </li>
+        <li>
+          <img
+            src="	https://www.unitechcorp.com/wp-content/themes/unitech/assets/images/business_slide_img2.jpg"
+            alt=""
+          />
+        </li>
+        <li>
+          <img
+            src="	https://www.unitechcorp.com/wp-content/themes/unitech/assets/images/business_slide_img3.jpg"
+            alt=""
+          />
+        </li>
+      </ul>
+      <div class="right">
+        <ul class="menu">
+          <li>
+            <a href=""><span>MO</span>BILITY</a>
+          </li>
+          <li>
+            <a href=""><span>EN</span>ERGY</a>
+          </li>
+          <li>
+            <a href=""><span>IN</span>NOVATION</a>
+          </li>
+        </ul>
+        <div class="bottom">
+          <h1><span>첨단 모빌리티 소재의 중심</span>MOBILITY</h1>
+          <p>
+            보다 안전하고, 보다 가벼워질 수 있는<br />
+            모빌리티 소재를 제공합니다.
+          </p>
+          <a href="#">AUTOMOTIVE</a>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      document.querySelectorAll(".wrap .right .menu li")[0].classList.add("on");
+
+      function my() {
+       document.querySelector(".wrap .right .menu li").forEach(function (v, k) {v.classList.remove("on");});
+
+       document.querySelector(".wrap .right .menu li").forEach(function (v, k) {v.onclick = function {
+              my();
+            }
+
+                  });
+    </script>
+  </body>
+</html>
