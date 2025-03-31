@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      a {
+        text-decoration: none;
+        color: #ffffff4d;
+      }
+      .wrap {
+        width: 100%;
+        padding: 200px;
+        box-sizing: border-box;
+        margin: 0 auto;
+        background: url(https://www.samsungshi.com/images/sub/sVisual_01.jpg);
+      }
+      .wrap h2 {
+        margin: 0 auto;
+        text-align: center;
+        font: bold 60px pretendard;
+        color: #fff;
+        padding-bottom: 50px;
+      }
+      .wrap ul {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+      }
+      .wrap ul li {
+        font: 22px pretendard;
+      }
+      .wrap ul li p {
+        position: relative;
+      }
+      .wrap ul li p a span {
+        padding: 0 20px;
+      }
+      .wrap ul li p a span.on {
+        color: #fff;
+      }
+      .wrap ul li p a img {
+        width: 0;
+      }
+      .wrap ul li:first-child p a img {
+        width: 20px;
+      }
+      /* .wrap ul li p a:hover img {
+        width: 20px;
+        transform: rotate(360deg);
+        transition: 0.5s;
+      }
+      .wrap ul li p a:hover span {
+        color: #fff;
+      } */
+      .wrap ul li p a::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 180%;
+        width: 100%;
+        height: 3px;
+        background: #ffffff4d;
+      }
+      /* .wrap ul li p a:hover:after {
+        background: #fff;
+        transition: 0.5s;
+      } */
+      .wrap ul li:first-child p a::after {
+        background: #fff;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <h2>제품 | 기술</h2>
+      <ul>
+        <li>
+          <p>
+            <a href="">
+              <span>제품 | 서비스</span>
+              <img
+                src="https://www.samsungshi.com/images/sub/sVIsual_icon.png"
+                alt="img"
+              />
+            </a>
+          </p>
+        </li>
+        <li>
+          <p>
+            <a href="">
+              <span>그린 솔루션</span>
+              <img
+                src="https://www.samsungshi.com/images/sub/sVIsual_icon.png"
+                alt="img"
+              />
+            </a>
+          </p>
+        </li>
+        <li>
+          <p>
+            <a href="">
+              <span> 디지털 솔루션</span>
+              <img
+                src="https://www.samsungshi.com/images/sub/sVIsual_icon.png"
+                alt="img"
+              />
+            </a>
+          </p>
+        </li>
+        <li>
+          <p>
+            <a href="">
+              <span>스마트야드 솔루션</span>
+              <img
+                src="https://www.samsungshi.com/images/sub/sVIsual_icon.png"
+                alt="img"
+              />
+            </a>
+          </p>
+        </li>
+      </ul>
+    </div>
+    <script>
+      function my() {
+        document.querySelectorAll("ul li p").forEach(function (v, k) {
+          v.querySelector("a span").onmouseenter.classList.add("on");
+        });
+      }
+
+      document.querySelectorAll("ul li p a").forEach(function (v, k) {
+        my();
+      });
+    </script>
+  </body>
+</html>
