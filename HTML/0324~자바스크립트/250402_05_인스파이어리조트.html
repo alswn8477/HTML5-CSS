@@ -37,16 +37,13 @@
       }
       .tower ul li div.title {
         background-position: center;
+        background-size: cover;
         border-radius: 15px;
         font-size: 32px;
         color: #fff;
-        background-position: center;
-        font-size: 32px;
-        color: #fff;
-        text-align: center;
       }
       .tower ul li.on div.title {
-        flex: 1;
+        flex: 40%;
         border-radius: 25px 0 0 25px;
       }
       .tower ul li.active {
@@ -62,6 +59,8 @@
         bottom: 50px;
         left: 0;
         white-space: nowrap;
+        text-align: center;
+        font-size: 36px;
       }
       .tower ul li.active div.title h2 {
         transform: rotate(-90deg);
@@ -89,15 +88,31 @@
         height: 100%;
         box-sizing: border-box;
       }
-
       .tower ul li.active .txt {
         width: 0;
         overflow: hidden;
         transition: 0.5s;
       }
-
       .tower .txt a {
+        width: 400px;
         background: rgb(111, 92, 128);
+        text-align: center;
+        border: 1px solid rgb(111, 92, 128);
+        border-radius: 10px;
+        padding: 25px 10px;
+        color: #fff;
+        text-decoration: none;
+      }
+      .tower .txt a img {
+        margin-left: 20px;
+      }
+      .tower ul li .txt h2 {
+        font: bold 48px pretendard;
+        text-transform: uppercase;
+      }
+      .tower ul li .txt p {
+        padding: 50px 0;
+        font-size: 18px;
       }
     </style>
   </head>
@@ -132,11 +147,11 @@
           <div class="txt">
             <div>
               <h2>
-                <div>Forest Tower</div>
+                <div>Ocean Tower</div>
               </h2>
               <p>
-                자연의 생기와 다양한 색채를 품은 포근한 안식처, 포레스트
-                타워에서 평온하면서도 활기 가득한 쉼을 누리세요.&nbsp;
+                푸르른 바다가 연상되는 오션 타워의 모던한 인테리어 속에서 일과
+                휴식의 경계를 넘나들며 편안한 시간을 보내세요. &nbsp;
               </p>
             </div>
             <a href="#"
@@ -153,11 +168,11 @@
           <div class="txt">
             <div>
               <h2>
-                <div>Forest Tower</div>
+                <div>SUN TOWER</div>
               </h2>
               <p>
-                자연의 생기와 다양한 색채를 품은 포근한 안식처, 포레스트
-                타워에서 평온하면서도 활기 가득한 쉼을 누리세요.&nbsp;
+                빛나는 태양의 따뜻함에 편안히 안길 수 있는 곳. 행운을 가득
+                머금은 선 타워에 오신 것을 환영합니다. &nbsp;
               </p>
             </div>
             <a href="#"
@@ -170,7 +185,7 @@
       </ul>
     </div>
     <script>
-      function myfnc() {
+      /* function myfnc() {
         document.querySelectorAll(".tower ul li").forEach(function (v, k) {
           v.classList.remove("on", "active");
         });
@@ -192,7 +207,26 @@
           myfnc();
           tower(k);
         };
-      });
+      }); */
+
+      document
+        .querySelectorAll(".tower ul li")
+        .forEach(function (v, k, allitem) {
+          if (k == 0) {
+            v.classList.add("on");
+          } else {
+            v.classList.add("active");
+          }
+          v.onclick = function () {
+            allitem.forEach(function (item, index) {
+              item.classList.remove("on", "active");
+              if (item != v) {
+                item.classList.add("active");
+              }
+            });
+            v.classList.add("on");
+          };
+        });
     </script>
   </body>
 </html>
