@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        height: 1000px;
+        /* cursor: url(../images/icons8-하트-40.png), auto; */
+      }
+      .con {
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        background: rgba(0, 0, 0, 0.5);
+        opacity: 0;
+        /* animation: circle 1s infinite; */
+        pointer-events: none;
+        transition: transform 0.4s;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .con.on {
+        opacity: 1;
+      }
+      @keyframes circle {
+        0% {
+          transform: scale(1);
+        }
+        50% {
+          transform: scale(1.5);
+        }
+        100% {
+          transform: scale(1);
+        }
+      }
+      ul {
+        width: 100%;
+        padding: 100px;
+        box-sizing: border-box;
+        display: flex;
+        gap: 20px;
+      }
+      ul li {
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+      }
+      ul li img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="con">View more</div>
+    <ul>
+      <li>
+        <p>자코모 소개</p>
+        <h3>About</h3>
+        <img
+          src="https://www.jakomosofa.com/inc/img/main/info_sect_1.jpg"
+          alt=""
+        />
+      </li>
+      <li>
+        <p>자코모 이야기</p>
+        <h3>Story</h3>
+        <img
+          src="	https://www.jakomosofa.com/inc/img/main/info_sect_2.jpg"
+          alt=""
+        />
+      </li>
+      <li>
+        <p>자코모 제품 철학</p>
+        <h3>Philosophy</h3>
+        <img
+          src="https://www.jakomosofa.com/inc/img/main/info_sect_3.jpg"
+          alt=""
+        />
+      </li>
+    </ul>
+    <script>
+      document.querySelectorAll("ul li").forEach(function (v, k) {
+        v.onmousemove = function (e) {
+          let x = e.clientX;
+          let y = e.clientY;
+          document.querySelector(".con").style.left = e.clientX + "px";
+          document.querySelector(".con").style.top = e.clientY + "px";
+        };
+        v.onmouseenter = function () {
+          document.querySelector(".con").classList.add("on");
+        };
+        v.onmouseleave = function () {
+          document.querySelector(".con").classList.remove("on");
+        };
+      });
+    </script>
+  </body>
+</html>
