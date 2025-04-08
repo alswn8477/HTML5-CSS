@@ -10,9 +10,15 @@
         font-family: Metropolis;
         src: url(./webfonts/Metropolis-Regular.woff) format("woff");
       }
+      @font-face {
+        font-family: NotoSansKR;
+        src: url(./webfonts/NotoSansKR-Regular.woff) format("woff");
+      }
       * {
         margin: 0;
         padding: 0;
+        font-family: "Metropolis", "NotoSansKR", "맑은고딕", "MalgunGothic",
+          sans-serif;
       }
       ul {
         list-style: none;
@@ -38,7 +44,7 @@
       header .top ul li a {
         text-decoration: none;
         color: #666666;
-        font: 15px Metropolis;
+        font-size: 15px;
       }
       header .top ul li:nth-child(3) {
         padding-left: 10px;
@@ -66,8 +72,8 @@
         gap: 5px;
       }
       header .nav {
-        width: 95%;
-        padding: 20px 0;
+        width: 90%;
+        padding: 20px 0 70px 0;
         margin: 0 auto;
         display: flex;
         justify-content: space-between;
@@ -75,7 +81,17 @@
       header .nav ul {
         display: flex;
         justify-content: space-between;
-        gap: 10px;
+        gap: 30px;
+        font-size: 16px;
+      }
+      header .nav ul li {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      header .nav ul li a {
+        text-decoration: none;
+        color: #333;
       }
       .con {
         width: 100%;
@@ -97,7 +113,7 @@
         position: relative;
       }
       .con2 h1 {
-        font: 50px Metropolis;
+        font-size: 50px;
         color: #333;
         text-align: center;
       }
@@ -106,7 +122,7 @@
         left: 75%;
         top: 1%;
         text-decoration: none;
-        font: 16px Metropolis;
+        font-size: 16px;
         color: #666;
       }
       .con2 .down {
@@ -121,7 +137,7 @@
         flex: 1;
       }
       .con2 .down .left {
-        font: 16px Metropolis;
+        font-size: 16px;
         color: #999;
         text-align: center;
       }
@@ -164,19 +180,25 @@
       </div>
       <div class="nav">
         <ul class="left">
-          <li>BED</li>
-          <li>FURNITURE</li>
-          <li>STRESSLESS</li>
-          <li>SLEEP CARE</li>
-          <li>CATALOG</li>
+          <li><a href="#">BED</a></li>
+          <li><a href="#">FURNITURE</a></li>
+          <li><a href="#">STRESSLESS</a></li>
+          <li><a href="#">SLEEP CARE</a></li>
+          <li><a href="#">CATALOG</a></li>
         </ul>
         <p><img src="./images/header-logo.png" alt="" /></p>
         <ul class="right">
-          <li>침대과학</li>
-          <li>에이스 스토리</li>
-          <li>고객체험</li>
-          <li>이벤트</li>
-          <li>매장안내</li>
+          <li><a href="#">침대과학</a></li>
+          <li><a href="#">에이스 스토리</a></li>
+          <li><a href="#">고객체험</a></li>
+          <li><a href="#">이벤트</a></li>
+          <li><a href="#">매장안내</a></li>
+          <li>
+            <a href="#"><img src="./images/gnb-search-btn.png" alt="" /></a>
+          </li>
+          <li>
+            <a href="#"><img src="./images/all-menu-btn.png" alt="" /></a>
+          </li>
         </ul>
       </div>
     </header>
