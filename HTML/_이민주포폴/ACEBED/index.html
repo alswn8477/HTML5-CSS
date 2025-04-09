@@ -77,19 +77,26 @@
         margin: 0 auto;
         display: flex;
         justify-content: space-between;
+        position: relative;
       }
-      header .nav ul {
+      header .nav > a {
+        position: absolute;
+        left: 50%;
+        top: 10%;
+        transform: translateX(-50%);
+      }
+      header .nav > div {
         display: flex;
         justify-content: space-between;
         gap: 30px;
         font-size: 16px;
       }
-      header .nav ul li {
+      header .nav > div > div {
         display: flex;
         justify-content: center;
         align-items: center;
       }
-      header .nav ul li a {
+      header .nav div > div > a {
         text-decoration: none;
         color: #333;
       }
@@ -160,7 +167,29 @@
         left: 0;
         top: -100px;
       }
+      @media screen and (max-width: 1700px) {
+        header .nav {
+          gap: 100px;
+        }
+        header .nav > div {
+          gap: 20px;
+        }
+      }
       @media screen and (max-width: 1500px) {
+        header .nav > a {
+          left: 85px;
+          top: 10px;
+        }
+        header .nav {
+          justify-content: end;
+        }
+        header .nav .right div:nth-child(1),
+        header .nav .right div:nth-child(2),
+        header .nav .right div:nth-child(3),
+        header .nav .right div:nth-child(4),
+        header .nav .right div:nth-child(5) {
+          opacity: 0;
+        }
       }
     </style>
   </head>
@@ -178,28 +207,29 @@
           <li><a href="#">에이스 침대몰</a></li>
         </ul>
       </div>
+
       <div class="nav">
-        <ul class="left">
-          <li><a href="#">BED</a></li>
-          <li><a href="#">FURNITURE</a></li>
-          <li><a href="#">STRESSLESS</a></li>
-          <li><a href="#">SLEEP CARE</a></li>
-          <li><a href="#">CATALOG</a></li>
-        </ul>
-        <p><img src="./images/header-logo.png" alt="" /></p>
-        <ul class="right">
-          <li><a href="#">침대과학</a></li>
-          <li><a href="#">에이스 스토리</a></li>
-          <li><a href="#">고객체험</a></li>
-          <li><a href="#">이벤트</a></li>
-          <li><a href="#">매장안내</a></li>
-          <li>
+        <a href="#"><img src="./images/header-logo.png" alt="logo" /></a>
+        <div class="left">
+          <div><a href="#">BED</a></div>
+          <div><a href="#">FURNITURE</a></div>
+          <div><a href="#">STRESSLESS</a></div>
+          <div><a href="#">SLEEP CARE</a></div>
+          <div><a href="#">CATALOG</a></div>
+        </div>
+        <div class="right">
+          <div><a href="#">침대과학</a></div>
+          <div><a href="#">에이스 스토리</a></div>
+          <div><a href="#">고객체험</a></div>
+          <div><a href="#">이벤트</a></div>
+          <div><a href="#">매장안내</a></div>
+          <div>
             <a href="#"><img src="./images/gnb-search-btn.png" alt="" /></a>
-          </li>
-          <li>
+          </div>
+          <div>
             <a href="#"><img src="./images/all-menu-btn.png" alt="" /></a>
-          </li>
-        </ul>
+          </div>
+        </div>
       </div>
     </header>
     <div class="con">
@@ -284,5 +314,7 @@
         </ul>
       </div>
     </div>
+
+    <script></script>
   </body>
 </html>
