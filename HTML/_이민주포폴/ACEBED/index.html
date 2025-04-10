@@ -77,6 +77,7 @@
         margin: 0 auto;
         display: flex;
         justify-content: space-between;
+
         position: relative;
       }
       header .nav > a {
@@ -88,17 +89,32 @@
       header .nav > div {
         display: flex;
         justify-content: space-between;
-        gap: 30px;
+        align-items: flex-start;
         font-size: 16px;
       }
       header .nav > div > div {
         display: flex;
         justify-content: center;
-        align-items: center;
+        align-items: flex-start;
+      }
+      header .nav > div > div > div {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 20px;
       }
       header .nav div > div > a {
+        display: inline-block;
         text-decoration: none;
         color: #333;
+      }
+      header .nav .one_dep div a span:nth-child(2) {
+        opacity: 0.5;
+      }
+      header .nav .two_dep {
+        display: flex;
+        flex-direction: column;
       }
       .con {
         width: 100%;
@@ -168,12 +184,6 @@
         top: -100px;
       }
       @media screen and (max-width: 1700px) {
-        header .nav {
-          gap: 100px;
-        }
-        header .nav > div {
-          gap: 20px;
-        }
       }
       @media screen and (max-width: 1500px) {
         header .nav > a {
@@ -207,27 +217,137 @@
           <li><a href="#">에이스 침대몰</a></li>
         </ul>
       </div>
-
       <div class="nav">
-        <a href="#"><img src="./images/header-logo.png" alt="logo" /></a>
+        <a href="#">
+          <img src="./images/header-logo.png" alt="logo" />
+        </a>
         <div class="left">
-          <div><a href="#">BED</a></div>
-          <div><a href="#">FURNITURE</a></div>
-          <div><a href="#">STRESSLESS</a></div>
-          <div><a href="#">SLEEP CARE</a></div>
-          <div><a href="#">CATALOG</a></div>
+          <div class="one_dep">
+            <div>
+              <a href="#">
+                <span class="one">BED</span>
+                <span>침대</span>
+              </a>
+              <div class="two_dep">
+                <a href="#"><span>프레임</span></a>
+                <a href="#"><span>매드리스</span></a>
+                <a href="#"><span>신제품</span></a>
+              </div>
+            </div>
+          </div>
+          <div class="one_dep">
+            <div>
+              <a href="#">
+                <span class="one">FURNITURE</span>
+                <span>가구</span>
+              </a>
+              <div class="two_dep">
+                <a href="#"><span>룸 세트</span></a>
+                <a href="#"><span>리빙가구</span></a>
+              </div>
+            </div>
+          </div>
+          <div class="one_dep">
+            <div>
+              <a href="#">
+                <span class="one">STRESSLESS</span>
+                <span>스트레스리스</span>
+              </a>
+              <div class="two_dep">
+                <a href="#"><span>1인용 리클라이너</span></a>
+                <a href="#"><span>오피스체어</span></a>
+                <a href="#"><span>소파</span></a>
+                <a href="#"><span>테이블&악세서리</span></a>
+              </div>
+            </div>
+          </div>
+          <div class="one_dep">
+            <div>
+              <a href="#">
+                <span class="one">SLEEP CARE</span>
+                <span>슬립케어</span>
+              </a>
+              <div class="two_dep">
+                <a href="#"><span>마이크로케어</span></a>
+                <a href="#"><span>스마트슬리브</span></a>
+                <a href="#"><span>마이크로케어 쿨링패드</span></a>
+                <a href="#"><span>쿨링 바디필로우</span></a>
+                <a href="#"><span>마이크로가드에코플러스</span></a>
+              </div>
+            </div>
+          </div>
+          <div class="one_dep">
+            <div>
+              <a href="#">
+                <span class="one">CATALOG</span>
+                <span>카달로그</span>
+              </a>
+              <div class="two_dep">
+                <a href="#"><span>E-카탈로그</span></a>
+              </div>
+            </div>
+          </div>
         </div>
         <div class="right">
-          <div><a href="#">침대과학</a></div>
-          <div><a href="#">에이스 스토리</a></div>
-          <div><a href="#">고객체험</a></div>
-          <div><a href="#">이벤트</a></div>
-          <div><a href="#">매장안내</a></div>
-          <div>
-            <a href="#"><img src="./images/gnb-search-btn.png" alt="" /></a>
+          <div class="one_dep">
+            <div>
+              <a href="#">
+                <span class="one">침대과학</span>
+              </a>
+              <div class="two_dep">
+                <a href="#"><span>스프링</span></a>
+                <a href="#"><span>기술력</span></a>
+                <a href="#"><span>특허 및 수상내역</span></a>
+                <a href="#"><span>침대공학연구소</span></a>
+              </div>
+            </div>
           </div>
-          <div>
-            <a href="#"><img src="./images/all-menu-btn.png" alt="" /></a>
+          <div class="one_dep">
+            <div>
+              <a href="#">
+                <span class="one">에이스 스토리</span>
+              </a>
+              <div class="two_dep">
+                <a href="#"><span>NOW SNS</span></a>
+                <a href="#"><span>고객후기</span></a>
+                <a href="#"><span>뉴스룸</span></a>
+              </div>
+            </div>
+          </div>
+          <div class="one_dep">
+            <div>
+              <a href="#">
+                <span class="one">고객체험</span>
+              </a>
+              <div class="two_dep">
+                <a href="#"><span>매트리스 체험존</span></a>
+                <a href="#"><span>이동수면공학 연구소</span></a>
+                <a href="#"><span>공장 견학 신청</span></a>
+              </div>
+            </div>
+          </div>
+          <div class="one_dep">
+            <div>
+              <a href="#">
+                <span class="one">이벤트</span>
+              </a>
+              <div class="two_dep">
+                <a href="#"><span>이벤트</span></a>
+                <a href="#"><span>당첨자 안내</span></a>
+              </div>
+            </div>
+          </div>
+          <div class="one_dep">
+            <div>
+              <a href="#">
+                <span class="one">매장안내</span>
+              </a>
+              <div class="two_dep">
+                <a href="#"><span>매장찾기</span></a>
+                <a href="#"><span>아이스 스퀘어</span></a>
+                <a href="#"><span>아이스 에비뉴</span></a>
+              </div>
+            </div>
           </div>
         </div>
       </div>
