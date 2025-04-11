@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="./style.css" />
-    <script src="./script.js"></script>
   </head>
   <body>
     <header>
@@ -172,13 +171,13 @@
       <h1>ACE SCIENCE</h1>
       <a href="#">more</a>
       <div class="down">
-        <ul class="left">
-          <li>HYBRID Z SPRING</li>
-          <li>5 FREE SYSTEM</li>
-          <li>NEW MATERIAL</li>
-          <li>ECO & HEALTH</li>
-        </ul>
-        <p>
+        <div class="left">
+          <a href="#">HYBRID Z SPRING</a>
+          <a href="#">5 FREE SYSTEM</a>
+          <a href="#">NEW MATERIAL</a>
+          <a href="#">ECO & HEALTH</a>
+        </div>
+        <div>
           <video
             autoplay
             muted
@@ -186,8 +185,8 @@
             src="./video/1440_bg01.mp4"
             type="mp4"
           ></video>
-        </p>
-        <ul class="right">
+        </div>
+        <div class="right">
           <li>
             <h3>
               오늘밤 어떤 스프링으로<br />
@@ -236,22 +235,67 @@
               신소재만을 사용합니다
             </p>
           </li>
-        </ul>
+        </div>
       </div>
     </div>
 
     <!-- Swiper -->
     <div class="con3">
+      <h1>ACE COLLECTION</h1>
+      <a href="#">more</a>
+
       <div class="swiper mySwiper">
         <div class="swiper-wrapper">
           <div class="swiper-slide">
+            <img src="./images/25011403030166744791.jpg" alt="" />
+          </div>
+          <div class="swiper-slide">
             <img src="./images/24122002161771842059.jpg" alt="" />
-            <img src="./images/24101701334671492682.jpg" alt="" />
+          </div>
+          <div class="swiper-slide">
             <img src="./images/24101701334671492682.jpg" alt="" />
           </div>
         </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
         <div class="swiper-pagination"></div>
       </div>
     </div>
+
+    <div class="con4">
+      <h1>ACE NEWS</h1>
+      <div class="down">
+        <div class="left">
+          <p>
+            에이스침대의<br />
+            새로운 소식을 알려드립니다
+          </p>
+        </div>
+        <div class="con">
+          <a href="#"><img src="./images/25040905102814275583.jpg" alt="" /></a>
+          <a href="#"><img src="./images/24121210562309739709.jpg" alt="" /></a>
+          <a href="#"><img src="./images/24102804150970723911.jpg" alt="" /></a>
+        </div>
+        <div class="right">
+          <a href="#">
+            <strong>매장오픈소식</strong><br />
+            <span>에이스스퀘어 군산점 OPEN</span>
+          </a>
+          <a href="#">
+            <strong>매장오픈소식</strong><br />
+            <span>에이스스퀘어 분당점 리뉴얼 OPEN</span>
+          </a>
+          <a href="#">
+            <strong>매장오픈소식</strong><br />
+            <span>롯데백화점 잠실점 리뉴얼 OPEN</span>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <script src="./script.js"></script>
   </body>
 </html>
