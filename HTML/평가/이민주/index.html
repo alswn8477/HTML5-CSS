@@ -7,169 +7,1197 @@
     <title>Document</title>
     <style>
       @font-face {
-        font-family: archivo;
-        src: url(./webfonts/archivo-v18-latin-regular.woff2) format("woff2");
+        font-family: Metropolis;
+        src: url(../webfonts/Metropolis-Light.woff) format("woff");
       }
       @font-face {
-        font-family: archivo300;
-        src: url(./webfonts/archivo-v18-latin-300.woff2) format("woff2");
-      }
-      @font-face {
-        font-family: archivo500;
-        src: url(./webfonts/archivo-v18-latin-500.woff2) format("woff2");
-      }
-      @font-face {
-        font-family: archivo700;
-        src: url(./webfonts/archivo-v18-latin-700.woff2) format("woff2");
+        font-family: NotoSansKR;
+        src: url(../webfonts/NotoSansKR-Light.woff) format("woff");
       }
       * {
         margin: 0;
         padding: 0;
+        font-family: Metropolis, NotoSansKR, 맑은고딕, MalgunGothic, sans-serif;
       }
       ul {
         list-style: none;
       }
+      li {
+        list-style: none;
+      }
       a {
         text-decoration: none;
+        color: #333;
       }
-      .wrap {
+      header {
+        padding: 0 80px;
+      }
+      header .top {
         width: 100%;
-        max-width: 1260px;
-        margin: 100px auto;
+        padding: 20px 0;
+        margin: 0 auto;
       }
-      .wrap h1 {
-        font: 42px archivo700;
-        color: #d1a050;
-        padding-bottom: 100px;
+      header .top ul {
+        display: flex;
+        justify-content: flex-end;
+        gap: 10px;
       }
-      .wrap .slices h2 {
-        font: bold 42px archivo300;
-        color: #d1a050;
-        padding-bottom: 20px;
+      header .top ul li {
+        display: flex;
+        justify-content: center;
+        align-items: center;
       }
-      .wrap .slices div {
+      header .top ul li a {
+        color: #666666;
+        font-size: 15px;
+      }
+      header .top ul li:nth-child(3) {
+        padding-left: 10px;
+      }
+      header .top ul li:nth-child(3) a {
+        color: #fff;
+        border: 1px solid #e36f96;
+        border-radius: 50px;
+        background: #e36f96;
+        padding: 5px 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 5px;
+      }
+      header .top ul li:nth-child(4) a {
+        color: #fff;
+        border: 1px solid #9badb6;
+        border-radius: 50px;
+        background: #9badb6;
+        padding: 5px 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 5px;
+      }
+      header .nav {
+        width: 100%;
+        padding: 0 80px;
+        box-sizing: border-box;
+        display: flex;
+        justify-content: space-between;
+        background: #fff;
+        transition: 0.5s;
+        left: 50%;
+        transform: translateX(-50%);
+        position: absolute;
+        z-index: 10;
+        margin-bottom: 200px;
+      }
+      header .nav .logo {
+        position: absolute;
+        left: 50%;
+        top: 10%;
+        transform: translateX(-50%);
+      }
+      header .nav > div {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        font-size: 16px;
+      }
+      header .nav .left,
+      header .nav .right {
+        display: flex;
+        gap: 30px;
+        background: #fff;
+      }
+      /* header .nav > div > div > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 20px;
+} */
+      /* header .nav div > div > a {
+  display: inline-block;
+  color: #333;
+} */
+      header .nav .one_dep {
+        width: 115px;
         position: relative;
+      }
+      header .nav .one_dep div a {
+        box-sizing: border-box;
+      }
+      header .nav .one_dep div a span:nth-child(2) {
+        display: none;
+      }
+      header .nav .two_dep {
+        padding-top: 20px;
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        height: 0;
+        overflow: hidden;
+        transition: 0.5s;
+        background: #fff;
+      }
+      header .nav .two_dep.on {
+        height: 100px;
+      }
+
+      .con {
+        padding: 0 80px;
+        margin-top: 200px;
+      }
+      .con > p:nth-child(1) {
+        padding: 20px 0;
+        box-sizing: border-box;
+        margin: 0 auto;
+      }
+      .con > p:nth-child(1) video {
+        width: 100%;
+        height: 70vh;
+        object-fit: cover;
+      }
+
+      .con2 {
+        width: 100%;
+        padding: 20px 80px;
+        box-sizing: border-box;
+        position: relative;
+      }
+      .con2 h1,
+      .con3 h1,
+      .con4 h1,
+      .con5 h1 {
+        font-size: 50px;
+        font-weight: 300;
+        color: #333;
+        text-align: center;
+        padding: 100px 0 50px 0;
+      }
+      .con2 > a,
+      .con3 > a {
+        position: absolute;
+        right: 15%;
+        top: 120px;
+        text-decoration: none;
+        font-size: 16px;
+        color: #666;
+      }
+      .con2 .inner {
+        display: flex;
+        height: 800px;
+        gap: 30px;
+      }
+      .con2 .inner .left,
+      .con2 .inner .right {
+        flex: 1;
+      }
+      .con2 .inner .swiper {
+        width: 710px;
+        height: 100%;
+      }
+      .con2 .inner .left {
+        font-size: 16px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+      .con2 .inner .left a {
+        display: block;
+        margin-bottom: 27px;
+        color: #999;
+      }
+      .con2 .inner .right {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .con2 .inner .right li {
+        position: absolute;
+      }
+
+      /* con2 button */
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      .visual {
+        position: relative;
+        width: 100%;
+        height: 500px;
+        border: 1px solid;
+      }
+      .visual .swiper {
+        width: 100%;
+        height: 100%;
+      }
+
+      .visual .swiper-slide {
+        text-align: center;
+        font-size: 18px;
+        background: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .visual .swiper-slide img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      .visual .swiper-btn {
+        position: absolute;
+        top: 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        z-index: 20;
+      }
+
+      .visual .swiper-btn a {
+        position: relative;
+        display: block;
+        width: 50px;
+        height: 150px;
+      }
+
+      svg {
+        width: 50px;
+        height: 150px;
+        fill: none;
+        stroke: #000;
+        stroke-width: 4px;
+        border: 1px solid;
+      }
+
+      svg path {
+        transition: d 1s ease;
+      }
+
+      #next p,
+      #prev p {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%) rotate(90deg);
+        font-size: 15px;
+        color: #333;
+        letter-spacing: 1px;
+        opacity: 0;
+        transition: opacity 0.3s;
+      }
+      #next p {
+        left: -10px;
+      }
+      #prev p {
+        left: 10px;
+      }
+      #next:hover p,
+      #prev:hover p {
+        opacity: 1;
+      }
+      .visual .swiper-btn a.disabled {
+        opacity: 0.3;
+        pointer-events: none;
+        cursor: not-allowed;
+      }
+
+      /* .con2 .down {
+  width: 100%;
+  height: 800px;
+  padding: 0 50px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.con2 .down .left {
+  font-size: 16px;
+  width: 300px;
+  height: 150px;
+}
+.con2 .down .left a {
+  display: block;
+  margin-bottom: 27px;
+  color: #999;
+}
+.con2 .down .left a.on {
+  color: #0890c0;
+  font-size: 22px;
+  font-weight: bold;
+}
+.con2 .down .swiper {
+  width: 710px;
+  height: 800px;
+}
+.con2 .down .swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.con2 .down .swiper video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.con2 .down > .center {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.con2 .down > .center video {
+  width: 100%;
+  height: 800px;
+  object-fit: cover;
+  position: absolute;
+  opacity: 0;
+}
+.con2 .down > .center video.on {
+  opacity: 1;
+}
+.con2 .down .right {
+  position: relative;
+}
+.con2 .down .right li {
+  position: absolute;
+  left: 0;
+  top: -100px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  opacity: 0;
+}
+.con2 .down .right li h3 {
+  font-size: 35px;
+  color: #333;
+}
+.con2 .down .right li p {
+  font-size: 18px;
+  color: #666;
+}
+.con2 .down .right li.on {
+  opacity: 1;
+} */
+
+      /* @media screen and (max-width: 1700px) {
+}
+@media screen and (max-width: 1500px) {
+  header .nav > a {
+    left: 85px;
+    top: 10px;
+  }
+  header .nav {
+    justify-content: end;
+  }
+  header .nav .right div:nth-child(1),
+  header .nav .right div:nth-child(2),
+  header .nav .right div:nth-child(3),
+  header .nav .right div:nth-child(4),
+  header .nav .right div:nth-child(5) {
+    opacity: 0;
+  }
+} */
+
+      .con3 {
+        width: 100%;
+        position: relative;
+        background: #f4f7fa;
+      }
+      .con3 .swiper {
+        width: 100%;
+      }
+      .con3 .mySwiper1 .swiper-slide {
+        text-align: center;
+        width: 1280px;
+        font-size: 18px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .con3 .swiper-slide img {
+        display: block;
+        width: 100%;
+        object-fit: cover;
+      }
+
+      /* con4 swiper
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.swiper-pagination-bullet {
+  width: 20px;
+  height: 20px;
+  text-align: center;
+  line-height: 20px;
+  font-size: 12px;
+  color: #000;
+  opacity: 1;
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.swiper-pagination-bullet-active {
+  color: #fff;
+  background: #007aff;
+} */
+
+      .con4 {
+        width: 100%;
+        height: 100%;
+        margin: 0 auto;
+        background: #f4f7fa;
+      }
+      .con4 .con4_wrap {
+        margin: 0 auto;
+      }
+      .con4 .con4_wrap .down {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+      }
+      .con4 .con4_wrap .down .left {
+        flex: 1 1 100%;
+        font-size: 26px;
+        color: #333;
+      }
+      .con4 .con4_wrap .down .con {
+        flex: 1 1 100%;
+        position: relative;
+      }
+      .con4 .con4_wrap .down .con a {
+        display: block;
+        width: 100%;
+      }
+      .con4 .con4_wrap.down .con a img {
+        width: 100%;
+        object-fit: cover;
+      }
+      .con4 .con4_wrap .down .right {
+        flex: 1 1 100%;
         display: flex;
         flex-direction: column;
       }
-      .wrap .slices div a {
+      .con4 .con4_wrap .down .right a {
+        display: block;
+        font-size: 16px;
+        color: #999;
+        padding-bottom: 30px;
+      }
+      .con4 .con4_wrap .down .right a span {
+        font-size: 20px;
+        color: #999;
+      }
+
+      .con5 {
+        height: 100%;
+        margin: 0 auto;
+      }
+      .con5 ul {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 50px;
+      }
+      .con5 ul li {
+        width: 100%;
+        flex: 20%;
+      }
+      .con5 ul li a {
         display: block;
         width: 100%;
-        font: 24px archivo;
-        color: #d1a050;
-        padding: 20px 0 20px 30px;
       }
-      .wrap .slices div a::before {
-        position: absolute;
-        content: "";
-        top: 0;
-        left: 0;
+      .con5 ul li a img {
         width: 100%;
-        height: 1px;
-        background: #d1a050;
+        height: 100%;
+        object-fit: cover;
       }
-      .wrap .slices div a p.on {
-        font-weight: bold;
+      .con5 p {
+        padding: 50px 0;
+        display: flex;
+        justify-content: center;
+        gap: 50px;
       }
-      .wrap .slices div a p::before {
-        content: "";
-        position: absolute;
-        left: 12px;
-        top: 33px;
-        transform: translateY(-50%);
-        width: 10px;
-        height: 2px;
-        background: #d1a050;
-        transition: 0.5s;
+
+      .con6 {
+        width: 100%;
       }
-      .wrap .slices div a p::after {
-        content: "";
-        position: absolute;
-        left: 16px;
-        top: 33px;
-        transform: translateY(-50%);
-        width: 2px;
-        height: 10px;
-        background: #d1a050;
-        transition: 0.5s;
-      }
-      .wrap .slices div a p.on::before {
-        content: "";
-        position: absolute;
-        left: 11px;
-        top: 33px;
-        transform: rotate(45deg);
-        width: 10px;
-        height: 2px;
-        background: #d1a050;
-      }
-      .wrap .slices div a p.on::after {
-        content: "";
-        position: absolute;
-        left: 15px;
-        top: 29px;
-        transform: rotate(45deg);
-        width: 2px;
-        height: 10px;
-        background: #d1a050;
-      }
-      .wrap .slices div > img {
-        height: 0;
-      }
-      .wrap .slices div.on > img {
-        height: auto;
-        margin-bottom: 50px;
-      }
-      .wrap .slices div a p > img {
-        width: 20px;
-        vertical-align: middle;
+      .con6 img {
+        width: 100%;
       }
     </style>
   </head>
   <body>
-    <div class="wrap">
-      <h1>RETAIL</h1>
-      <div class="slices">
-        <h2>Slices - Oat Base</h2>
-        <div>
-          <a href="#">
-            <p>AMERICAN</p>
-          </a>
-          <img src="./images/SLICES-OATBASE-AMERICAN-pc.jpg" alt="AMERICAN" />
-        </div>
-        <div>
-          <a href="#">
-            <p>CHEDDAR</p>
-          </a>
-          <img src="./images/SLICES-OATBASE-CHEDDAR-pc.jpg" alt="CHEDDAR" />
-        </div>
-        <div>
-          <a href="#">
-            <p>
-              <span>PEPPER JACK</span
-              ><img src="./images/webstaurantstore-w-mark.png" alt="img" />
-            </p>
-          </a>
+    <header>
+      <div class="top">
+        <ul>
+          <li><a href="#">로그인</a></li>
+          <li><a href="#">회원가입</a></li>
+          <li>
+            <a href="#"
+              ><img
+                src="https://www.acebed.com/common/images/wedding-icon.png"
+                alt="ring"
+              />웨딩멤버스</a
+            >
+          </li>
+          <li><a href="#">에이스 침대몰</a></li>
+        </ul>
+      </div>
+      <div class="nav">
+        <a href="#" class="logo">
           <img
-            src="./images/SLICES-OATBASE-PEPPERJACK-pc.jpg"
-            alt="PEPPERJACK"
+            src="https://www.acebed.com/common/images/header-logo.png"
+            alt="logo"
           />
+        </a>
+        <div class="left">
+          <div class="one_dep">
+            <div>
+              <a href="#">
+                <span class="up">BED</span>
+                <span class="down">침대</span>
+              </a>
+              <div class="two_dep">
+                <a href="#"><span>프레임</span></a>
+                <a href="#"><span>매트리스</span></a>
+                <a href="#"><span>신제품</span></a>
+              </div>
+            </div>
+          </div>
+          <div class="one_dep">
+            <div>
+              <a href="#">
+                <span class="one">FURNITURE</span>
+                <span>가구</span>
+              </a>
+              <div class="two_dep">
+                <a href="#"><span>룸 세트</span></a>
+                <a href="#"><span>리빙가구</span></a>
+              </div>
+            </div>
+          </div>
+          <div class="one_dep">
+            <div>
+              <a href="#">
+                <span class="one">STRESSLESS</span>
+                <span>스트레스리스</span>
+              </a>
+              <div class="two_dep">
+                <a href="#"><span>1인용 리클라이너</span></a>
+                <a href="#"><span>오피스체어</span></a>
+                <a href="#"><span>소파</span></a>
+                <a href="#"><span>테이블&악세서리</span></a>
+              </div>
+            </div>
+          </div>
+          <div class="one_dep">
+            <div>
+              <a href="#">
+                <span class="one">SLEEP CARE</span>
+                <span>슬립케어</span>
+              </a>
+              <div class="two_dep">
+                <a href="#"><span>마이크로케어</span></a>
+                <a href="#"><span>스마트슬리브</span></a>
+                <a href="#"><span>마이크로케어 쿨링패드</span></a>
+                <a href="#"><span>쿨링 바디필로우</span></a>
+                <a href="#"><span>마이크로가드에코플러스</span></a>
+              </div>
+            </div>
+          </div>
+          <div class="one_dep">
+            <div>
+              <a href="#">
+                <span class="one">CATALOG</span>
+                <span>카달로그</span>
+              </a>
+              <div class="two_dep">
+                <a href="#"><span>E-카탈로그</span></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="right">
+          <div class="one_dep">
+            <div>
+              <a href="#">
+                <span class="one">침대과학</span>
+              </a>
+              <div class="two_dep">
+                <a href="#"><span>스프링</span></a>
+                <a href="#"><span>기술력</span></a>
+                <a href="#"><span>특허 및 수상내역</span></a>
+                <a href="#"><span>침대공학연구소</span></a>
+              </div>
+            </div>
+          </div>
+          <div class="one_dep">
+            <div>
+              <a href="#">
+                <span class="one">에이스 스토리</span>
+              </a>
+              <div class="two_dep">
+                <a href="#"><span>NOW SNS</span></a>
+                <a href="#"><span>고객후기</span></a>
+                <a href="#"><span>뉴스룸</span></a>
+              </div>
+            </div>
+          </div>
+          <div class="one_dep">
+            <div>
+              <a href="#">
+                <span class="one">고객체험</span>
+              </a>
+              <div class="two_dep">
+                <a href="#"><span>매트리스 체험존</span></a>
+                <a href="#"><span>이동수면공학 연구소</span></a>
+                <a href="#"><span>공장 견학 신청</span></a>
+              </div>
+            </div>
+          </div>
+          <div class="one_dep">
+            <div>
+              <a href="#">
+                <span class="one">이벤트</span>
+              </a>
+              <div class="two_dep">
+                <a href="#"><span>이벤트</span></a>
+                <a href="#"><span>당첨자 안내</span></a>
+              </div>
+            </div>
+          </div>
+          <div class="one_dep">
+            <div>
+              <a href="#">
+                <span class="one">매장안내</span>
+              </a>
+              <div class="two_dep">
+                <a href="#"><span>매장찾기</span></a>
+                <a href="#"><span>아이스 스퀘어</span></a>
+                <a href="#"><span>아이스 에비뉴</span></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <div class="con">
+      <p>
+        <video
+          autoplay
+          muted
+          loop
+          src="https://www.acebed.com/video/2025/2/25022810252527843105.mp4"
+          type="mp4"
+        ></video>
+      </p>
+    </div>
+
+    <div class="con2">
+      <h1>ACE SCIENCE</h1>
+      <a href="#">more</a>
+      <div class="inner">
+        <div class="left">
+          <a href="#">HYBRID Z SPRING</a>
+          <a href="#">5 FREE SYSTEM</a>
+          <a href="#">NEW MATERIAL</a>
+          <a href="#">ECO & HEALTH</a>
+        </div>
+        <div class="swiper mySwiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <video
+                autoplay
+                muted
+                loop
+                src="https://www.acebed.com/common/images/1440_bg01.mp4"
+                type="mp4"
+              ></video>
+            </div>
+            <div class="swiper-slide">
+              <video
+                autoplay
+                muted
+                loop
+                src="https://www.acebed.com/common/images/1440_bg02.mp4"
+                type="mp4"
+              ></video>
+            </div>
+            <div class="swiper-slide">
+              <video
+                autoplay
+                muted
+                loop
+                src="https://www.acebed.com/common/images/1440_bg03.mp4"
+                type="mp4"
+              ></video>
+            </div>
+            <div class="swiper-slide">
+              <video
+                autoplay
+                muted
+                loop
+                src="https://www.acebed.com/common/images/1440_bg04.mp4"
+                type="mp4"
+              ></video>
+            </div>
+          </div>
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-pagination"></div>
+        </div>
+        <div class="right">
+          <li>
+            <h3>
+              오늘밤 어떤 스프링으로<br />
+              만든 침대에서<br />
+              주무시겠습니까?
+            </h3>
+            <p>
+              에이스만의 첨단 공학이 적용된 스프링은<br />
+              인체 곡선과 하중 분포에 따라 위에서 한 번<br />
+              부드럽게 맞춰주고 밑에서 또 한 번<br />
+              단단하게 받쳐줍니다.
+            </p>
+          </li>
+          <li>
+            <h3>
+              휴식을 방해하는<br />
+              모든 것이 사라지는 순간,<br />
+              완벽한 편안함이<br />
+              시작됩니다
+            </h3>
+            <p>
+              꺼짐, 빈틈, 쏠림, 소음, 흔들림으로부터 자유롭게! 어떤 몸 상태에도
+              적용되는 5 FREE SYSTEM으로 최상의 숙면 조건을 만듭니다.
+            </p>
+          </li>
+          <li>
+            <h3>
+              시원하게, 위생적으로<br />
+              최고의 잠을 위한<br />
+              새로운 기술
+            </h3>
+            <p>
+              최고 품질을 위해 중요한 소재 하나하나까지 직접 개발, 생산한
+              신소재만을 사용합니다
+            </p>
+          </li>
+          <li>
+            <h3>
+              피부에 가까운 만큼<br />
+              더욱 안전하게<br />
+              당신의 하루가<br />
+              건강해집니다
+            </h3>
+            <p>
+              최고 품질을 위해 중요한 소재 하나하나까지 직접 개발, 생산한
+              신소재만을 사용합니다
+            </p>
+          </li>
+        </div>
+      </div>
+      <!-- <div class="down">
+        <div class="left">
+          <a href="#">HYBRID Z SPRING</a>
+          <a href="#">5 FREE SYSTEM</a>
+          <a href="#">NEW MATERIAL</a>
+          <a href="#">ECO & HEALTH</a>
+        </div>
+        <!-- <div class="center">
+          <video
+            autoplay
+            muted
+            loop
+            src="./video/1440_bg01.mp4"
+            type="mp4"
+          ></video>
+          <video
+            autoplay
+            muted
+            loop
+            src="./video/1440_bg02.mp4"
+            type="mp4"
+          ></video>
+          <video
+            autoplay
+            muted
+            loop
+            src="./video/1440_bg03.mp4"
+            type="mp4"
+          ></video>
+          <video
+            autoplay
+            muted
+            loop
+            src="./video/1440_bg04.mp4"
+            type="mp4"
+          ></video>
+        </div> -->
+      <!-- <div class="right">
+          <li>
+            <h3>
+              오늘밤 어떤 스프링으로<br />
+              만든 침대에서<br />
+              주무시겠습니까?
+            </h3>
+            <p>
+              에이스만의 첨단 공학이 적용된 스프링은<br />
+              인체 곡선과 하중 분포에 따라 위에서 한 번<br />
+              부드럽게 맞춰주고 밑에서 또 한 번<br />
+              단단하게 받쳐줍니다.
+            </p>
+          </li>
+          <li>
+            <h3>
+              휴식을 방해하는<br />
+              모든 것이 사라지는 순간,<br />
+              완벽한 편안함이<br />
+              시작됩니다
+            </h3>
+            <p>
+              꺼짐, 빈틈, 쏠림, 소음, 흔들림으로부터 자유롭게! 어떤 몸 상태에도
+              적용되는 5 FREE SYSTEM으로 최상의 숙면 조건을 만듭니다.
+            </p>
+          </li>
+          <li>
+            <h3>
+              시원하게, 위생적으로<br />
+              최고의 잠을 위한<br />
+              새로운 기술
+            </h3>
+            <p>
+              최고 품질을 위해 중요한 소재 하나하나까지 직접 개발, 생산한
+              신소재만을 사용합니다
+            </p>
+          </li>
+          <li>
+            <h3>
+              피부에 가까운 만큼<br />
+              더욱 안전하게<br />
+              당신의 하루가<br />
+              건강해집니다
+            </h3>
+            <p>
+              최고 품질을 위해 중요한 소재 하나하나까지 직접 개발, 생산한
+              신소재만을 사용합니다
+            </p>
+          </li>
+        </div> 
+        </div> 
+        </div> 
+        </div> 
+      </div> -->
+    </div>
+
+    <!-- Swiper -->
+    <div class="con3">
+      <h1>ACE COLLECTION</h1>
+      <a href="#">more</a>
+
+      <div class="swiper mySwiper1">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <img src="./images/25011403030166744791.jpg" alt="" />
+          </div>
+          <div class="swiper-slide">
+            <img src="./images/24122002161771842059.jpg" alt="" />
+          </div>
+          <div class="swiper-slide">
+            <img src="./images/24101701334671492682.jpg" alt="" />
+          </div>
+        </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-pagination"></div>
+      </div>
+    </div>
+
+    <!-- Swiper -->
+    <!-- <div class="con4">
+      <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <img src="./images/25040905102814275583.jpg" alt="" />
+          </div>
+          <div class="swiper-slide">
+            <img src="./images/24121210562309739709.jpg" alt="" />
+          </div>
+          <div class="swiper-slide">
+            <img src="./images/24102804150970723911.jpg" alt="" />
+          </div>
+        </div>
+        <div class="swiper-pagination"></div>
+      </div>
+    </div> -->
+
+    <div class="con4">
+      <div class="con4_wrap">
+        <h1>ACE NEWS</h1>
+        <div class="down">
+          <div class="left">
+            <p>
+              에이스침대의<br />
+              새로운 소식을 알려드립니다
+            </p>
+          </div>
+          <div class="con">
+            <a href="#"
+              ><img src="./images/25040905102814275583.jpg" alt=""
+            /></a>
+            <a href="#"
+              ><img src="./images/24121210562309739709.jpg" alt=""
+            /></a>
+            <a href="#"
+              ><img src="./images/24102804150970723911.jpg" alt=""
+            /></a>
+          </div>
+          <div class="right">
+            <a href="#">
+              <strong>매장오픈소식</strong><br />
+              <span>에이스스퀘어 군산점 OPEN</span>
+            </a>
+            <a href="#">
+              <strong>매장오픈소식</strong><br />
+              <span>에이스스퀘어 분당점 리뉴얼 OPEN</span>
+            </a>
+            <a href="#">
+              <strong>매장오픈소식</strong><br />
+              <span>롯데백화점 잠실점 리뉴얼 OPEN</span>
+            </a>
+          </div>
         </div>
       </div>
     </div>
 
-    <script>
-      let div = document.querySelectorAll(".wrap .slices div");
+    <div class="con5">
+      <h1>NOW SNS</h1>
+      <ul>
+        <li>
+          <a href="#"><img src="./images/1.png" alt="" /></a>
+        </li>
+        <li>
+          <a href="#"><img src="./images/2.png" alt="" /></a>
+        </li>
+        <li>
+          <a href="#"><img src="./images/3.png" alt="" /></a>
+        </li>
+        <li>
+          <a href="#"><img src="./images/4.png" alt="" /></a>
+        </li>
+        <li>
+          <a href="#"><img src="./images/5.png" alt="" /></a>
+        </li>
+        <li>
+          <a href="#"><img src="./images/6.png" alt="" /></a>
+        </li>
+        <li>
+          <a href="#"><img src="./images/7.png" alt="" /></a>
+        </li>
+        <li>
+          <a href="#"><img src="./images/8.png" alt="" /></a>
+        </li>
+      </ul>
+      <p>
+        <a href="#"><img src="./images/con5-1.png" alt="" /></a>
+        <a href="#"><img src="./images/con5-2.png" alt="" /></a>
+        <a href="#"><img src="./images/con5-3.png" alt="" /></a>
+        <a href="#"><img src="./images/con5-4.png" alt="" /></a>
+      </p>
+    </div>
 
-      div.forEach(function (v, k) {
-        v.querySelectorAll("a").forEach(function () {
-          v.onclick = function () {
-            v.classList.toggle("on");
-            v.querySelector("a").classList.toggle("on");
-            v.querySelector("p").classList.toggle("on");
-          };
+    <div class="con6">
+      <p><img src="./images/store-map.jpg" alt="map" /></p>
+    </div>
+
+    <!-- Swiper con3 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <script src="./js/script.js"></script>
+
+    <script>
+      // script.js
+      function loadAlert() {
+        alert("Test!");
+      }
+      // * header *
+      let nav = document.querySelector(".nav");
+      let gnbL = document.querySelector(".left").querySelectorAll(".one_dep");
+      let sub = document.querySelector(".left").querySelectorAll(".two_dep");
+
+      gnbL.forEach(function (v, k) {
+        v.onmouseenter = function () {
+          document.querySelector(".logo").style.display = "none";
+          let span = v
+            .querySelector("div")
+            .querySelector("a")
+            .querySelectorAll("span");
+          span[0].style.display = "none";
+          span[1].style.display = "block";
+          document.querySelector(".nav").style.height = "180px";
+          sub.forEach(function (v, k) {
+            v.classList.add("on");
+          });
+        };
+        v.onmouseleave = function () {
+          document.querySelector(".logo").style.display = "block";
+          let span = v
+            .querySelector("div")
+            .querySelector("a")
+            .querySelectorAll("span");
+          span[0].style.display = "block";
+          span[1].style.display = "none";
+          document.querySelector(".nav").style.height = "0";
+          sub.forEach(function (v, k) {
+            v.classList.remove("on");
+          });
+        };
+      });
+
+      // let span = gnbL.querySelectorAll("span");
+      // span[1].style.display = "none";
+
+      // * con2 *
+      var swiper = new Swiper(".mySwiper", {
+        autoplay: {
+          delay: 2500,
+          disableOnInteraction: false,
+        },
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+      });
+      let a = document.querySelectorAll(".con2 .inner .left a");
+      let lir = document.querySelectorAll(".con2 .inner .right li");
+      let vid = document.querySelectorAll(".con2 .inner .center video");
+
+      // a[0].classList.add("on");
+      // lir[0].classList.add("on");
+      // vid[0].classList.add("on");
+
+      function myr() {
+        a.forEach(function (v, k) {
+          v.classList.remove("on");
+          lir.forEach(function (v, k) {
+            v.classList.remove("on");
+          });
+          vid.forEach(function (v, k) {
+            v.classList.remove("on");
+          });
+        });
+      }
+
+      a.forEach(function (v, k) {
+        v.onclick = function (event) {
+          event.preventDefault();
+          myr();
+          a[k].classList.add("on");
+          lir[k].classList.add("on");
+          vid[k].classList.add("on");
+        };
+      });
+
+      // * con2 button *
+      function updateBtn(swiperI) {
+        const prevBtn = document.querySelector("#prev");
+        const nextBtn = document.querySelector("#next");
+
+        prevBtn.classList.toggle("disabled", swiperI.isBeginning);
+        nextBtn.classList.toggle("disabled", swiperI.isEnd);
+      }
+
+      const swiper2 = new Swiper(".mySwiper", {
+        navigation: {
+          nextEl: "#next",
+          prevEl: "#prev",
+        },
+        on: {
+          init(swiper) {
+            updateBtn(swiper);
+          },
+          slideChange(swiper) {
+            updateBtn(swiper);
+          },
+        },
+      });
+      const btnPrev = document.querySelector("#prev");
+      const pathPrev = btnPrev.querySelector(".btn_prev");
+      const btnNext = document.querySelector("#next");
+      const pathnext = btnNext.querySelector(".btn_next");
+
+      btnPrev.addEventListener("mouseenter", () => {
+        pathPrev.setAttribute("d", "M 30 10 Q -10 65 30 140");
+      });
+
+      btnPrev.addEventListener("mouseleave", () => {
+        pathPrev.setAttribute("d", "M 30 10 Q 30 65 30 140");
+      });
+      btnNext.addEventListener("mouseenter", () => {
+        pathnext.setAttribute("d", "M 20 10 Q 60 65 20 140");
+      });
+
+      btnNext.addEventListener("mouseleave", () => {
+        pathnext.setAttribute("d", "M 20 10 Q 20 65 20 140");
+      });
+      const btns = document.querySelectorAll(".btn div");
+      btns.forEach((v, k) => {
+        v.addEventListener("click", () => {
+          swiper.slideTo(k); // 0부터 시작하는 인덱스
         });
       });
+
+      // * con3 *
+      var swiper1 = new Swiper(".mySwiper1", {
+        slidesPerView: "auto",
+        spaceBetween: 30,
+        centeredSlides: true,
+        keyboard: {
+          enabled: true,
+        },
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+      });
+
+      // * con4 *
     </script>
   </body>
 </html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script>
+      $(function () {});
+    </script>
+  </head>
+  <body>
+    <p id="p1">문단태그1</p>
+    <p>문단태그2</p>
+    <p>문단태그3</p>
+    <p>문단태그4</p>
+    <p>문단태그5</p>
+
+    <script>
+      // 내가 한 거
+      // function my() {
+      //   document.querySelectorAll("p").forEach(function (v, k) {
+      //     v.style.color = "#000";
+      //   });
+      // }
+
+      // document.querySelectorAll("p").forEach(function (v, k) {
+      //   v.onclick = function () {
+      //     my();
+      //     v.style.color = "#f00";
+      //   };
+      // });
+
+      // 쌤이 한 거
+      // let p = document.querySelectorAll("p");
+      // p.forEach(function (v, k, allitem) {
+      //   v.onclick = function () {
+      //     allitem.forEach(function (item) {
+      //       item.style.color = "#000";
+      //     });
+      //     this.style.color = "#f00";
+      //   };
+      // });
+
+      // 화살표 함수 (this 안 됨. v로 변경)
+      // let p = document.querySelectorAll("p");
+      // p.forEach((v, k, allitem) => {
+      //   v.onclick = () => {
+      //     allitem.forEach((item) => {
+      //       item.style.color = "#000";
+      //     });
+      //     v.style.color = "#f00";
+      //   };
+      // });
+
+      // jQuery
+      // $("p").click(function () {
+      //   $("p").css("color", "#000");
+      //   $(this).css("color", "#f00");
+      // });
+
+      // jQuery 화살표 함수 (this 안 됨. event.currentTarget으로 변경)
+      // $("p").click(() => {
+      //   $("p").css("color", "#000");
+      //   $(event.currentTarget).css("color", "#f00");
+      // });
+
+      // jQuery
+      $("p").mouseenter(() => {
+        $("p").css("color", "#000");
+        $(event.currentTarget).css("color", "#f00");
+      });
+
+      $("p").dblclick(function () {
+        $(this).hide();
+      });
+
+      $("#p1").mousedown(function () {
+        alert("Mouse down over p1!");
+      });
+      $("#p1").mouseup(function () {
+        alert("Mouse down over p1!");
+      });
+    </script>
+  </body>
+</html>
