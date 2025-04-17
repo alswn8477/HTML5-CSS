@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script> -->
+    <script src="./js/jquery-3.7.1.min.js"></script>
+
+    <script>
+      $(function () {
+        $("a").click(function (e) {
+          // e.preventDefault(); // 구문 가장 처음에 써야 함
+          $("p").toggle(1000, "linear"); // swing 또는 linear
+          // let txt = $(this).text();
+          let txt = $("p").css("display");
+          // $(this).text("show");
+          if (txt == "hide") {
+            $(this).text("show");
+          } else {
+            $(this).text("hide");
+          }
+          return false; // e.preventDefault()과 같은 기능. 구문 가장 끝에 써야 함.
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <p>show()hide()</p>
+    <a href="#">hide</a>
+  </body>
+</html>
