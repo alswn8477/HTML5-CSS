@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js"></script>
+    <style>
+      .box {
+        width: 50px;
+        height: 50px;
+      }
+      .green {
+        background: green;
+      }
+      .red {
+        background: red;
+      }
+      .blue {
+        background: blue;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box green"></div>
+    <div class="box red"></div>
+    <div class="box blue"></div>
+    <button class="pause">pause</button>
+    <button class="resume">resume</button>
+    <button class="restart">restart</button>
+    <button class="seek">seek(3)</button>
+    <button class="reverse">reverse</button>
+    <script>
+      var tl = gsap.timeline({}); // 나열되는 애니메이션 총 실행 시간
+      tl.to(".green", { x: 500, duration: 6 }) // 각각 애니메이션 실행 시간
+        .to(".red", { x: 500, duration: 4 }, "<2") // "<2"는 이전 것의 2초 지점에 실행 = .green 2초 지점에 시작
+        // .to(".red", { x: 500, duration: 4 }, ">2") // ">2"는 이전 것 끝나고 2초 후에 실행 = .green 마치고 2초 후 지점에 시작
+        // .to(".blue", { x: 500, duration: 2 }, "<2"); // "<2"는 이전 것의 2초 지점에 실행 = .red 2초 지점에 시작
+        .to(".blue", { x: 500, duration: 2 }, "-=3"); // 전체 실행시간 종료 3초 전에 실행
+      // .to(".blue", { x: 500, duration: 2 }, "+=3"); // 전체 실행시간 종료 3초 후에 실행
+
+      document.querySelector(".pause").onclick = function () {
+        tl.pause(); // 멈춤
+      };
+      document.querySelector(".resume").onclick = function () {
+        tl.resume(); // 멈춘 곳부터 다시 진행
+      };
+      document.querySelector(".restart").onclick = function () {
+        tl.restart(); // 처음부터 다시 진행
+      };
+      document.querySelector(".seek").onclick = function () {
+        tl.seek(3); // 전체 진행중 3초인 지점으로 이동 (해당 플레이시간으로)
+      };
+      document.querySelector(".reverse").onclick = function () {
+        tl.reverse(); // 역재생
+      };
+    </script>
+  </body>
+</html>

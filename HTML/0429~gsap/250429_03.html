@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js"></script>
+    <style>
+      .box {
+        width: 50px;
+        height: 50px;
+      }
+      .green {
+        background: green;
+      }
+      .red {
+        background: red;
+      }
+      .blue {
+        background: blue;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box green"></div>
+
+    <script>
+      function myfnc() {
+        alert("애니메이션 끝!");
+      }
+      gsap.to(".green", {
+        x: 500,
+        duration: 6,
+        repeat: 2,
+        repeatDelay: 3,
+        onComplete: myfnc,
+      }); // x500으로, 6초동안, 한 번 마친 뒤 반복 2번, 3초 후에, 마치고 myfnc함수 실행
+    </script>
+  </body>
+</html>
