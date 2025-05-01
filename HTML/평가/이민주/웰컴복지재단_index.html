@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        font-family: "NotoSansCJKkr", "Noto Sans JP", "Noto Sans SC",
+          "Noto Sans KR", sans-serif;
+      }
+      ul {
+        list-style: none;
+      }
+      a {
+        text-decoration: none;
+        color: #000;
+      }
+      .wrap {
+        width: 100%;
+        height: 100%;
+        padding: 100px;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+      }
+      .wrap .up {
+        width: 100%;
+        height: 100%;
+      }
+      .wrap .up ul {
+        display: flex;
+        justify-content: center;
+        gap: 200px;
+        align-items: center;
+        padding: 20px;
+        box-sizing: border-box;
+        border-bottom: 1px solid #e5e5e5;
+      }
+      .wrap .up ul li {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+      }
+      .wrap .up ul li a {
+        font-size: 18px;
+        font-weight: 500;
+        color: #000;
+      }
+      .wrap .up ul li.on a {
+        color: #ea002c;
+      }
+      .wrap .up ul li::after {
+        content: "";
+        position: absolute;
+        top: 45px;
+        left: 0;
+        width: 100%;
+        height: 3px;
+        background: #ea002c;
+        opacity: 0;
+      }
+      .wrap .up ul li.on::after {
+        background: #ea002c;
+        opacity: 1;
+      }
+      .wrap .up ul li.active::after {
+        background: #000;
+        opacity: 1;
+      }
+      .wrap .up ul li a {
+        display: block;
+      }
+      .wrap .down {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+      .wrap .down .title {
+        width: 100%;
+        position: relative;
+      }
+      .wrap .down .title h1 {
+        position: absolute;
+        top: 150px;
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 50px;
+        opacity: 0;
+      }
+      .wrap .down .title h1.on {
+        opacity: 1;
+      }
+      .wrap .down .sub {
+        width: 100%;
+        position: relative;
+      }
+      .wrap .down .sub p {
+        position: absolute;
+        top: 250px;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        gap: 30px;
+        opacity: 0;
+      }
+      .wrap .down .sub p.on {
+        opacity: 1;
+      }
+      .wrap .down .sub p a {
+        font-size: 20px;
+        color: #666;
+      }
+      .wrap .down .sub p a.on {
+        color: #ea002c;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <div class="up">
+        <ul>
+          <li><a href="#">아동복지사업</a></li>
+          <li><a href="#">청소년복지사업</a></li>
+          <li><a href="#">노인복지사업</a></li>
+          <li><a href="#">장애인복지사업</a></li>
+          <li><a href="#">사회봉사사업</a></li>
+        </ul>
+      </div>
+      <div class="down">
+        <div class="title">
+          <h1>아동복지사업</h1>
+          <h1>청소년복지사업</h1>
+          <h1>노인복지사업</h1>
+          <h1>장애인복지사업</h1>
+          <h1>사회봉사사업</h1>
+        </div>
+        <div class="sub">
+          <p>
+            <a href="#">지역아동센터사업</a>
+            <a href="#">우리동네키움센터사업</a>
+            <a href="#">어린이집사업</a>
+          </p>
+          <p>
+            <a href="#">청소년복지시설사업</a>
+            <a href="#">웰컴투모로우사업</a>
+          </p>
+          <p>
+            <a href="#">행복빨래방사업</a>
+            <a href="#">주거환경개선사업</a>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      let upli = document.querySelectorAll(".up ul li");
+      let h1 = document.querySelectorAll(".down .title h1");
+      let p = document.querySelectorAll(".down .sub p");
+      let a = document.querySelectorAll(".down .sub > p > a");
+
+      upli[0].classList.add("on");
+      h1[0].classList.add("on");
+      p[0].classList.add("on");
+      a[0].classList.add("on");
+
+      function myr() {
+        upli.forEach(function (v, k) {
+          v.classList.remove("on");
+        });
+        upli.forEach(function (v, k) {
+          v.classList.remove("active");
+        });
+        h1.forEach(function (v, k) {
+          v.classList.remove("on");
+        });
+        p.forEach(function (v, k) {
+          v.classList.remove("on");
+        });
+        a.forEach(function (v, k) {
+          v.classList.remove("on");
+        });
+      }
+
+      upli.forEach(function (v, k) {
+        v.onmouseenter = function () {
+          v.classList.add("active");
+        };
+        v.onmouseleave = function () {
+          v.classList.remove("active");
+        };
+      });
+
+      upli.forEach(function (v, k) {
+        v.addEventListener("click", function () {
+          myr();
+          v.classList.add("on");
+          h1[k].classList.add("on");
+          p[k].classList.add("on");
+          a[k].classList.add("on");
+        });
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        font-family: "NotoSansCJKkr", "Noto Sans JP", "Noto Sans SC",
+          "Noto Sans KR", sans-serif;
+      }
+      ul {
+        list-style: none;
+      }
+      a {
+        text-decoration: none;
+      }
+      .wrap {
+        width: 1400px;
+        margin: 50px auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+      .wrap .up {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-bottom: 50px;
+        margin-bottom: 50px;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+      }
+      .wrap .up .upleft h1 {
+        font-size: 46px;
+        text-transform: uppercase;
+      }
+      .wrap .up .upright ul {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 50px;
+      }
+      .wrap .up .upright ul li {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-end;
+        cursor: pointer;
+      }
+      .wrap .up .upright ul li span {
+        font-size: 15px;
+        color: #16161699;
+      }
+      .wrap .up .upright ul li p {
+        display: inline;
+        font-size: 20px;
+        color: #161616;
+      }
+      .wrap .up .upright ul li.on p {
+        border-bottom: 2px solid;
+      }
+      .wrap .down {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+      }
+      .wrap .down .downleft {
+        flex: 1 1 100%;
+      }
+      .wrap .down .downleft ul li {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        gap: 100px;
+        position: absolute;
+        opacity: 0;
+      }
+      .wrap .down .downleft ul li.on {
+        opacity: 1;
+      }
+      .wrap .down .downleft ul li p {
+        font-size: 22px;
+        color: #161616;
+      }
+      .wrap .down .downleft ul li a {
+        width: 150px;
+        display: inline-block;
+        font-size: 15px;
+        color: #292929;
+        border: 1px solid transparent;
+        border-radius: 50px;
+        background: #f8f8f8e6;
+        padding: 10px 0;
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        align-items: center;
+      }
+      .wrap .down .downright {
+        flex: 1 1 100%;
+      }
+      .wrap .down .downright p {
+        position: absolute;
+        opacity: 0;
+      }
+      .wrap .down .downright p.on {
+        opacity: 1;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <div class="up">
+        <div class="upleft">
+          <h1>
+            Sustainable<br />
+            Love & Respect
+          </h1>
+        </div>
+        <div class="upright">
+          <ul>
+            <li>
+              <span>Environmental</span><br />
+              <p>환경</p>
+            </li>
+            <li>
+              <span>Social</span><br />
+              <p>사회</p>
+            </li>
+            <li>
+              <span>Governance</span><br />
+              <p>지배구조</p>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="down">
+        <div class="downleft">
+          <ul>
+            <li>
+              <p>
+                애경산업은 지속가능한 환경을 위해<br />
+                책임을 다하겠습니다.
+              </p>
+              <a href="#"
+                >바로가기<img
+                  src="https://www.aekyung.co.kr/img/front/sub/sustainable/report/arrow_link.webp"
+                  alt="arrow"
+              /></a>
+            </li>
+            <li>
+              <p>
+                애경산업의 노력은<br />
+                임직원과 협력사, 지역사회<br />
+                그리고 고객이 함께하는 향기로운 동행이 될 것입니다.
+              </p>
+              <a href="#"
+                >바로가기<img
+                  src="https://www.aekyung.co.kr/img/front/sub/sustainable/report/arrow_link.webp"
+                  alt="arrow"
+              /></a>
+            </li>
+            <li>
+              <p>투명하고 건전한 기업 활동을 이어나가겠습니다.</p>
+              <a href="#"
+                >바로가기<img
+                  src="https://www.aekyung.co.kr/img/front/sub/sustainable/report/arrow_link.webp"
+                  alt="arrow"
+              /></a>
+            </li>
+          </ul>
+        </div>
+        <div class="downright">
+          <p>
+            <img
+              src="https://www.aekyung.co.kr/img/front/main/mo_main_tab01.png"
+              alt="img1"
+            />
+          </p>
+          <p>
+            <img
+              src="https://www.aekyung.co.kr/img/front/main/mo_main_tab02.png
+              "
+              alt="img1"
+            />
+          </p>
+          <p>
+            <img
+              src="https://www.aekyung.co.kr/img/front/main/mo_main_tab03.png"
+              alt="img1"
+            />
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      let li = document.querySelectorAll(".upright ul li");
+      let downli = document.querySelectorAll(".downleft ul li");
+      let downp = document.querySelectorAll(".downright p");
+      li[0].classList.add("on");
+      downli[0].classList.add("on");
+      downp[0].classList.add("on");
+
+      function myr() {
+        li.forEach(function (v, k) {
+          v.classList.remove("on");
+        });
+        downli.forEach(function (v, k) {
+          v.classList.remove("on");
+        });
+        downp.forEach(function (v, k) {
+          v.classList.remove("on");
+        });
+      }
+
+      li.forEach(function (v, k) {
+        v.addEventListener("click", function () {
+          myr();
+          v.classList.add("on");
+          downli[k].classList.add("on");
+          downp[k].classList.add("on");
+        });
+      });
+    </script>
+  </body>
+</html>
